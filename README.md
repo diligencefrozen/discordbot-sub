@@ -30,16 +30,16 @@
 
 # ScreenShots
 <pre>
-<img src="https://github.com/queenanna1999/Doribot_Python/blob/main/ss/1.PNG?raw=true">
-<img src="https://github.com/queenanna1999/Doribot_Python/blob/main/ss/2.png?raw=true">
-<img src="https://github.com/queenanna1999/Doribot_Python/blob/main/ss/3.PNG?raw=true">
-<img src="https://github.com/queenanna1999/Doribot_Python/blob/main/ss/4.PNG?raw=true">
-<img src="https://github.com/queenanna1999/Doribot_Python/blob/main/ss/5.PNG?raw=true">
+<img src="https://github.com/diligencefrozen/discordbot-sub/blob/main/ss/1.PNG?raw=true">
+<img src="https://github.com/diligencefrozen/discordbot-sub/blob/main/ss/2.PNG?raw=true">
+<img src="https://github.com/diligencefrozen/discordbot-sub/blob/main/ss/3.PNG?raw=true">
+<img src="https://github.com/diligencefrozen/discordbot-sub/blob/main/ss/4.PNG?raw=true">
+<img src="https://github.com/diligencefrozen/discordbot-sub/blob/main/ss/5.PNG?raw=true">
 </pre>
 
 # 자주 언급되는 단어들
 <pre>
-<img src="https://raw.githubusercontent.com/elsannadisney/Doribot_Python/main/ss/SSM_01_V2.png">
+<img src="https://github.com/diligencefrozen/discordbot-sub/blob/main/ss/SSM_01_V2.png?raw=true">
 </pre>
 
 # LANGUAGE
