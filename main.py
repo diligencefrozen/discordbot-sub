@@ -199,7 +199,7 @@ async def on_message(message):
         embed.add_field(name ='=서버분석', value = "디스코드 서버 내에서 가장 많이 언급된 단어들이 궁금하신가요?",inline = False) 
         await message.channel.send(channel,embed=embed)
 
-#이모지 크기를 늘려줍니다. / 2023.11.21 수정 
+#이모지 크기를 늘려줍니다. / 2023.12.12 수정 
 
     if ":dccon:" in message.content:
         embed = discord.Embed(
@@ -833,6 +833,34 @@ async def on_message(message):
         )
 
         urlBase = 'https://i.imgur.com/nsTNL1F.png'
+        randomNum = random.randrange(1, 2)
+        urlF = urlBase+str(randomNum)
+        embed.set_image(url = urlF)
+        #await message.delete()     
+        await message.channel.send( embed=embed)
+
+    if ":49:" in message.content:
+        embed = discord.Embed(
+        title='해당 기능은 Beta 버전 입니다.',
+        description=f'{message.author.mention}님의 이모지 크기를 \n\n강제로 확대했습니다.',
+
+        )
+
+        urlBase = 'https://i.imgur.com/qP5FVcJ.png'
+        randomNum = random.randrange(1, 2)
+        urlF = urlBase+str(randomNum)
+        embed.set_image(url = urlF)
+        #await message.delete()     
+        await message.channel.send( embed=embed)
+
+    if ":50:" in message.content:
+        embed = discord.Embed(
+        title='해당 기능은 Beta 버전 입니다.',
+        description=f'{message.author.mention}님의 이모지 크기를 \n\n강제로 확대했습니다.',
+
+        )
+
+        urlBase = 'https://i.imgur.com/tLKQl25.png'
         randomNum = random.randrange(1, 2)
         urlF = urlBase+str(randomNum)
         embed.set_image(url = urlF)
