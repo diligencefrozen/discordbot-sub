@@ -860,7 +860,7 @@ async def on_message(message):
 
         )
 
-        urlBase = 'https://i.imgur.com/tLKQl25.png'
+        urlBase = 'https://i.imgur.com/8hNJe23.png'
         randomNum = random.randrange(1, 2)
         urlF = urlBase+str(randomNum)
         embed.set_image(url = urlF)
