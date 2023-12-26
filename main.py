@@ -119,20 +119,27 @@ president_patterns04 = [
     re.compile(r"석[ㄱㄴㄷㄹㅁㅂㅅㅇㅈㅊㅋㅌㅍㅎabcdefghijklmnopqrstuvwxyz1234567890/@!:;#\\s$%^&*()\-_=+.,?'\"{}\[\]|`~<> ]+렬"), 
     re.compile(r"두[ㄱㄴㄷㄹㅁㅂㅅㅇㅈㅊㅋㅌㅍㅎabcdefghijklmnopqrstuvwxyz1234567890/@!:;#\\s$%^&*()\-_=+.,?'\"{}\[\]|`~<> ]+창"), 
 ]
- 
-# banned_patterns02에 등록된 금칙어를 수정한 채팅에서 사용하였을 때 작동함.
 
+# 금칙어 검사: 일반적인 금지된 단어
 async def 금칙어_검사(content):
     for pattern in banned_patterns:
         if pattern.search(content):
             return True
     return False
- 
+
 @app.event
 async def on_message_edit(before, after):
-    if 금칙어_검사(after.content):  # 금칙어_검사는 금칙어를 검사하는 함수입니다.
+    # 링크 검사 (모든 채널에서)
+    if any(substring in after.content for substring in ["https://", "http://", "youtu.be", "youtube", "gall.dcinside.com", "news.naver.com", "news.v.daum.net"]):
         await after.delete()
-        await after.channel.send(f"{after.author.mention},님의 수정된 채팅에서 금칙어가 감지되었습니다!")
+        await after.channel.send(f"{after.author.mention} 님, 수정 기능을 사용하여 링크 공유 및 금칙어를 사용하는 행위는 우리 서버 규칙을 어기는 행위입니다.")
+        return
+
+    # 금칙어 검사 (일반적인 금지된 단어)
+    if 금칙어_검사(after.content):
+        await after.delete()
+        await after.channel.send(f"{after.author.mention} 님, 수정 기능을 사용하여 링크 공유 및 금칙어를 사용하는 행위는 우리 서버 규칙을 어기는 행위입니다.")
+        return
      
 @app.event
 async def on_ready():
