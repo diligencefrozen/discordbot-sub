@@ -129,6 +129,11 @@ async def 금칙어_검사(content):
 
 @app.event
 async def on_message_edit(before, after):
+ 
+    # 수정된 메시지가 봇에 의해 보내진 경우 처리하지 않음
+    if after.author.bot:
+        return
+     
     # 링크 검사 (모든 채널에서)
     if any(substring in after.content for substring in ["https://", "http://", "youtu.be", "youtube", "gall.dcinside.com", "news.naver.com", "news.v.daum.net"]):
         await after.delete()
