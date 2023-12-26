@@ -119,7 +119,21 @@ president_patterns04 = [
     re.compile(r"석[ㄱㄴㄷㄹㅁㅂㅅㅇㅈㅊㅋㅌㅍㅎabcdefghijklmnopqrstuvwxyz1234567890/@!:;#\\s$%^&*()\-_=+.,?'\"{}\[\]|`~<> ]+렬"), 
     re.compile(r"두[ㄱㄴㄷㄹㅁㅂㅅㅇㅈㅊㅋㅌㅍㅎabcdefghijklmnopqrstuvwxyz1234567890/@!:;#\\s$%^&*()\-_=+.,?'\"{}\[\]|`~<> ]+창"), 
 ]
+ 
+# banned_patterns에 등록된 금칙어를 수정한 채팅에서 사용하였을 때 작동함.
 
+async def 금칙어_검사(content):
+    for pattern in banned_patterns:
+        if pattern.search(content):
+            return True
+    return False
+ 
+@app.event
+async def on_message_edit(before, after):
+    if 금칙어_검사(after.content):  # 금칙어_검사는 금칙어를 검사하는 함수입니다.
+        await after.delete()
+        await after.channel.send(f"{after.author.mention},님이 방금 수정하신 채팅에서 금칙어가 감지되었습니다!")
+     
 @app.event
 async def on_ready():
     print("I'm logging in.")  
