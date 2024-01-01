@@ -1747,11 +1747,10 @@ async def on_message(message):
         await message.delete()
         await message.channel.send(f"{message.author.mention} 님, 링크 공유는 서버 규칙을 어긴겁니다.")
 
- #주요 서버 주축이 되는 멤버의 닉네임에 대응합니다. / 2023.08.22 수정 
+ #주요 서버 주축이 되는 멤버의 닉네임에 대응합니다. / 2024.01.01 수정 
  
     if "나냡" in message.content or "나1냡" in message.content or "나11냡" in message.content or "나111냡" in message.content or "나/냡" in message.content or "나//냡" in message.content or "나///냡" in message.content or "남냠" in message.content or "남냠" in message.content or "남1냠" in message.content or "남11냠" in message.content or "남111냠" in message.content or "남/냠" in message.content or "남//냠" in message.content or "남///냠" in message.content:
-        await message.delete()
-        await message.channel.send(f"{message.author.mention} 님, 서버 내 데이터를 분석한 결과, 해당 닉네임은 서버에 가장 많은 분란을 조장한 닉네임으로 판명되었습니다. 조화로운 서버 활동을 위하여 언급을 자제해주시길 바랍니다.")        
+        await message.channel.send(f"{message.author.mention} 님, 서버 내 데이터를 분석한 결과, 해당 닉네임은 언급해도 괜찮습니다.")        
                     
     if "도리" in message.content or "돌이" in message.content:
         await message.channel.send(f"{message.author.mention} 님, 해당 닉네임을 언급해도 좋습니다.") 
@@ -1766,7 +1765,7 @@ async def on_message(message):
     if "들쥐" in message.content:
         await message.channel.send(f"{message.author.mention} 님, 전라도 출신의 닉네임은 언급해도 괜찮습니다. ")   
       
-    if "1인칭" in message.content:
+    if "1인칭" in message.content or "일인칭" in message.content:
         await message.channel.send(f"{message.author.mention} 님, 전라도 신안 염전 노예 출신의 닉네임은 언급해도 괜찮습니다. ")   
       
 #총기 이름에 대응함./ 2023.08.17 수정 
