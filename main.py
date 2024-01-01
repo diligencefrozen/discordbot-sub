@@ -119,7 +119,26 @@ president_patterns04 = [
     re.compile(r"석[ㄱㄴㄷㄹㅁㅂㅅㅇㅈㅊㅋㅌㅍㅎabcdefghijklmnopqrstuvwxyz1234567890/@!:;#\\s$%^&*()\-_=+.,?'\"{}\[\]|`~<> ]+렬"), 
     re.compile(r"두[ㄱㄴㄷㄹㅁㅂㅅㅇㅈㅊㅋㅌㅍㅎabcdefghijklmnopqrstuvwxyz1234567890/@!:;#\\s$%^&*()\-_=+.,?'\"{}\[\]|`~<> ]+창"), 
 ]
-     
+
+nickname_patterns = [
+    re.compile(r"나[ㄱㄴㄷㄹㅁㅂㅅㅇㅈㅊㅋㅌㅍㅎabcdefghijklmnopqrstuvwxyz1234567890/@!:;#\\s$%^&*()\-_=+.,?'\"{}\[\]|`~<> ]+냡"),
+    re.compile(r"도[ㄱㄴㄷㄹㅁㅂㅅㅇㅈㅊㅋㅌㅍㅎabcdefghijklmnopqrstuvwxyz1234567890/@!:;#\\s$%^&*()\-_=+.,?'\"{}\[\]|`~<> ]+리"), 
+    re.compile(r"들[ㄱㄴㄷㄹㅁㅂㅅㅇㅈㅊㅋㅌㅍㅎabcdefghijklmnopqrstuvwxyz1234567890/@!:;#\\s$%^&*()\-_=+.,?'\"{}\[\]|`~<> ]+쥐"), 
+    re.compile(r"1[ㄱㄴㄷㄹㅁㅂㅅㅇㅈㅊㅋㅌㅍㅎabcdefghijklmnopqrstuvwxyz1234567890/@!:;#\\s$%^&*()\-_=+.,?'\"{}\[\]|`~<> ]+인칭"), 
+    re.compile(r"1인[ㄱㄴㄷㄹㅁㅂㅅㅇㅈㅊㅋㅌㅍㅎabcdefghijklmnopqrstuvwxyz1234567890/@!:;#\\s$%^&*()\-_=+.,?'\"{}\[\]|`~<> ]+칭"), 
+    re.compile(r"일[ㄱㄴㄷㄹㅁㅂㅅㅇㅈㅊㅋㅌㅍㅎabcdefghijklmnopqrstuvwxyz1234567890/@!:;#\\s$%^&*()\-_=+.,?'\"{}\[\]|`~<> ]+인칭"), 
+    re.compile(r"일인[ㄱㄴㄷㄹㅁㅂㅅㅇㅈㅊㅋㅌㅍㅎabcdefghijklmnopqrstuvwxyz1234567890/@!:;#\\s$%^&*()\-_=+.,?'\"{}\[\]|`~<> ]+칭"),  
+    re.compile(r"7[ㄱㄴㄷㄹㅁㅂㅅㅇㅈㅊㅋㅌㅍㅎabcdefghijklmnopqrstuvwxyz1234567890/@!:;#\\s$%^&*()\-_=+.,?'\"{}\[\]|`~<> ]+호선"), 
+    re.compile(r"7호[ㄱㄴㄷㄹㅁㅂㅅㅇㅈㅊㅋㅌㅍㅎabcdefghijklmnopqrstuvwxyz1234567890/@!:;#\\s$%^&*()\-_=+.,?'\"{}\[\]|`~<> ]+선"), 
+    re.compile(r"칠[ㄱㄴㄷㄹㅁㅂㅅㅇㅈㅊㅋㅌㅍㅎabcdefghijklmnopqrstuvwxyz1234567890/@!:;#\\s$%^&*()\-_=+.,?'\"{}\[\]|`~<> ]+호선"), 
+    re.compile(r"칠호[ㄱㄴㄷㄹㅁㅂㅅㅇㅈㅊㅋㅌㅍㅎabcdefghijklmnopqrstuvwxyz1234567890/@!:;#\\s$%^&*()\-_=+.,?'\"{}\[\]|`~<> ]+선"),   
+]   
+
+nickname_patterns02 = [
+    re.compile(r"광[ㄱㄴㄷㄹㅁㅂㅅㅇㅈㅊㅋㅌㅍㅎabcdefghijklmnopqrstuvwxyz1234567890/@!:;#\\s$%^&*()\-_=+.,?'\"{}\[\]|`~<> ]+탈맨"), 
+    re.compile(r"광탈[ㄱㄴㄷㄹㅁㅂㅅㅇㅈㅊㅋㅌㅍㅎabcdefghijklmnopqrstuvwxyz1234567890/@!:;#\\s$%^&*()\-_=+.,?'\"{}\[\]|`~<> ]+맨"),   
+]  
+
 @app.event
 async def on_ready():
     print("I'm logging in.")  
@@ -1746,28 +1765,45 @@ async def on_message(message):
     if "https://" in message.content or "http://" in message.content or "youtu.be" in message.content or "youtube" in message.content or "gall.dcinside.com" in message.content or "news.naver.com" in message.content or "news.v.daum.net" in message.content:
         await message.delete()
         await message.channel.send(f"{message.author.mention} 님, 링크 공유는 서버 규칙을 어긴겁니다.")
+     
+ #주요 서버 주축이 되는 멤버의 닉네임에 대응합니다. (개선된 버전 / 기존 버전은 유지보수하기 힘드므로, 약간의 개선된 코드를 추가함.) / 2024.01.01 수정 
 
- #주요 서버 주축이 되는 멤버의 닉네임에 대응합니다. / 2024.01.01 수정 
+    for pattern in nickname_patterns:
+        if pattern.search(message.content):
+            await message.channel.send(f"{message.author.mention} 님, 해당 닉네임은 언급해도 괜찮습니다. ")
+            return  # 한 번 메시지를 삭제하고 경고한 후, 루프에서 나옵니다.
+         
+#주요 서버 주축이 되는 멤버의 닉네임에 대응합니다. / 2024.01.01 수정 
  
-    if "나냡" in message.content or "나1냡" in message.content or "나11냡" in message.content or "나111냡" in message.content or "나/냡" in message.content or "나//냡" in message.content or "나///냡" in message.content or "남냠" in message.content or "남냠" in message.content or "남1냠" in message.content or "남11냠" in message.content or "남111냠" in message.content or "남/냠" in message.content or "남//냠" in message.content or "남///냠" in message.content:
-        await message.channel.send(f"{message.author.mention} 님, 서버 내 데이터를 분석한 결과, 해당 닉네임은 언급해도 괜찮습니다.")        
+    if "나냡" in message.content:
+        await message.channel.send(f"{message.author.mention} 님, 해당 닉네임은 언급해도 괜찮습니다.")        
                     
-    if "도리" in message.content or "돌이" in message.content:
-        await message.channel.send(f"{message.author.mention} 님, 해당 닉네임을 언급해도 좋습니다.") 
+    if "도리" in message.content:
+        await message.channel.send(f"{message.author.mention} 님, 해당 닉네임을 언급해도 좋습니다.")      
+                     
+    if "7호선" in message.content:
+        await message.channel.send(f"{message.author.mention} 님, 해당 닉네임을 언급해도 좋습니다.")  
+       
+    if "들쥐" in message.content:
+        await message.channel.send(f"{message.author.mention} 님, 해당 닉네임을 언급해도 좋습니다.")   
+      
+    if "1인칭" in message.content or "일인칭" in message.content:
+        await message.channel.send(f"{message.author.mention} 님, 해당 닉네임을 언급해도 좋습니다.")   
+     
+#주요 서버 주축이 되는 멤버의 닉네임에 대응합니다. (개선된 버전 / 기존 버전은 유지보수하기 힘드므로, 약간의 개선된 코드를 추가함.) / 2024.01.01 수정 
+
+    for pattern in nickname_patterns02:
+        if pattern.search(message.content):
+            await message.delete()
+            await message.channel.send(f"{message.author.mention} 님, 해당 닉네임을 언급하는 행위는 분쟁 유발 목적이 다분해보입니다.")
+            return  # 한 번 메시지를 삭제하고 경고한 후, 루프에서 나옵니다.    
+         
+#주요 서버 주축이 되는 멤버의 닉네임에 대응합니다. / 2024.01.01 수정 
        
     if "광탈맨" in message.content:
         await message.delete()
-        await message.channel.send(f"{message.author.mention} 님, 해당 닉네임을 언급하는 행위는 분쟁 유발 목적이 다분해보입니다.")        
-                     
-    if "7호선" in message.content:
-        await message.channel.send(f"{message.author.mention} 님, 사회 하층민 신분의 닉네임은 언급해도 괜찮습니다. ")  
-       
-    if "들쥐" in message.content:
-        await message.channel.send(f"{message.author.mention} 님, 전라도 출신의 닉네임은 언급해도 괜찮습니다. ")   
-      
-    if "1인칭" in message.content or "일인칭" in message.content:
-        await message.channel.send(f"{message.author.mention} 님, 전라도 신안 염전 노예 출신의 닉네임은 언급해도 괜찮습니다. ")   
-      
+        await message.channel.send(f"{message.author.mention} 님, 해당 닉네임을 언급하는 행위는 분쟁 유발 목적이 다분해보입니다.")  
+     
 #총기 이름에 대응함./ 2023.08.17 수정 
 
     if "Groza" in message.content or "groza" in message.content or "그로자" in message.content:
