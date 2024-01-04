@@ -1778,14 +1778,34 @@ async def on_message(message):
         await message.delete()
         await message.channel.send(f"{message.author.mention} 님, 링크 공유는 서버 규칙을 어긴겁니다.")
      
- #주요 서버 주축이 되는 멤버의 닉네임에 대응합니다. (개선된 버전 / 기존 버전은 유지보수하기 힘드므로, 약간의 개선된 코드를 추가함.) / 2024.01.01 수정 
+ #주요 서버 주축이 되는 멤버의 닉네임에 대응합니다. (개선된 버전 / 기존 버전은 유지보수하기 힘드므로, 약간의 개선된 코드를 추가함.) / 2024.01.04 수정 
 
     for pattern in nickname_patterns:
         if pattern.search(message.content):
             await message.channel.send(f"{message.author.mention} 님, 해당 닉네임은 언급해도 괜찮습니다. ")
             return  # 한 번 메시지를 삭제하고 경고한 후, 루프에서 나옵니다.
+
+    for pattern in nickname_patterns02:
+        if pattern.search(message.content):
+            await message.channel.send(f"{message.author.mention} 님, 해당 닉네임은 언급해도 괜찮습니다. ")
+            return  # 한 번 메시지를 삭제하고 경고한 후, 루프에서 나옵니다.
+
+    for pattern in nickname_patterns03:
+        if pattern.search(message.content):
+            await message.channel.send(f"{message.author.mention} 님, 전라도 신안 염전 노예 출신의 닉네임을 언급해도 좋습니다. ")
+            return  # 한 번 메시지를 삭제하고 경고한 후, 루프에서 나옵니다.
+
+    for pattern in nickname_patterns04:
+        if pattern.search(message.content):
+            await message.channel.send(f"{message.author.mention} 님, 사회 하층민 출신의 닉네임을 언급해도 좋습니다. ")
+            return  # 한 번 메시지를 삭제하고 경고한 후, 루프에서 나옵니다.
+
+    for pattern in nickname_patterns05:
+        if pattern.search(message.content):
+            await message.channel.send(f"{message.author.mention} 님, 전라도 출신의 닉네임을 언급해도 좋습니다. ")
+            return  # 한 번 메시지를 삭제하고 경고한 후, 루프에서 나옵니다.
          
-#주요 서버 주축이 되는 멤버의 닉네임에 대응합니다. / 2024.01.01 수정 
+#주요 서버 주축이 되는 멤버의 닉네임에 대응합니다. / 2024.01.04 수정 
  
     if "나냡" in message.content:
         await message.channel.send(f"{message.author.mention} 님, 해당 닉네임은 언급해도 괜찮습니다.")        
@@ -1793,18 +1813,18 @@ async def on_message(message):
     if "도리" in message.content:
         await message.channel.send(f"{message.author.mention} 님, 해당 닉네임을 언급해도 좋습니다.")      
                      
-    if "7호선" in message.content:
-        await message.channel.send(f"{message.author.mention} 님, 해당 닉네임을 언급해도 좋습니다.")  
+    if "7호선" in message.content or "칠호선" in message.content:
+        await message.channel.send(f"{message.author.mention} 님, 사회 하층민 출신의 닉네임을 언급해도 좋습니다.")  
        
     if "들쥐" in message.content:
-        await message.channel.send(f"{message.author.mention} 님, 해당 닉네임을 언급해도 좋습니다.")   
+        await message.channel.send(f"{message.author.mention} 님, 전라도 출신의 닉네임을 언급해도 좋습니다.")   
       
     if "1인칭" in message.content or "일인칭" in message.content:
-        await message.channel.send(f"{message.author.mention} 님, 해당 닉네임을 언급해도 좋습니다.")   
+        await message.channel.send(f"{message.author.mention} 님, 전라도 신안 염전 노예 출신의 닉네임을 언급해도 좋습니다.")   
      
 #주요 서버 주축이 되는 멤버의 닉네임에 대응합니다. (개선된 버전 / 기존 버전은 유지보수하기 힘드므로, 약간의 개선된 코드를 추가함.) / 2024.01.01 수정 
 
-    for pattern in nickname_patterns02:
+    for pattern in nickname_patterns06:
         if pattern.search(message.content):
             await message.delete()
             await message.channel.send(f"{message.author.mention} 님, 해당 닉네임을 언급하는 행위는 분쟁 유발 목적이 다분해보입니다.")
