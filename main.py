@@ -228,6 +228,8 @@ async def on_message(message):
         embed.add_field(name ='=음식추천', value = "도리봇이 당신에게 음식 하나를 추천해줄 것입니다.",inline = False) 
         embed.add_field(name ='=허락', value = "도리봇에게 게임 허락을 받아보세요, 봇이 게임을 플레이 하는것을 허락하지 않는다면 그날은 게임 안 돌리는겁니다?",inline = False)
         embed.add_field(name ='=서버분석', value = "디스코드 서버 내에서 가장 많이 언급된 단어들이 궁금하신가요?",inline = False) 
+        embed.add_field(name ='=멤버분석', value = "디스코드 서버 내에서 가장 많은 채팅을 작성한 이용자들의 순위가 궁금하신가요?",inline = False)
+        embed.add_field(name ='=채팅분석', value = "디스코드 서버 내에서 가장 많은 채팅이 작성된 날짜들의 순위가 궁금하신가요?",inline = False) 
         await message.channel.send(channel,embed=embed)
 
 #이모지 크기를 늘려줍니다. / 2023.12.12 수정 
@@ -2307,7 +2309,37 @@ async def on_message(message):
          randomNum = random.randrange(1, 2)
          urlF = urlBase+str(randomNum)
          embed.set_image(url = urlF)
-         await message.channel.send( embed=embed)  
+         await message.channel.send( embed=embed)
+
+#서버 내 가장 많은 채팅을 작성한 이용자들의 순위를 분석한 결과를 불러옵니다. / 2024.01.05 수정함. 
+     
+    if "=멤버분석" in message.content:
+         embed = discord.Embed(
+         title='삼사모 서버의 멤버 분석 결과 입니다.',
+         description='2020년 06월 13일 ~2023년 10월 29일',
+
+        )
+
+         urlBase = 'https://i.imgur.com/pdnEHcW.png'
+         randomNum = random.randrange(1, 2)
+         urlF = urlBase+str(randomNum)
+         embed.set_image(url = urlF)
+         await message.channel.send( embed=embed)
+
+#서버 내 가장 많은 채팅이 작성된 날짜들에 대한 순위를 분석한 결과를 불러옵니다. / 2024.01.05 수정함. 
+     
+    if "=채팅분석" in message.content:
+         embed = discord.Embed(
+         title='삼사모 서버의 채팅 분석 결과 입니다.',
+         description='2020년 06월 13일 ~2023년 10월 29일',
+
+        )
+
+         urlBase = 'https://i.imgur.com/f03zFDr.png'
+         randomNum = random.randrange(1, 2)
+         urlF = urlBase+str(randomNum)
+         embed.set_image(url = urlF)
+         await message.channel.send( embed=embed)
                               
 accross_token = os.environ["BOT_TOKENSEC"]
 app.run(accross_token)
