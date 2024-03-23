@@ -247,593 +247,565 @@ async def on_message(message):
         embed.set_image(url = urlF)
         await message.channel.send( embed=embed)  
 
-    if ":icon_1:" in message.content:     
+    if ":01:" in message.content:     
         embed = discord.Embed(
         title='해당 기능은 Beta 버전 입니다.',
         description=f'{message.author.mention}님의 이모지 크기를 \n\n강제로 확대했습니다.',
 
         )
 
-        urlBase = 'https://i.imgur.com/1PCJfRP.png'
+        urlBase = 'https://i.imgur.com/WX2l0uU.png'
         randomNum = random.randrange(1, 2)
         urlF = urlBase+str(randomNum)
         embed.set_image(url = urlF)
         #await message.delete()
         await message.channel.send( embed=embed)      
 
-    if ":icon_2:" in message.content:
+    if ":02:" in message.content:
         embed = discord.Embed(
         title='해당 기능은 Beta 버전 입니다.',
         description=f'{message.author.mention}님의 이모지 크기를 \n\n강제로 확대했습니다.',
 
         )
 
-        urlBase = 'https://i.imgur.com/4EcTa0o.png'
+        urlBase = 'https://i.imgur.com/1r3hhVb.png'
         randomNum = random.randrange(1, 2)
         urlF = urlBase+str(randomNum)
         embed.set_image(url = urlF)
         #await message.delete()
         await message.channel.send( embed=embed)  
 
-    if ":icon_3:" in message.content:
+    if ":03:" in message.content:
         embed = discord.Embed(
         title='해당 기능은 Beta 버전 입니다.',
         description=f'{message.author.mention}님의 이모지 크기를 \n\n강제로 확대했습니다.',
 
         )
 
-        urlBase = 'https://i.imgur.com/oj8rloJ.png'
+        urlBase = 'https://i.imgur.com/NPIbOLd.png'
         randomNum = random.randrange(1, 2)
         urlF = urlBase+str(randomNum)
         embed.set_image(url = urlF)
         #await message.delete()
         await message.channel.send( embed=embed)  
 
-    if ":icon_4:" in message.content:
+    if ":04:" in message.content:
         embed = discord.Embed(
         title='해당 기능은 Beta 버전 입니다.',
         description=f'{message.author.mention}님의 이모지 크기를 \n\n강제로 확대했습니다.',
 
         )
 
-        urlBase = 'https://i.imgur.com/ydCS0lf.png'
+        urlBase = 'https://i.imgur.com/PzwThBo.png'
         randomNum = random.randrange(1, 2)
         urlF = urlBase+str(randomNum)
         embed.set_image(url = urlF)
         #await message.delete()
         await message.channel.send( embed=embed)  
 
-    if ":icon_5:" in message.content:
+    if ":05:" in message.content:
         embed = discord.Embed(
         title='해당 기능은 Beta 버전 입니다.',
         description=f'{message.author.mention}님의 이모지 크기를 \n\n강제로 확대했습니다.',
 
         )
 
-        urlBase = 'https://i.imgur.com/ERLeNp1.png'
+        urlBase = 'https://i.imgur.com/bDvCKcC.png'
+        randomNum = random.randrange(1, 2)
+        urlF = urlBase+str(randomNum)
+        embed.set_image(url = urlF)
+        #await message.delete()     
+        await message.channel.send( embed=embed)  
+
+    if ":06:" in message.content:
+        embed = discord.Embed(
+        title='해당 기능은 Beta 버전 입니다.',
+        description=f'{message.author.mention}님의 이모지 크기를 \n\n강제로 확대했습니다.',
+
+        )
+
+        urlBase = 'https://i.imgur.com/VPusR3u.png'
         randomNum = random.randrange(1, 2)
         urlF = urlBase+str(randomNum)
         embed.set_image(url = urlF)
         #await message.delete()     
         await message.channel.send( embed=embed)      
 
-    if ":icon_7:" in message.content:
+    if ":07:" in message.content:
         embed = discord.Embed(
         title='해당 기능은 Beta 버전 입니다.',
         description=f'{message.author.mention}님의 이모지 크기를 \n\n강제로 확대했습니다.',
 
         )
 
-        urlBase = 'https://i.imgur.com/jjeiXSE.png'
+        urlBase = 'https://i.imgur.com/e1zqgdO.png'
         randomNum = random.randrange(1, 2)
         urlF = urlBase+str(randomNum)
         embed.set_image(url = urlF)
         #await message.delete()     
         await message.channel.send( embed=embed)  
 
-    if ":icon_8:" in message.content:
+    if ":08:" in message.content:
         embed = discord.Embed(
         title='해당 기능은 Beta 버전 입니다.',
         description=f'{message.author.mention}님의 이모지 크기를 \n\n강제로 확대했습니다.',
 
         )
 
-        urlBase = 'https://i.imgur.com/YJUzeVA.png'
+        urlBase = 'https://i.imgur.com/7UlfZbz.png'
         randomNum = random.randrange(1, 2)
         urlF = urlBase+str(randomNum)
         embed.set_image(url = urlF)
         #await message.delete()     
         await message.channel.send( embed=embed)  
 
-    if ":icon_9:" in message.content:
+    if ":09:" in message.content:
         embed = discord.Embed(
         title='해당 기능은 Beta 버전 입니다.',
         description=f'{message.author.mention}님의 이모지 크기를 \n\n강제로 확대했습니다.',
 
         )
 
-        urlBase = 'https://i.imgur.com/S6HkKbz.png'
+        urlBase = 'https://i.imgur.com/EwgIbSk.png'
         randomNum = random.randrange(1, 2)
         urlF = urlBase+str(randomNum)
         embed.set_image(url = urlF)
         #await message.delete()     
         await message.channel.send( embed=embed)  
 
-    if ":icon_10:" in message.content:
+    if ":10:" in message.content:
         embed = discord.Embed(
         title='해당 기능은 Beta 버전 입니다.',
         description=f'{message.author.mention}님의 이모지 크기를 \n\n강제로 확대했습니다.',
 
         )
 
-        urlBase = 'https://i.imgur.com/qVA6csH.png'
+        urlBase = 'https://i.imgur.com/biIJH99.png'
         randomNum = random.randrange(1, 2)
         urlF = urlBase+str(randomNum)
         embed.set_image(url = urlF)
         #await message.delete()     
         await message.channel.send( embed=embed) 
 
-    if ":icon_11:" in message.content:
+    if ":11:" in message.content:
         embed = discord.Embed(
         title='해당 기능은 Beta 버전 입니다.',
         description=f'{message.author.mention}님의 이모지 크기를 \n\n강제로 확대했습니다.',
 
         )
 
-        urlBase = 'https://i.imgur.com/sLu9ki5.png'
+        urlBase = 'https://i.imgur.com/gyePhJr.png'
         randomNum = random.randrange(1, 2)
         urlF = urlBase+str(randomNum)
         embed.set_image(url = urlF)
         #await message.delete()     
         await message.channel.send( embed=embed)      
 
-    if ":icon_12:" in message.content:
+    if ":12:" in message.content:
         embed = discord.Embed(
         title='해당 기능은 Beta 버전 입니다.',
         description=f'{message.author.mention}님의 이모지 크기를 \n\n강제로 확대했습니다.',
 
         )
 
-        urlBase = 'https://i.imgur.com/n25HQUK.png'
+        urlBase = 'https://i.imgur.com/ZlzXREI.png'
         randomNum = random.randrange(1, 2)
         urlF = urlBase+str(randomNum)
         embed.set_image(url = urlF)
         #await message.delete()     
         await message.channel.send( embed=embed)  
 
-    if ":icon_13:" in message.content:
+    if ":13:" in message.content:
         embed = discord.Embed(
         title='해당 기능은 Beta 버전 입니다.',
         description=f'{message.author.mention}님의 이모지 크기를 \n\n강제로 확대했습니다.',
 
         )
 
-        urlBase = 'https://i.imgur.com/fyhOFxr.png'
+        urlBase = 'https://i.imgur.com/okCxfKw.png'
         randomNum = random.randrange(1, 2)
         urlF = urlBase+str(randomNum)
         embed.set_image(url = urlF)
         #await message.delete()     
         await message.channel.send( embed=embed)  
 
-    if ":icon_14:" in message.content:
+    if ":14:" in message.content:
         embed = discord.Embed(
         title='해당 기능은 Beta 버전 입니다.',
         description=f'{message.author.mention}님의 이모지 크기를 \n\n강제로 확대했습니다.',
 
         )
 
-        urlBase = 'https://i.imgur.com/htfOM56.png'
+        urlBase = 'https://i.imgur.com/iKktYRc.png'
         randomNum = random.randrange(1, 2)
         urlF = urlBase+str(randomNum)
         embed.set_image(url = urlF)
         #await message.delete()     
         await message.channel.send( embed=embed)  
 
-    if ":icon_15:" in message.content:
+    if ":15:" in message.content:
         embed = discord.Embed(
         title='해당 기능은 Beta 버전 입니다.',
         description=f'{message.author.mention}님의 이모지 크기를 \n\n강제로 확대했습니다.',
 
         )
 
-        urlBase = 'https://i.imgur.com/9vwPHYX.png'
+        urlBase = 'https://i.imgur.com/NfpVoVi.png'
         randomNum = random.randrange(1, 2)
         urlF = urlBase+str(randomNum)
         embed.set_image(url = urlF)
         #await message.delete()     
         await message.channel.send( embed=embed) 
 
-    if ":icon_16:" in message.content:
+    if ":16:" in message.content:
         embed = discord.Embed(
         title='해당 기능은 Beta 버전 입니다.',
         description=f'{message.author.mention}님의 이모지 크기를 \n\n강제로 확대했습니다.',
 
         )
 
-        urlBase = 'https://i.imgur.com/9MvaYp1.png'
+        urlBase = 'https://i.imgur.com/thA8iNJ.png'
         randomNum = random.randrange(1, 2)
         urlF = urlBase+str(randomNum)
         embed.set_image(url = urlF)
         #await message.delete()     
         await message.channel.send( embed=embed)      
 
-    if ":icon_17:" in message.content:
+    if ":17:" in message.content:
         embed = discord.Embed(
         title='해당 기능은 Beta 버전 입니다.',
         description=f'{message.author.mention}님의 이모지 크기를 \n\n강제로 확대했습니다.',
 
         )
 
-        urlBase = 'https://i.imgur.com/n7EowjH.png'
+        urlBase = 'https://i.imgur.com/2afn6NY.png'
         randomNum = random.randrange(1, 2)
         urlF = urlBase+str(randomNum)
         embed.set_image(url = urlF)
         #await message.delete()     
         await message.channel.send( embed=embed)  
 
-    if ":icon_19:" in message.content:
+    if ":18:" in message.content:
         embed = discord.Embed(
         title='해당 기능은 Beta 버전 입니다.',
         description=f'{message.author.mention}님의 이모지 크기를 \n\n강제로 확대했습니다.',
 
         )
 
-        urlBase = 'https://i.imgur.com/sVHogho.png'
+        urlBase = 'https://i.imgur.com/6dZaEcG.png'
         randomNum = random.randrange(1, 2)
         urlF = urlBase+str(randomNum)
         embed.set_image(url = urlF)
         #await message.delete()     
         await message.channel.send( embed=embed)  
 
-    if ":icon_20:" in message.content:
+    if ":19:" in message.content:
         embed = discord.Embed(
         title='해당 기능은 Beta 버전 입니다.',
         description=f'{message.author.mention}님의 이모지 크기를 \n\n강제로 확대했습니다.',
 
         )
 
-        urlBase = 'https://i.imgur.com/6S5ZFbo.png'
+        urlBase = 'https://i.imgur.com/tjp1ces.png'
+        randomNum = random.randrange(1, 2)
+        urlF = urlBase+str(randomNum)
+        embed.set_image(url = urlF)
+        #await message.delete()     
+        await message.channel.send( embed=embed)  
+
+    if ":20:" in message.content:
+        embed = discord.Embed(
+        title='해당 기능은 Beta 버전 입니다.',
+        description=f'{message.author.mention}님의 이모지 크기를 \n\n강제로 확대했습니다.',
+
+        )
+
+        urlBase = 'https://i.imgur.com/N7H3IN5.png'
         randomNum = random.randrange(1, 2)
         urlF = urlBase+str(randomNum)
         embed.set_image(url = urlF)
         #await message.delete()     
         await message.channel.send( embed=embed) 
 
-    if ":icon_21:" in message.content:
+    if ":21:" in message.content:
         embed = discord.Embed(
         title='해당 기능은 Beta 버전 입니다.',
         description=f'{message.author.mention}님의 이모지 크기를 \n\n강제로 확대했습니다.',
 
         )
 
-        urlBase = 'https://i.imgur.com/sEAIl7x.png'
+        urlBase = 'https://i.imgur.com/npCQgc9.png'
         randomNum = random.randrange(1, 2)
         urlF = urlBase+str(randomNum)
         embed.set_image(url = urlF)
         #await message.delete()     
         await message.channel.send( embed=embed) 
 
-    if ":icon_22:" in message.content:
+    if ":22:" in message.content:
         embed = discord.Embed(
         title='해당 기능은 Beta 버전 입니다.',
         description=f'{message.author.mention}님의 이모지 크기를 \n\n강제로 확대했습니다.',
 
         )
 
-        urlBase = 'https://i.imgur.com/PS9zJx6.png'
+        urlBase = 'https://i.imgur.com/vnGfnPf.png'
         randomNum = random.randrange(1, 2)
         urlF = urlBase+str(randomNum)
         embed.set_image(url = urlF)
         #await message.delete()     
         await message.channel.send( embed=embed) 
 
-    if ":icon_23:" in message.content:
+    if ":23:" in message.content:
         embed = discord.Embed(
         title='해당 기능은 Beta 버전 입니다.',
         description=f'{message.author.mention}님의 이모지 크기를 \n\n강제로 확대했습니다.',
 
         )
 
-        urlBase = 'https://i.imgur.com/ariWcgF.png'
+        urlBase = 'https://i.imgur.com/F9D06cX.png'
         randomNum = random.randrange(1, 2)
         urlF = urlBase+str(randomNum)
         embed.set_image(url = urlF)
         #await message.delete()     
         await message.channel.send( embed=embed)     
 
-    if ":icon_24:" in message.content:
+    if ":24:" in message.content:
         embed = discord.Embed(
         title='해당 기능은 Beta 버전 입니다.',
         description=f'{message.author.mention}님의 이모지 크기를 \n\n강제로 확대했습니다.',
 
         )
 
-        urlBase = 'https://i.imgur.com/K9cCKne.png'
+        urlBase = 'https://i.imgur.com/HaoReRY.png'
         randomNum = random.randrange(1, 2)
         urlF = urlBase+str(randomNum)
         embed.set_image(url = urlF)
         #await message.delete()     
         await message.channel.send( embed=embed)  
 
-    if ":icon_25:" in message.content:
+    if ":25:" in message.content:
         embed = discord.Embed(
         title='해당 기능은 Beta 버전 입니다.',
         description=f'{message.author.mention}님의 이모지 크기를 \n\n강제로 확대했습니다.',
 
         )
 
-        urlBase = 'https://i.imgur.com/DgqSJKx.png'
+        urlBase = 'https://i.imgur..com/vt1Q6RD.png'
         randomNum = random.randrange(1, 2)
         urlF = urlBase+str(randomNum)
         embed.set_image(url = urlF)
         #await message.delete()     
         await message.channel.send( embed=embed)  
 
-    if ":icon_26:" in message.content:
+    if ":26:" in message.content:
         embed = discord.Embed(
         title='해당 기능은 Beta 버전 입니다.',
         description=f'{message.author.mention}님의 이모지 크기를 \n\n강제로 확대했습니다.',
 
         )
 
-        urlBase = 'https://i.imgur.com/sqeX8zl.png'
+        urlBase = 'https://i.imgur.com/Q4sKIfP.png'
         randomNum = random.randrange(1, 2)
         urlF = urlBase+str(randomNum)
         embed.set_image(url = urlF)
         #await message.delete()     
         await message.channel.send( embed=embed)  
 
-    if ":icon_27:" in message.content:
+    if ":27:" in message.content:
         embed = discord.Embed(
         title='해당 기능은 Beta 버전 입니다.',
         description=f'{message.author.mention}님의 이모지 크기를 \n\n강제로 확대했습니다.',
 
         )
 
-        urlBase = 'https://i.imgur.com/ZTVI6jB.png'
+        urlBase = 'https://i.imgur.com/V8oqrZB.png'
         randomNum = random.randrange(1, 2)
         urlF = urlBase+str(randomNum)
         embed.set_image(url = urlF)
         #await message.delete()     
         await message.channel.send( embed=embed)  
 
-    if ":icon_28:" in message.content:
+    if ":28:" in message.content:
         embed = discord.Embed(
         title='해당 기능은 Beta 버전 입니다.',
         description=f'{message.author.mention}님의 이모지 크기를 \n\n강제로 확대했습니다.',
 
         )
 
-        urlBase = 'https://i.imgur.com/IqIomZL.png'
+        urlBase = 'https://i.imgur.com/8jNSKlD.png'
         randomNum = random.randrange(1, 2)
         urlF = urlBase+str(randomNum)
         embed.set_image(url = urlF)
         #await message.delete()     
         await message.channel.send( embed=embed)   
 
-    if ":icon_29:" in message.content:
+    if ":29:" in message.content:
         embed = discord.Embed(
         title='해당 기능은 Beta 버전 입니다.',
         description=f'{message.author.mention}님의 이모지 크기를 \n\n강제로 확대했습니다.',
 
         )
 
-        urlBase = 'https://i.imgur.com/FTBVFKT.png'
+        urlBase = 'https://i.imgur.com/SWW5313.png'
         randomNum = random.randrange(1, 2)
         urlF = urlBase+str(randomNum)
         embed.set_image(url = urlF)
         #await message.delete()     
         await message.channel.send( embed=embed)  
 
-    if ":icon_30:" in message.content:
+    if ":30:" in message.content:
         embed = discord.Embed(
         title='해당 기능은 Beta 버전 입니다.',
         description=f'{message.author.mention}님의 이모지 크기를 \n\n강제로 확대했습니다.',
 
         )
 
-        urlBase = 'https://i.imgur.com/ydK7RL5.png'
+        urlBase = 'https://i.imgur.com/fdBrLKw.png'
         randomNum = random.randrange(1, 2)
         urlF = urlBase+str(randomNum)
         embed.set_image(url = urlF)
         #await message.delete()     
         await message.channel.send( embed=embed)  
 
-    if ":icon_31:" in message.content:
+    if ":31:" in message.content:
         embed = discord.Embed(
         title='해당 기능은 Beta 버전 입니다.',
         description=f'{message.author.mention}님의 이모지 크기를 \n\n강제로 확대했습니다.',
 
         )
 
-        urlBase = 'https://i.imgur.com/qvpoLRz.png'
+        urlBase = 'https://i.imgur.com/am84lo6.png'
         randomNum = random.randrange(1, 2)
         urlF = urlBase+str(randomNum)
         embed.set_image(url = urlF)
         #await message.delete()     
         await message.channel.send( embed=embed)      
 
-    if ":icon_32:" in message.content:
+    if ":32:" in message.content:
         embed = discord.Embed(
         title='해당 기능은 Beta 버전 입니다.',
         description=f'{message.author.mention}님의 이모지 크기를 \n\n강제로 확대했습니다.',
 
         )
 
-        urlBase = 'https://i.imgur.com/kqiyvgZ.png'
+        urlBase = 'https://i.imgur.com/T1F1AFH.png'
         randomNum = random.randrange(1, 2)
         urlF = urlBase+str(randomNum)
         embed.set_image(url = urlF)
         #await message.delete()     
         await message.channel.send( embed=embed)  
 
-    if ":icon_33:" in message.content:
+    if ":33:" in message.content:
         embed = discord.Embed(
         title='해당 기능은 Beta 버전 입니다.',
         description=f'{message.author.mention}님의 이모지 크기를 \n\n강제로 확대했습니다.',
 
         )
 
-        urlBase = 'https://i.imgur.com/a4NegUS.png'
+        urlBase = 'https://i.imgur.com/P1eW1Fv.png'
         randomNum = random.randrange(1, 2)
         urlF = urlBase+str(randomNum)
         embed.set_image(url = urlF)
         #await message.delete()     
         await message.channel.send( embed=embed)  
 
-    if ":icon_34:" in message.content:
+    if ":34:" in message.content:
         embed = discord.Embed(
         title='해당 기능은 Beta 버전 입니다.',
         description=f'{message.author.mention}님의 이모지 크기를 \n\n강제로 확대했습니다.',
 
         )
 
-        urlBase = 'https://i.imgur.com/1ro8ZZK.png'
+        urlBase = 'https://i.imgur.com/ddlUmB6.png'
         randomNum = random.randrange(1, 2)
         urlF = urlBase+str(randomNum)
         embed.set_image(url = urlF)
         #await message.delete()     
         await message.channel.send( embed=embed)  
 
-    if ":icon_35:" in message.content:
+    if ":35:" in message.content:
         embed = discord.Embed(
         title='해당 기능은 Beta 버전 입니다.',
         description=f'{message.author.mention}님의 이모지 크기를 \n\n강제로 확대했습니다.',
 
         )
 
-        urlBase = 'https://i.imgur.com/GqQtTKN.png'
+        urlBase = 'https://i.imgur.com/JETBDDo.png'
+        randomNum = random.randrange(1, 2)
+        urlF = urlBase+str(randomNum)
+        embed.set_image(url = urlF)
+        #await message.delete()     
+        await message.channel.send( embed=embed)  
+
+    if ":36:" in message.content:
+        embed = discord.Embed(
+        title='해당 기능은 Beta 버전 입니다.',
+        description=f'{message.author.mention}님의 이모지 크기를 \n\n강제로 확대했습니다.',
+
+        )
+
+        urlBase = 'https://i.imgur.com/mtgJRPI.png'
         randomNum = random.randrange(1, 2)
         urlF = urlBase+str(randomNum)
         embed.set_image(url = urlF)
         #await message.delete()     
         await message.channel.send( embed=embed)      
 
-    if ":icon_37:" in message.content:
+    if ":37:" in message.content:
         embed = discord.Embed(
         title='해당 기능은 Beta 버전 입니다.',
         description=f'{message.author.mention}님의 이모지 크기를 \n\n강제로 확대했습니다.',
 
         )
 
-        urlBase = 'https://i.imgur.com/uzMTcjd.png'
+        urlBase = 'https://i.imgur.com/ZCE00xe.png'
         randomNum = random.randrange(1, 2)
         urlF = urlBase+str(randomNum)
         embed.set_image(url = urlF)
         #await message.delete()     
         await message.channel.send( embed=embed)  
 
-    if ":icon_39:" in message.content:
+    if ":38:" in message.content:
         embed = discord.Embed(
         title='해당 기능은 Beta 버전 입니다.',
         description=f'{message.author.mention}님의 이모지 크기를 \n\n강제로 확대했습니다.',
 
         )
 
-        urlBase = 'https://i.imgur.com/WMBuYsY.png'
+        urlBase = 'https://i.imgur.com/zsd6Zxf.png'
         randomNum = random.randrange(1, 2)
         urlF = urlBase+str(randomNum)
         embed.set_image(url = urlF)
         #await message.delete()     
         await message.channel.send( embed=embed)  
 
-    if ":icon_40:" in message.content:
+    if ":39:" in message.content:
         embed = discord.Embed(
         title='해당 기능은 Beta 버전 입니다.',
         description=f'{message.author.mention}님의 이모지 크기를 \n\n강제로 확대했습니다.',
 
         )
 
-        urlBase = 'https://i.imgur.com/RMieIGT.png'
+        urlBase = 'https://i.imgur.com/0PnFdno.png'
+        randomNum = random.randrange(1, 2)
+        urlF = urlBase+str(randomNum)
+        embed.set_image(url = urlF)
+        #await message.delete()     
+        await message.channel.send( embed=embed)  
+
+    if ":40:" in message.content:
+        embed = discord.Embed(
+        title='해당 기능은 Beta 버전 입니다.',
+        description=f'{message.author.mention}님의 이모지 크기를 \n\n강제로 확대했습니다.',
+
+        )
+
+        urlBase = 'https://i.imgur.com/Wf1J7Ur.png'
         randomNum = random.randrange(1, 2)
         urlF = urlBase+str(randomNum)
         embed.set_image(url = urlF)
         #await message.delete()     
         await message.channel.send( embed=embed) 
-
-    if ":icon_41:" in message.content:
-        embed = discord.Embed(
-        title='해당 기능은 Beta 버전 입니다.',
-        description=f'{message.author.mention}님의 이모지 크기를 \n\n강제로 확대했습니다.',
-
-        )
-
-        urlBase = 'https://i.imgur.com/tQllktn.png'
-        randomNum = random.randrange(1, 2)
-        urlF = urlBase+str(randomNum)
-        embed.set_image(url = urlF)
-        #await message.delete()     
-        await message.channel.send( embed=embed) 
-
-    if ":icon_42:" in message.content:
-        embed = discord.Embed(
-        title='해당 기능은 Beta 버전 입니다.',
-        description=f'{message.author.mention}님의 이모지 크기를 \n\n강제로 확대했습니다.',
-
-        )
-
-        urlBase = 'https://i.imgur.com/Vgu6Ooj.png'
-        randomNum = random.randrange(1, 2)
-        urlF = urlBase+str(randomNum)
-        embed.set_image(url = urlF)
-        #await message.delete()     
-        await message.channel.send( embed=embed) 
-
-    if ":icon_45:" in message.content:
-        embed = discord.Embed(
-        title='해당 기능은 Beta 버전 입니다.',
-        description=f'{message.author.mention}님의 이모지 크기를 \n\n강제로 확대했습니다.',
-
-        )
-
-        urlBase = 'https://i.imgur.com/5yTKvhe.png'
-        randomNum = random.randrange(1, 2)
-        urlF = urlBase+str(randomNum)
-        embed.set_image(url = urlF)
-        #await message.delete()     
-        await message.channel.send( embed=embed)   
-
-    if ":icon_46:" in message.content:
-        embed = discord.Embed(
-        title='해당 기능은 Beta 버전 입니다.',
-        description=f'{message.author.mention}님의 이모지 크기를 \n\n강제로 확대했습니다.',
-
-        )
-
-        urlBase = 'https://i.imgur.com/42UHuDt.png'
-        randomNum = random.randrange(1, 2)
-        urlF = urlBase+str(randomNum)
-        embed.set_image(url = urlF)
-        #await message.delete()     
-        await message.channel.send( embed=embed)    
-
-    if ":icon_47:" in message.content:
-        embed = discord.Embed(
-        title='해당 기능은 Beta 버전 입니다.',
-        description=f'{message.author.mention}님의 이모지 크기를 \n\n강제로 확대했습니다.',
-
-        )
-
-        urlBase = 'https://i.imgur.com/T5yKGx1.png'
-        randomNum = random.randrange(1, 2)
-        urlF = urlBase+str(randomNum)
-        embed.set_image(url = urlF)
-        #await message.delete()     
-        await message.channel.send( embed=embed)
-
-    if ":icon_48:" in message.content:
-        embed = discord.Embed(
-        title='해당 기능은 Beta 버전 입니다.',
-        description=f'{message.author.mention}님의 이모지 크기를 \n\n강제로 확대했습니다.',
-
-        )
-
-        urlBase = 'https://i.imgur.com/DDApXZM.png'
-        randomNum = random.randrange(1, 2)
-        urlF = urlBase+str(randomNum)
-        embed.set_image(url = urlF)
-        #await message.delete()     
-        await message.channel.send( embed=embed)
      
 #창조주, 창조물에 대한 정보를 불러옴. / 2023.08.17 수정  
  
@@ -1256,170 +1228,6 @@ async def on_message(message):
             await message.channel.send(embed=discord.Embed(title="오늘은 플레이해도 좋습니다. 최고의 피지컬을 뽐내보세요.", color=0x00ff00))
         if randomNum==2:
             await message.channel.send(embed=discord.Embed(title="오늘만큼은 플레이하면 후회하실겁니다. 컨디션 최악으로 보입니다만.. 그래도 돌리시겠다면 어쩔수 없죠.", color=0x00ff00))               
-         
-#사용자들이 자주 언급한 대통령 키워드에 반응함 (노 전 대통령, 문 전 대통령, 이재명 의원) (개선된 버전 / 기존 버전은 유지보수하기 힘드므로, 약간의 개선된 코드를 추가함.) / 2023.10.29 수정 
-
-    for pattern in president_patterns01:
-        if pattern.search(message.content):
-            embed = discord.Embed(
-                title='이 분은 대한민국의 위대한 역대 대통령 중 한분입니다.',
-                description='이 분에 대한 비난, 비판적인 채팅을 작성할 경우 제재를 받을 수 있습니다.'
-            )
-
-            urlBase = 'https://i.imgur.com/MIhVYtv.jpeg'
-            randomNum = random.randrange(1, 2)
-            urlF = urlBase + str(randomNum)
-            embed.set_image(url=urlF)
-            await message.channel.send(embed=embed)
-            return       
-
-    for pattern in president_patterns02:
-        if pattern.search(message.content):
-            embed = discord.Embed(
-                title='이 분은 대한민국의 위대한 역대 대통령이자 원조 재앙입니다.',
-                description='이 분에 대한 비난, 비판적인 채팅을 작성할 경우 제재를 받을 수 있습니다.'
-            )
-
-            urlBase = 'https://i.imgur.com/ijmIIlA.jpeg'
-            randomNum = random.randrange(1, 2)
-            urlF = urlBase + str(randomNum)
-            embed.set_image(url=urlF)
-            await message.channel.send(embed=embed)
-            return   
-
-    for pattern in president_patterns03:
-        if pattern.search(message.content):
-            embed = discord.Embed(
-                title='이 분은 대한민국의 진정한 제 20대 대통령이십니다. 부정선거의 희생양이시죠.',
-                description='이 분에 대한 비난, 비판적인 채팅을 작성할 경우 제재를 받을 수 있습니다.'
-            )
-
-            urlBase = 'https://i.imgur.com/AVKFarD.jpeg'
-            randomNum = random.randrange(1, 2)
-            urlF = urlBase + str(randomNum)
-            embed.set_image(url=urlF)
-            await message.channel.send(embed=embed)
-            return   
-
-    for pattern in president_patterns04:
-        if pattern.search(message.content):
-            embed = discord.Embed(
-                title='이 분은 대한민국의 제 20대 대통령이십니다. 대통령이 되기위해 부정부패를 일삼았습니다.',
-                description='이 분에 대한 칭찬, 옹호적인 채팅을 작성할 경우 제재를 받을 수 있습니다.'
-            )
-
-            urlBase = 'https://i.imgur.com/RYfUxEO.png'
-            randomNum = random.randrange(1, 2)
-            urlF = urlBase + str(randomNum)
-            embed.set_image(url=urlF)
-            await message.channel.send(embed=embed)
-            return 
-         
-#사용자들이 자주 언급한 대통령 키워드에 반응함 (노 전 대통령, 문 전 대통령, 이재명 의원) / 2023.10.29 수정   
-       
-    if "재인" in message.content:          
-         embed = discord.Embed(
-         title='이 분은 대한민국의 위대한 역대 대통령 중 한분입니다.',
-         description='이 분에 대한 비난, 비판적인 채팅을 작성할 경우 제재를 받을수 있습니다.',
-
-        )
-
-         urlBase = 'https://i.imgur.com/MIhVYtv.jpeg'
-         randomNum = random.randrange(1, 2)
-         urlF = urlBase+str(randomNum)
-         embed.set_image(url = urlF)
-         await message.channel.send( embed=embed)        
-       
-    if "재앙" in message.content:          
-         embed = discord.Embed(
-         title='이 분은 대한민국의 위대한 역대 대통령 중 한분입니다.',
-         description='이 분에 대한 비난, 비판적인 채팅을 작성할 경우 제재를 받을수 있습니다.',
-
-        )
-
-         urlBase = 'https://i.imgur.com/MIhVYtv.jpeg'
-         randomNum = random.randrange(1, 2)
-         urlF = urlBase+str(randomNum)
-         embed.set_image(url = urlF)
-         await message.channel.send( embed=embed)  
-     
-    if "무현" in message.content:
-        embed = discord.Embed(
-        title='이 분은 대한민국의 위대한 역대 대통령이자 원조 재앙입니다.',
-        description='이 분에 대한 비난, 비판적인 채팅을 작성할 경우 제재를 받을수 있습니다.',
-
-        )
-
-        urlBase = 'https://i.imgur.com/ijmIIlA.jpeg'
-        randomNum = random.randrange(1, 2)
-        urlF = urlBase+str(randomNum)
-        embed.set_image(url = urlF)
-        await message.channel.send( embed=embed)   
-
-    if "재명" in message.content:
-        embed = discord.Embed(
-        title='이 분은 대한민국의 진정한 제 20대 대통령이십니다. 부정선거의 희생양이시죠.',
-        description='이 분에 대한 비난, 비판적인 채팅을 작성할 경우 제재를 받을수 있습니다.',
-
-        )
-
-        urlBase = 'https://i.imgur.com/AVKFarD.jpeg'
-        randomNum = random.randrange(1, 2)
-        urlF = urlBase+str(randomNum)
-        embed.set_image(url = urlF)
-        await message.channel.send( embed=embed)       
-
-    if "석열" in message.content:
-        embed = discord.Embed(
-        title='이 분은 대한민국의 제 20대 대통령이십니다. 대통령이 되기위해 부정부패를 일삼았습니다.',
-        description='이 분에 대한 칭찬, 옹호적인 채팅을 작성할 경우 제재를 받을 수 있습니다.',
-
-        )
-
-        urlBase = 'https://i.imgur.com/RYfUxEO.png'
-        randomNum = random.randrange(1, 2)
-        urlF = urlBase+str(randomNum)
-        embed.set_image(url = urlF)
-        await message.channel.send( embed=embed)   
-
-    if "석렬" in message.content:
-        embed = discord.Embed(
-        title='이 분은 대한민국의 제 20대 대통령이십니다. 대통령이 되기위해 부정부패를 일삼았습니다.',
-        description='이 분에 대한 칭찬, 옹호적인 채팅을 작성할 경우 제재를 받을 수 있습니다.',
-
-        )
-
-        urlBase = 'https://i.imgur.com/RYfUxEO.png'
-        randomNum = random.randrange(1, 2)
-        urlF = urlBase+str(randomNum)
-        embed.set_image(url = urlF)
-        await message.channel.send( embed=embed)   
-
-    if "두창" in message.content:
-        embed = discord.Embed(
-        title='이 분은 대한민국의 제 20대 대통령이십니다. 대통령이 되기위해 부정부패를 일삼았습니다.',
-        description='이 분에 대한 칭찬, 옹호적인 채팅을 작성할 경우 제재를 받을 수 있습니다.',
-
-        )
-
-        urlBase = 'https://i.imgur.com/RYfUxEO.png'
-        randomNum = random.randrange(1, 2)
-        urlF = urlBase+str(randomNum)
-        embed.set_image(url = urlF)
-        await message.channel.send( embed=embed)   
-
-    if "굥" in message.content:
-        embed = discord.Embed(
-        title='이 분은 대한민국의 제 20대 대통령이십니다. 대통령이 되기위해 부정부패를 일삼았습니다.',
-        description='이 분에 대한 칭찬, 옹호적인 채팅을 작성할 경우 제재를 받을 수 있습니다.',
-
-        )
-
-        urlBase = 'https://i.imgur.com/RYfUxEO.png'
-        randomNum = random.randrange(1, 2)
-        urlF = urlBase+str(randomNum)
-        embed.set_image(url = urlF)
-        await message.channel.send( embed=embed)  
      
 #욕설을 제재함. (개선된 버전 / 기존 버전은 유지보수하기 힘드므로, 약간의 개선된 코드를 추가함.) / 2023.10.29 수정 
 
