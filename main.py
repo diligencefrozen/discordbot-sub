@@ -232,580 +232,458 @@ async def on_message(message):
         embed.add_field(name ='=채팅분석', value = "디스코드 서버 내에서 가장 많은 채팅이 작성된 날짜들의 순위가 궁금하신가요?",inline = False) 
         await message.channel.send(channel,embed=embed)
      
-#이모지 크기를 늘려줍니다. / 2024.03.23 수정  
-
+#이모지 크기를 늘려줍니다. / 2024.05.15 수정  
+     
     if ":dccon:" in message.content:
         embed = discord.Embed(
-        title='이모지 크기를 강제로 확대했습니다.',
-        description='해당 기능은 Beta 버전 입니다.',
-
+            title='해당 기능은 Beta 버전입니다.',
+            description=f'{message.author.mention}님이 사용하신 이모지를 확대하였습니다.',
+            color=0x3498db  # 파란색
         )
+        embed.set_image(url='https://i.imgur.com/kJDrG0s.png')
+        embed.set_footer(text="도리봇", icon_url="https://i.imgur.com/Ny6e2BS.jpeg")
+        await message.channel.send(embed=embed)
+        return 
 
-        urlBase = 'https://i.imgur.com/kJDrG0s.png'
-        randomNum = random.randrange(1, 2)
-        urlF = urlBase+str(randomNum)
-        embed.set_image(url = urlF)
-        await message.channel.send( embed=embed)  
-
-    if ":01:" in message.content:     
+    if ":01:" in message.content:
         embed = discord.Embed(
-        title='해당 기능은 Beta 버전 입니다.',
-        description=f'{message.author.mention}님의 이모지 크기를 \n\n강제로 확대했습니다.',
-
+            title='해당 기능은 Beta 버전입니다.',
+            description=f'{message.author.mention}님이 사용하신 이모지를 확대하였습니다.',
+            color=0x3498db  # 파란색
         )
-
-        urlBase = 'https://i.imgur.com/WX2l0uU.png'
-        randomNum = random.randrange(1, 2)
-        urlF = urlBase+str(randomNum)
-        embed.set_image(url = urlF)
-        #await message.delete()
-        await message.channel.send( embed=embed)      
+        embed.set_image(url='https://i.imgur.com/WX2l0uU.png')
+        embed.set_footer(text="도리봇", icon_url="https://i.imgur.com/Ny6e2BS.jpeg")
+        await message.channel.send(embed=embed)
+        return    
 
     if ":02:" in message.content:
         embed = discord.Embed(
-        title='해당 기능은 Beta 버전 입니다.',
-        description=f'{message.author.mention}님의 이모지 크기를 \n\n강제로 확대했습니다.',
-
+            title='해당 기능은 Beta 버전입니다.',
+            description=f'{message.author.mention}님이 사용하신 이모지를 확대하였습니다.',
+            color=0x3498db  # 파란색
         )
-
-        urlBase = 'https://i.imgur.com/1r3hhVb.png'
-        randomNum = random.randrange(1, 2)
-        urlF = urlBase+str(randomNum)
-        embed.set_image(url = urlF)
-        #await message.delete()
-        await message.channel.send( embed=embed)  
+        embed.set_image(url='https://i.imgur.com/1r3hhVb.png')
+        embed.set_footer(text="도리봇", icon_url="https://i.imgur.com/Ny6e2BS.jpeg")
+        await message.channel.send(embed=embed)
+        return
 
     if ":03:" in message.content:
         embed = discord.Embed(
-        title='해당 기능은 Beta 버전 입니다.',
-        description=f'{message.author.mention}님의 이모지 크기를 \n\n강제로 확대했습니다.',
-
+            title='해당 기능은 Beta 버전입니다.',
+            description=f'{message.author.mention}님이 사용하신 이모지를 확대하였습니다.',
+            color=0x3498db  # 파란색
         )
-
-        urlBase = 'https://i.imgur.com/NPIbOLd.png'
-        randomNum = random.randrange(1, 2)
-        urlF = urlBase+str(randomNum)
-        embed.set_image(url = urlF)
-        #await message.delete()
-        await message.channel.send( embed=embed)  
+        embed.set_image(url='https://i.imgur.com/NPIbOLd.png')
+        embed.set_footer(text="도리봇", icon_url="https://i.imgur.com/Ny6e2BS.jpeg")
+        await message.channel.send(embed=embed)
+        return
 
     if ":04:" in message.content:
         embed = discord.Embed(
-        title='해당 기능은 Beta 버전 입니다.',
-        description=f'{message.author.mention}님의 이모지 크기를 \n\n강제로 확대했습니다.',
-
+            title='해당 기능은 Beta 버전입니다.',
+            description=f'{message.author.mention}님이 사용하신 이모지를 확대하였습니다.',
+            color=0x3498db  # 파란색
         )
-
-        urlBase = 'https://i.imgur.com/PzwThBo.png'
-        randomNum = random.randrange(1, 2)
-        urlF = urlBase+str(randomNum)
-        embed.set_image(url = urlF)
-        #await message.delete()
-        await message.channel.send( embed=embed)  
+        embed.set_image(url='https://i.imgur.com/PzwThBo.png')
+        embed.set_footer(text="도리봇", icon_url="https://i.imgur.com/Ny6e2BS.jpeg")
+        await message.channel.send(embed=embed)
+        return
 
     if ":05:" in message.content:
         embed = discord.Embed(
-        title='해당 기능은 Beta 버전 입니다.',
-        description=f'{message.author.mention}님의 이모지 크기를 \n\n강제로 확대했습니다.',
-
+            title='해당 기능은 Beta 버전입니다.',
+            description=f'{message.author.mention}님이 사용하신 이모지를 확대하였습니다.',
+            color=0x3498db  # 파란색
         )
-
-        urlBase = 'https://i.imgur.com/bDvCKcC.png'
-        randomNum = random.randrange(1, 2)
-        urlF = urlBase+str(randomNum)
-        embed.set_image(url = urlF)
-        #await message.delete()     
-        await message.channel.send( embed=embed)  
+        embed.set_image(url='https://i.imgur.com/bDvCKcC.png')
+        embed.set_footer(text="도리봇", icon_url="https://i.imgur.com/Ny6e2BS.jpeg")
+        await message.channel.send(embed=embed)
+        return
 
     if ":06:" in message.content:
         embed = discord.Embed(
-        title='해당 기능은 Beta 버전 입니다.',
-        description=f'{message.author.mention}님의 이모지 크기를 \n\n강제로 확대했습니다.',
-
+            title='해당 기능은 Beta 버전입니다.',
+            description=f'{message.author.mention}님이 사용하신 이모지를 확대하였습니다.',
+            color=0x3498db  # 파란색
         )
-
-        urlBase = 'https://i.imgur.com/VPusR3u.png'
-        randomNum = random.randrange(1, 2)
-        urlF = urlBase+str(randomNum)
-        embed.set_image(url = urlF)
-        #await message.delete()     
-        await message.channel.send( embed=embed)      
+        embed.set_image(url='https://i.imgur.com/VPusR3u.png')
+        embed.set_footer(text="도리봇", icon_url="https://i.imgur.com/Ny6e2BS.jpeg")
+        await message.channel.send(embed=embed)
+        return   
 
     if ":07:" in message.content:
         embed = discord.Embed(
-        title='해당 기능은 Beta 버전 입니다.',
-        description=f'{message.author.mention}님의 이모지 크기를 \n\n강제로 확대했습니다.',
-
+            title='해당 기능은 Beta 버전입니다.',
+            description=f'{message.author.mention}님이 사용하신 이모지를 확대하였습니다.',
+            color=0x3498db  # 파란색
         )
-
-        urlBase = 'https://i.imgur.com/e1zqgdO.png'
-        randomNum = random.randrange(1, 2)
-        urlF = urlBase+str(randomNum)
-        embed.set_image(url = urlF)
-        #await message.delete()     
-        await message.channel.send( embed=embed)  
+        embed.set_image(url='https://i.imgur.com/e1zqgdO.png')
+        embed.set_footer(text="도리봇", icon_url="https://i.imgur.com/Ny6e2BS.jpeg")
+        await message.channel.send(embed=embed)
+        return
 
     if ":08:" in message.content:
         embed = discord.Embed(
-        title='해당 기능은 Beta 버전 입니다.',
-        description=f'{message.author.mention}님의 이모지 크기를 \n\n강제로 확대했습니다.',
-
+            title='해당 기능은 Beta 버전입니다.',
+            description=f'{message.author.mention}님이 사용하신 이모지를 확대하였습니다.',
+            color=0x3498db  # 파란색
         )
-
-        urlBase = 'https://i.imgur.com/7UlfZbz.png'
-        randomNum = random.randrange(1, 2)
-        urlF = urlBase+str(randomNum)
-        embed.set_image(url = urlF)
-        #await message.delete()     
-        await message.channel.send( embed=embed)  
+        embed.set_image(url='https://i.imgur.com/7UlfZbz.png')
+        embed.set_footer(text="도리봇", icon_url="https://i.imgur.com/Ny6e2BS.jpeg")
+        await message.channel.send(embed=embed)
+        return
 
     if ":09:" in message.content:
         embed = discord.Embed(
-        title='해당 기능은 Beta 버전 입니다.',
-        description=f'{message.author.mention}님의 이모지 크기를 \n\n강제로 확대했습니다.',
-
+            title='해당 기능은 Beta 버전입니다.',
+            description=f'{message.author.mention}님이 사용하신 이모지를 확대하였습니다.',
+            color=0x3498db  # 파란색
         )
-
-        urlBase = 'https://i.imgur.com/EwgIbSk.png'
-        randomNum = random.randrange(1, 2)
-        urlF = urlBase+str(randomNum)
-        embed.set_image(url = urlF)
-        #await message.delete()     
-        await message.channel.send( embed=embed)  
+        embed.set_image(url='https://i.imgur.com/EwgIbSk.png')
+        embed.set_footer(text="도리봇", icon_url="https://i.imgur.com/Ny6e2BS.jpeg")
+        await message.channel.send(embed=embed)
+        return
 
     if ":10:" in message.content:
         embed = discord.Embed(
-        title='해당 기능은 Beta 버전 입니다.',
-        description=f'{message.author.mention}님의 이모지 크기를 \n\n강제로 확대했습니다.',
-
+            title='해당 기능은 Beta 버전입니다.',
+            description=f'{message.author.mention}님이 사용하신 이모지를 확대하였습니다.',
+            color=0x3498db  # 파란색
         )
-
-        urlBase = 'https://i.imgur.com/biIJH99.png'
-        randomNum = random.randrange(1, 2)
-        urlF = urlBase+str(randomNum)
-        embed.set_image(url = urlF)
-        #await message.delete()     
-        await message.channel.send( embed=embed) 
+        embed.set_image(url='https://i.imgur.com/biIJH99.png')
+        embed.set_footer(text="도리봇", icon_url="https://i.imgur.com/Ny6e2BS.jpeg")
+        await message.channel.send(embed=embed)
+        return
 
     if ":11:" in message.content:
         embed = discord.Embed(
-        title='해당 기능은 Beta 버전 입니다.',
-        description=f'{message.author.mention}님의 이모지 크기를 \n\n강제로 확대했습니다.',
-
+            title='해당 기능은 Beta 버전입니다.',
+            description=f'{message.author.mention}님이 사용하신 이모지를 확대하였습니다.',
+            color=0x3498db  # 파란색
         )
-
-        urlBase = 'https://i.imgur.com/gyePhJr.png'
-        randomNum = random.randrange(1, 2)
-        urlF = urlBase+str(randomNum)
-        embed.set_image(url = urlF)
-        #await message.delete()     
-        await message.channel.send( embed=embed)      
+        embed.set_image(url='https://i.imgur.com/gyePhJr.png')
+        embed.set_footer(text="도리봇", icon_url="https://i.imgur.com/Ny6e2BS.jpeg")
+        await message.channel.send(embed=embed)
+        return     
 
     if ":12:" in message.content:
         embed = discord.Embed(
-        title='해당 기능은 Beta 버전 입니다.',
-        description=f'{message.author.mention}님의 이모지 크기를 \n\n강제로 확대했습니다.',
-
+            title='해당 기능은 Beta 버전입니다.',
+            description=f'{message.author.mention}님이 사용하신 이모지를 확대하였습니다.',
+            color=0x3498db  # 파란색
         )
-
-        urlBase = 'https://i.imgur.com/ZlzXREI.png'
-        randomNum = random.randrange(1, 2)
-        urlF = urlBase+str(randomNum)
-        embed.set_image(url = urlF)
-        #await message.delete()     
-        await message.channel.send( embed=embed)  
+        embed.set_image(url='https://i.imgur.com/ZlzXREI.png')
+        embed.set_footer(text="도리봇", icon_url="https://i.imgur.com/Ny6e2BS.jpeg")
+        await message.channel.send(embed=embed)
+        return
 
     if ":13:" in message.content:
         embed = discord.Embed(
-        title='해당 기능은 Beta 버전 입니다.',
-        description=f'{message.author.mention}님의 이모지 크기를 \n\n강제로 확대했습니다.',
-
+            title='해당 기능은 Beta 버전입니다.',
+            description=f'{message.author.mention}님이 사용하신 이모지를 확대하였습니다.',
+            color=0x3498db  # 파란색
         )
-
-        urlBase = 'https://i.imgur.com/okCxfKw.png'
-        randomNum = random.randrange(1, 2)
-        urlF = urlBase+str(randomNum)
-        embed.set_image(url = urlF)
-        #await message.delete()     
-        await message.channel.send( embed=embed)  
+        embed.set_image(url='https://i.imgur.com/okCxfKw.png')
+        embed.set_footer(text="도리봇", icon_url="https://i.imgur.com/Ny6e2BS.jpeg")
+        await message.channel.send(embed=embed)
+        return
 
     if ":14:" in message.content:
         embed = discord.Embed(
-        title='해당 기능은 Beta 버전 입니다.',
-        description=f'{message.author.mention}님의 이모지 크기를 \n\n강제로 확대했습니다.',
-
+            title='해당 기능은 Beta 버전입니다.',
+            description=f'{message.author.mention}님이 사용하신 이모지를 확대하였습니다.',
+            color=0x3498db  # 파란색
         )
-
-        urlBase = 'https://i.imgur.com/iKktYRc.png'
-        randomNum = random.randrange(1, 2)
-        urlF = urlBase+str(randomNum)
-        embed.set_image(url = urlF)
-        #await message.delete()     
-        await message.channel.send( embed=embed)  
+        embed.set_image(url='https://i.imgur.com/iKktYRc.png')
+        embed.set_footer(text="도리봇", icon_url="https://i.imgur.com/Ny6e2BS.jpeg")
+        await message.channel.send(embed=embed)
+        return
 
     if ":15:" in message.content:
         embed = discord.Embed(
-        title='해당 기능은 Beta 버전 입니다.',
-        description=f'{message.author.mention}님의 이모지 크기를 \n\n강제로 확대했습니다.',
-
+            title='해당 기능은 Beta 버전입니다.',
+            description=f'{message.author.mention}님이 사용하신 이모지를 확대하였습니다.',
+            color=0x3498db  # 파란색
         )
-
-        urlBase = 'https://i.imgur.com/NfpVoVi.png'
-        randomNum = random.randrange(1, 2)
-        urlF = urlBase+str(randomNum)
-        embed.set_image(url = urlF)
-        #await message.delete()     
-        await message.channel.send( embed=embed) 
+        embed.set_image(url='https://i.imgur.com/NfpVoVi.png')
+        embed.set_footer(text="도리봇", icon_url="https://i.imgur.com/Ny6e2BS.jpeg")
+        await message.channel.send(embed=embed)
+        return
 
     if ":16:" in message.content:
         embed = discord.Embed(
-        title='해당 기능은 Beta 버전 입니다.',
-        description=f'{message.author.mention}님의 이모지 크기를 \n\n강제로 확대했습니다.',
-
+            title='해당 기능은 Beta 버전입니다.',
+            description=f'{message.author.mention}님이 사용하신 이모지를 확대하였습니다.',
+            color=0x3498db  # 파란색
         )
-
-        urlBase = 'https://i.imgur.com/thA8iNJ.png'
-        randomNum = random.randrange(1, 2)
-        urlF = urlBase+str(randomNum)
-        embed.set_image(url = urlF)
-        #await message.delete()     
-        await message.channel.send( embed=embed)      
+        embed.set_image(url='https://i.imgur.com/thA8iNJ.png')
+        embed.set_footer(text="도리봇", icon_url="https://i.imgur.com/Ny6e2BS.jpeg")
+        await message.channel.send(embed=embed)
+        return  
 
     if ":17:" in message.content:
         embed = discord.Embed(
-        title='해당 기능은 Beta 버전 입니다.',
-        description=f'{message.author.mention}님의 이모지 크기를 \n\n강제로 확대했습니다.',
-
+            title='해당 기능은 Beta 버전입니다.',
+            description=f'{message.author.mention}님이 사용하신 이모지를 확대하였습니다.',
+            color=0x3498db  # 파란색
         )
-
-        urlBase = 'https://i.imgur.com/2afn6NY.png'
-        randomNum = random.randrange(1, 2)
-        urlF = urlBase+str(randomNum)
-        embed.set_image(url = urlF)
-        #await message.delete()     
-        await message.channel.send( embed=embed)  
+        embed.set_image(url='https://i.imgur.com/2afn6NY.png')
+        embed.set_footer(text="도리봇", icon_url="https://i.imgur.com/Ny6e2BS.jpeg")
+        await message.channel.send(embed=embed)
+        return
 
     if ":18:" in message.content:
         embed = discord.Embed(
-        title='해당 기능은 Beta 버전 입니다.',
-        description=f'{message.author.mention}님의 이모지 크기를 \n\n강제로 확대했습니다.',
-
+            title='해당 기능은 Beta 버전입니다.',
+            description=f'{message.author.mention}님이 사용하신 이모지를 확대하였습니다.',
+            color=0x3498db  # 파란색
         )
-
-        urlBase = 'https://i.imgur.com/6dZaEcG.png'
-        randomNum = random.randrange(1, 2)
-        urlF = urlBase+str(randomNum)
-        embed.set_image(url = urlF)
-        #await message.delete()     
-        await message.channel.send( embed=embed)  
+        embed.set_image(url='https://i.imgur.com/6dZaEcG.png')
+        embed.set_footer(text="도리봇", icon_url="https://i.imgur.com/Ny6e2BS.jpeg")
+        await message.channel.send(embed=embed)
+        return
 
     if ":19:" in message.content:
         embed = discord.Embed(
-        title='해당 기능은 Beta 버전 입니다.',
-        description=f'{message.author.mention}님의 이모지 크기를 \n\n강제로 확대했습니다.',
-
+            title='해당 기능은 Beta 버전입니다.',
+            description=f'{message.author.mention}님이 사용하신 이모지를 확대하였습니다.',
+            color=0x3498db  # 파란색
         )
-
-        urlBase = 'https://i.imgur.com/tjp1ces.png'
-        randomNum = random.randrange(1, 2)
-        urlF = urlBase+str(randomNum)
-        embed.set_image(url = urlF)
-        #await message.delete()     
-        await message.channel.send( embed=embed)  
+        embed.set_image(url='https://i.imgur.com/tjp1ces.png')
+        embed.set_footer(text="도리봇", icon_url="https://i.imgur.com/Ny6e2BS.jpeg")
+        await message.channel.send(embed=embed)
+        return
 
     if ":20:" in message.content:
         embed = discord.Embed(
-        title='해당 기능은 Beta 버전 입니다.',
-        description=f'{message.author.mention}님의 이모지 크기를 \n\n강제로 확대했습니다.',
-
+            title='해당 기능은 Beta 버전입니다.',
+            description=f'{message.author.mention}님이 사용하신 이모지를 확대하였습니다.',
+            color=0x3498db  # 파란색
         )
-
-        urlBase = 'https://i.imgur.com/N7H3IN5.png'
-        randomNum = random.randrange(1, 2)
-        urlF = urlBase+str(randomNum)
-        embed.set_image(url = urlF)
-        #await message.delete()     
-        await message.channel.send( embed=embed) 
+        embed.set_image(url='https://i.imgur.com/N7H3IN5.png')
+        embed.set_footer(text="도리봇", icon_url="https://i.imgur.com/Ny6e2BS.jpeg")
+        await message.channel.send(embed=embed)
+        return
 
     if ":21:" in message.content:
         embed = discord.Embed(
-        title='해당 기능은 Beta 버전 입니다.',
-        description=f'{message.author.mention}님의 이모지 크기를 \n\n강제로 확대했습니다.',
-
+            title='해당 기능은 Beta 버전입니다.',
+            description=f'{message.author.mention}님이 사용하신 이모지를 확대하였습니다.',
+            color=0x3498db  # 파란색
         )
-
-        urlBase = 'https://i.imgur.com/npCQgc9.png'
-        randomNum = random.randrange(1, 2)
-        urlF = urlBase+str(randomNum)
-        embed.set_image(url = urlF)
-        #await message.delete()     
-        await message.channel.send( embed=embed) 
+        embed.set_image(url='https://i.imgur.com/npCQgc9.png')
+        embed.set_footer(text="도리봇", icon_url="https://i.imgur.com/Ny6e2BS.jpeg")
+        await message.channel.send(embed=embed)
+        return
 
     if ":22:" in message.content:
         embed = discord.Embed(
-        title='해당 기능은 Beta 버전 입니다.',
-        description=f'{message.author.mention}님의 이모지 크기를 \n\n강제로 확대했습니다.',
-
+            title='해당 기능은 Beta 버전입니다.',
+            description=f'{message.author.mention}님이 사용하신 이모지를 확대하였습니다.',
+            color=0x3498db  # 파란색
         )
-
-        urlBase = 'https://i.imgur.com/vnGfnPf.png'
-        randomNum = random.randrange(1, 2)
-        urlF = urlBase+str(randomNum)
-        embed.set_image(url = urlF)
-        #await message.delete()     
-        await message.channel.send( embed=embed) 
+        embed.set_image(url='https://i.imgur.com/vnGfnPf.png')
+        embed.set_footer(text="도리봇", icon_url="https://i.imgur.com/Ny6e2BS.jpeg")
+        await message.channel.send(embed=embed)
+        return
 
     if ":23:" in message.content:
         embed = discord.Embed(
-        title='해당 기능은 Beta 버전 입니다.',
-        description=f'{message.author.mention}님의 이모지 크기를 \n\n강제로 확대했습니다.',
-
+            title='해당 기능은 Beta 버전입니다.',
+            description=f'{message.author.mention}님이 사용하신 이모지를 확대하였습니다.',
+            color=0x3498db  # 파란색
         )
-
-        urlBase = 'https://i.imgur.com/F9D06cX.png'
-        randomNum = random.randrange(1, 2)
-        urlF = urlBase+str(randomNum)
-        embed.set_image(url = urlF)
-        #await message.delete()     
-        await message.channel.send( embed=embed)     
+        embed.set_image(url='https://i.imgur.com/F9D06cX.png')
+        embed.set_footer(text="도리봇", icon_url="https://i.imgur.com/Ny6e2BS.jpeg")
+        await message.channel.send(embed=embed)
+        return
 
     if ":24:" in message.content:
         embed = discord.Embed(
-        title='해당 기능은 Beta 버전 입니다.',
-        description=f'{message.author.mention}님의 이모지 크기를 \n\n강제로 확대했습니다.',
-
+            title='해당 기능은 Beta 버전입니다.',
+            description=f'{message.author.mention}님이 사용하신 이모지를 확대하였습니다.',
+            color=0x3498db  # 파란색
         )
-
-        urlBase = 'https://i.imgur.com/HaoReRY.png'
-        randomNum = random.randrange(1, 2)
-        urlF = urlBase+str(randomNum)
-        embed.set_image(url = urlF)
-        #await message.delete()     
-        await message.channel.send( embed=embed)  
+        embed.set_image(url='https://i.imgur.com/HaoReRY.png')
+        embed.set_footer(text="도리봇", icon_url="https://i.imgur.com/Ny6e2BS.jpeg")
+        await message.channel.send(embed=embed)
+        return
 
     if ":25:" in message.content:
         embed = discord.Embed(
-        title='해당 기능은 Beta 버전 입니다.',
-        description=f'{message.author.mention}님의 이모지 크기를 \n\n강제로 확대했습니다.',
-
+            title='해당 기능은 Beta 버전입니다.',
+            description=f'{message.author.mention}님이 사용하신 이모지를 확대하였습니다.',
+            color=0x3498db  # 파란색
         )
-
-        urlBase = 'https://i.imgur.com/vt1Q6RD.png'
-        randomNum = random.randrange(1, 2)
-        urlF = urlBase+str(randomNum)
-        embed.set_image(url = urlF)
-        #await message.delete()     
-        await message.channel.send( embed=embed)  
+        embed.set_image(url='https://i.imgur.com/vt1Q6RD.png')
+        embed.set_footer(text="도리봇", icon_url="https://i.imgur.com/Ny6e2BS.jpeg")
+        await message.channel.send(embed=embed)
+        return
 
     if ":26:" in message.content:
         embed = discord.Embed(
-        title='해당 기능은 Beta 버전 입니다.',
-        description=f'{message.author.mention}님의 이모지 크기를 \n\n강제로 확대했습니다.',
-
+            title='해당 기능은 Beta 버전입니다.',
+            description=f'{message.author.mention}님이 사용하신 이모지를 확대하였습니다.',
+            color=0x3498db  # 파란색
         )
-
-        urlBase = 'https://i.imgur.com/Q4sKIfP.png'
-        randomNum = random.randrange(1, 2)
-        urlF = urlBase+str(randomNum)
-        embed.set_image(url = urlF)
-        #await message.delete()     
-        await message.channel.send( embed=embed)  
+        embed.set_image(url='https://i.imgur.com/Q4sKIfP.png')
+        embed.set_footer(text="도리봇", icon_url="https://i.imgur.com/Ny6e2BS.jpeg")
+        await message.channel.send(embed=embed)
+        return
 
     if ":27:" in message.content:
         embed = discord.Embed(
-        title='해당 기능은 Beta 버전 입니다.',
-        description=f'{message.author.mention}님의 이모지 크기를 \n\n강제로 확대했습니다.',
-
+            title='해당 기능은 Beta 버전입니다.',
+            description=f'{message.author.mention}님이 사용하신 이모지를 확대하였습니다.',
+            color=0x3498db  # 파란색
         )
-
-        urlBase = 'https://i.imgur.com/V8oqrZB.png'
-        randomNum = random.randrange(1, 2)
-        urlF = urlBase+str(randomNum)
-        embed.set_image(url = urlF)
-        #await message.delete()     
-        await message.channel.send( embed=embed)  
+        embed.set_image(url='https://i.imgur.com/V8oqrZB.png')
+        embed.set_footer(text="도리봇", icon_url="https://i.imgur.com/Ny6e2BS.jpeg")
+        await message.channel.send(embed=embed)
+        return
 
     if ":28:" in message.content:
         embed = discord.Embed(
-        title='해당 기능은 Beta 버전 입니다.',
-        description=f'{message.author.mention}님의 이모지 크기를 \n\n강제로 확대했습니다.',
-
+            title='해당 기능은 Beta 버전입니다.',
+            description=f'{message.author.mention}님이 사용하신 이모지를 확대하였습니다.',
+            color=0x3498db  # 파란색
         )
-
-        urlBase = 'https://i.imgur.com/8jNSKlD.png'
-        randomNum = random.randrange(1, 2)
-        urlF = urlBase+str(randomNum)
-        embed.set_image(url = urlF)
-        #await message.delete()     
-        await message.channel.send( embed=embed)   
+        embed.set_image(url='https://i.imgur.com/8jNSKlD.png')
+        embed.set_footer(text="도리봇", icon_url="https://i.imgur.com/Ny6e2BS.jpeg")
+        await message.channel.send(embed=embed)
+        return   
 
     if ":29:" in message.content:
         embed = discord.Embed(
-        title='해당 기능은 Beta 버전 입니다.',
-        description=f'{message.author.mention}님의 이모지 크기를 \n\n강제로 확대했습니다.',
-
+            title='해당 기능은 Beta 버전입니다.',
+            description=f'{message.author.mention}님이 사용하신 이모지를 확대하였습니다.',
+            color=0x3498db  # 파란색
         )
-
-        urlBase = 'https://i.imgur.com/SWW5313.png'
-        randomNum = random.randrange(1, 2)
-        urlF = urlBase+str(randomNum)
-        embed.set_image(url = urlF)
-        #await message.delete()     
-        await message.channel.send( embed=embed)  
+        embed.set_image(url='https://i.imgur.com/SWW5313.png')
+        embed.set_footer(text="도리봇", icon_url="https://i.imgur.com/Ny6e2BS.jpeg")
+        await message.channel.send(embed=embed)
+        return
 
     if ":30:" in message.content:
         embed = discord.Embed(
-        title='해당 기능은 Beta 버전 입니다.',
-        description=f'{message.author.mention}님의 이모지 크기를 \n\n강제로 확대했습니다.',
-
+            title='해당 기능은 Beta 버전입니다.',
+            description=f'{message.author.mention}님이 사용하신 이모지를 확대하였습니다.',
+            color=0x3498db  # 파란색
         )
-
-        urlBase = 'https://i.imgur.com/fdBrLKw.png'
-        randomNum = random.randrange(1, 2)
-        urlF = urlBase+str(randomNum)
-        embed.set_image(url = urlF)
-        #await message.delete()     
-        await message.channel.send( embed=embed)  
+        embed.set_image(url='https://i.imgur.com/fdBrLKw.png')
+        embed.set_footer(text="도리봇", icon_url="https://i.imgur.com/Ny6e2BS.jpeg")
+        await message.channel.send(embed=embed)
+        return
 
     if ":31:" in message.content:
         embed = discord.Embed(
-        title='해당 기능은 Beta 버전 입니다.',
-        description=f'{message.author.mention}님의 이모지 크기를 \n\n강제로 확대했습니다.',
-
+            title='해당 기능은 Beta 버전입니다.',
+            description=f'{message.author.mention}님이 사용하신 이모지를 확대하였습니다.',
+            color=0x3498db  # 파란색
         )
-
-        urlBase = 'https://i.imgur.com/am84lo6.png'
-        randomNum = random.randrange(1, 2)
-        urlF = urlBase+str(randomNum)
-        embed.set_image(url = urlF)
-        #await message.delete()     
-        await message.channel.send( embed=embed)      
+        embed.set_image(url='https://i.imgur.com/am84lo6.png')
+        embed.set_footer(text="도리봇", icon_url="https://i.imgur.com/Ny6e2BS.jpeg")
+        await message.channel.send(embed=embed)
+        return     
 
     if ":32:" in message.content:
         embed = discord.Embed(
-        title='해당 기능은 Beta 버전 입니다.',
-        description=f'{message.author.mention}님의 이모지 크기를 \n\n강제로 확대했습니다.',
-
+            title='해당 기능은 Beta 버전입니다.',
+            description=f'{message.author.mention}님이 사용하신 이모지를 확대하였습니다.',
+            color=0x3498db  # 파란색
         )
-
-        urlBase = 'https://i.imgur.com/T1F1AFH.png'
-        randomNum = random.randrange(1, 2)
-        urlF = urlBase+str(randomNum)
-        embed.set_image(url = urlF)
-        #await message.delete()     
-        await message.channel.send( embed=embed)  
+        embed.set_image(url='https://i.imgur.com/T1F1AFH.png')
+        embed.set_footer(text="도리봇", icon_url="https://i.imgur.com/Ny6e2BS.jpeg")
+        await message.channel.send(embed=embed)
+        return
 
     if ":33:" in message.content:
         embed = discord.Embed(
-        title='해당 기능은 Beta 버전 입니다.',
-        description=f'{message.author.mention}님의 이모지 크기를 \n\n강제로 확대했습니다.',
-
+            title='해당 기능은 Beta 버전입니다.',
+            description=f'{message.author.mention}님이 사용하신 이모지를 확대하였습니다.',
+            color=0x3498db  # 파란색
         )
-
-        urlBase = 'https://i.imgur.com/P1eW1Fv.png'
-        randomNum = random.randrange(1, 2)
-        urlF = urlBase+str(randomNum)
-        embed.set_image(url = urlF)
-        #await message.delete()     
-        await message.channel.send( embed=embed)  
+        embed.set_image(url='https://i.imgur.com/P1eW1Fv.png')
+        embed.set_footer(text="도리봇", icon_url="https://i.imgur.com/Ny6e2BS.jpeg")
+        await message.channel.send(embed=embed)
+        return
 
     if ":34:" in message.content:
         embed = discord.Embed(
-        title='해당 기능은 Beta 버전 입니다.',
-        description=f'{message.author.mention}님의 이모지 크기를 \n\n강제로 확대했습니다.',
-
+            title='해당 기능은 Beta 버전입니다.',
+            description=f'{message.author.mention}님이 사용하신 이모지를 확대하였습니다.',
+            color=0x3498db  # 파란색
         )
-
-        urlBase = 'https://i.imgur.com/ddlUmB6.png'
-        randomNum = random.randrange(1, 2)
-        urlF = urlBase+str(randomNum)
-        embed.set_image(url = urlF)
-        #await message.delete()     
-        await message.channel.send( embed=embed)  
+        embed.set_image(url='https://i.imgur.com/ddlUmB6.png')
+        embed.set_footer(text="도리봇", icon_url="https://i.imgur.com/Ny6e2BS.jpeg")
+        await message.channel.send(embed=embed)
+        return
 
     if ":35:" in message.content:
         embed = discord.Embed(
-        title='해당 기능은 Beta 버전 입니다.',
-        description=f'{message.author.mention}님의 이모지 크기를 \n\n강제로 확대했습니다.',
-
+            title='해당 기능은 Beta 버전입니다.',
+            description=f'{message.author.mention}님이 사용하신 이모지를 확대하였습니다.',
+            color=0x3498db  # 파란색
         )
-
-        urlBase = 'https://i.imgur.com/JETBDDo.png'
-        randomNum = random.randrange(1, 2)
-        urlF = urlBase+str(randomNum)
-        embed.set_image(url = urlF)
-        #await message.delete()     
-        await message.channel.send( embed=embed)  
+        embed.set_image(url='https://i.imgur.com/JETBDDo.png')
+        embed.set_footer(text="도리봇", icon_url="https://i.imgur.com/Ny6e2BS.jpeg")
+        await message.channel.send(embed=embed)
+        return
 
     if ":36:" in message.content:
         embed = discord.Embed(
-        title='해당 기능은 Beta 버전 입니다.',
-        description=f'{message.author.mention}님의 이모지 크기를 \n\n강제로 확대했습니다.',
-
+            title='해당 기능은 Beta 버전입니다.',
+            description=f'{message.author.mention}님이 사용하신 이모지를 확대하였습니다.',
+            color=0x3498db  # 파란색
         )
-
-        urlBase = 'https://i.imgur.com/mtgJRPI.png'
-        randomNum = random.randrange(1, 2)
-        urlF = urlBase+str(randomNum)
-        embed.set_image(url = urlF)
-        #await message.delete()     
-        await message.channel.send( embed=embed)      
+        embed.set_image(url='https://i.imgur.com/mtgJRPI.png')
+        embed.set_footer(text="도리봇", icon_url="https://i.imgur.com/Ny6e2BS.jpeg")
+        await message.channel.send(embed=embed)
+        return   
 
     if ":37:" in message.content:
         embed = discord.Embed(
-        title='해당 기능은 Beta 버전 입니다.',
-        description=f'{message.author.mention}님의 이모지 크기를 \n\n강제로 확대했습니다.',
-
+            title='해당 기능은 Beta 버전입니다.',
+            description=f'{message.author.mention}님이 사용하신 이모지를 확대하였습니다.',
+            color=0x3498db  # 파란색
         )
-
-        urlBase = 'https://i.imgur.com/ZCE00xe.png'
-        randomNum = random.randrange(1, 2)
-        urlF = urlBase+str(randomNum)
-        embed.set_image(url = urlF)
-        #await message.delete()     
-        await message.channel.send( embed=embed)  
+        embed.set_image(url='https://i.imgur.com/ZCE00xe.png')
+        embed.set_footer(text="도리봇", icon_url="https://i.imgur.com/Ny6e2BS.jpeg")
+        await message.channel.send(embed=embed)
+        return 
 
     if ":38:" in message.content:
         embed = discord.Embed(
-        title='해당 기능은 Beta 버전 입니다.',
-        description=f'{message.author.mention}님의 이모지 크기를 \n\n강제로 확대했습니다.',
-
+            title='해당 기능은 Beta 버전입니다.',
+            description=f'{message.author.mention}님이 사용하신 이모지를 확대하였습니다.',
+            color=0x3498db  # 파란색
         )
-
-        urlBase = 'https://i.imgur.com/zsd6Zxf.png'
-        randomNum = random.randrange(1, 2)
-        urlF = urlBase+str(randomNum)
-        embed.set_image(url = urlF)
-        #await message.delete()     
-        await message.channel.send( embed=embed)  
+        embed.set_image(url='https://i.imgur.com/zsd6Zxf.png')
+        embed.set_footer(text="도리봇", icon_url="https://i.imgur.com/Ny6e2BS.jpeg")
+        await message.channel.send(embed=embed)
+        return
 
     if ":39:" in message.content:
         embed = discord.Embed(
-        title='해당 기능은 Beta 버전 입니다.',
-        description=f'{message.author.mention}님의 이모지 크기를 \n\n강제로 확대했습니다.',
-
+            title='해당 기능은 Beta 버전입니다.',
+            description=f'{message.author.mention}님이 사용하신 이모지를 확대하였습니다.',
+            color=0x3498db  # 파란색
         )
-
-        urlBase = 'https://i.imgur.com/0PnFdno.png'
-        randomNum = random.randrange(1, 2)
-        urlF = urlBase+str(randomNum)
-        embed.set_image(url = urlF)
-        #await message.delete()     
-        await message.channel.send( embed=embed)  
+        embed.set_image(url='https://i.imgur.com/0PnFdno.png')
+        embed.set_footer(text="도리봇", icon_url="https://i.imgur.com/Ny6e2BS.jpeg")
+        await message.channel.send(embed=embed)
+        return
 
     if ":40:" in message.content:
         embed = discord.Embed(
-        title='해당 기능은 Beta 버전 입니다.',
-        description=f'{message.author.mention}님의 이모지 크기를 \n\n강제로 확대했습니다.',
-
+            title='해당 기능은 Beta 버전입니다.',
+            description=f'{message.author.mention}님이 사용하신 이모지를 확대하였습니다.',
+            color=0x3498db  # 파란색
         )
-
-        urlBase = 'https://i.imgur.com/Wf1J7Ur.png'
-        randomNum = random.randrange(1, 2)
-        urlF = urlBase+str(randomNum)
-        embed.set_image(url = urlF)
-        #await message.delete()     
-        await message.channel.send( embed=embed) 
+        embed.set_image(url='https://i.imgur.com/Wf1J7Ur.png')
+        embed.set_footer(text="도리봇", icon_url="https://i.imgur.com/Ny6e2BS.jpeg")
+        await message.channel.send(embed=embed)
+        return
      
 #창조주, 창조물에 대한 정보를 불러옴. / 2023.08.17 수정  
  
