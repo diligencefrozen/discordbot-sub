@@ -156,14 +156,12 @@ async def on_ready():
     await app.change_presence(status=discord.Status.online, activity=game)
         
 seoul_tz = timezone('Asia/Seoul')
-now = datetime.datetime.now(seoul_tz)
-time = f"{str(now.year)}년 {str(now.month)}월 {str(now.day)}일 {str(now.hour)}시 {str(now.minute)}분 {str(now.second)}초"
 
 @app.event
 async def on_message_delete(message):
     seoul_tz = timezone('Asia/Seoul')
     now = datetime.datetime.now(seoul_tz)
-    time = f"{str(now.year)}-{str(now.month)}-{str(now.day)} {str(now.hour)}:{str(now.minute)}:{str(now.second)}"
+    time = f"{now.year}-{now.month}-{now.day} {now.hour}:{now.minute}:{now.second}"
     channel = app.get_channel(1064823080100306995)
     embed = discord.Embed(title="Deleted", description=f"User: {message.author.mention} Channel: {message.channel.mention}", color=0xFF0000)
     embed.add_field(name="Deleted Content", value=f"Content: {message.content}", inline=False)
