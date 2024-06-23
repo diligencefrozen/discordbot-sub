@@ -6,20 +6,15 @@ import logging
 import random
 import traceback
 import time
-import datetime
 import os
 import urllib
 import bs4
 import re
 from urllib.parse import quote
 import warnings
-from discord.ext import commands
-from urllib.request import URLError
-from urllib.request import HTTPError
-from urllib.request import urlopen
+from discord.ext import commands, tasks
+from urllib.request import URLError, HTTPError, urlopen, Request
 from bs4 import BeautifulSoup
-from urllib.request import urlopen, Request
-from discord.ext import tasks
 from pytz import timezone
  
 app = discord.Client()
@@ -168,10 +163,10 @@ time = f"{str(now.year)}년 {str(now.month)}월 {str(now.day)}일 {str(now.hour)
 async def on_message_delete(message):
     seoul_tz = timezone('Asia/Seoul')
     now = datetime.datetime.now(seoul_tz)
-    time = f"{str(now.year)}년 {str(now.month)}월 {str(now.day)}일 {str(now.hour)}시 {str(now.minute)}분 {str(now.second)}초"
-    channel = app.get_channel(1065283543640576103)  
-    embed = discord.Embed(title=f"삭제됨", description=f"유저 : {message.author.mention} 채널 : {message.channel.mention}", color=0xFF0000)
-    embed.add_field(name="삭제된 내용", value=f"내용 : {message.content}", inline=False)
+    time = f"{str(now.year)}-{str(now.month)}-{str(now.day)} {str(now.hour)}:{str(now.minute)}:{str(now.second)}"
+    channel = app.get_channel(1064823080100306995)
+    embed = discord.Embed(title="Deleted", description=f"User: {message.author.mention} Channel: {message.channel.mention}", color=0xFF0000)
+    embed.add_field(name="Deleted Content", value=f"Content: {message.content}", inline=False)
     embed.set_footer(text=f"{message.guild.name} | {time}")
     await channel.send(embed=embed)
     
@@ -232,456 +227,497 @@ async def on_message(message):
         embed.add_field(name ='=채팅분석', value = "디스코드 서버 내에서 가장 많은 채팅이 작성된 날짜들의 순위가 궁금하신가요?",inline = False) 
         await message.channel.send(channel,embed=embed)
      
-#이모지 크기를 늘려줍니다. / 2024.05.16 수정  
-     
+#이모지 크기를 늘려줍니다. / 2024.06.23 수정  
+
     if ":dccon:" in message.content:
+        current_time = datetime.datetime.now(seoul_tz).strftime('%Y-%m-%d %H:%M:%S')
         embed = discord.Embed(
             title='해당 기능은 Beta 버전입니다.',
-            description=f'{message.author.mention}님이 사용하신 이모지를 확대하였습니다.',
+            description=f'{message.author.mention} 님의 이모지 크기를 \n\n강제로 확대하였습니다.',
             color=0x3498db  # 파란색
         )
         embed.set_image(url='https://i.imgur.com/kJDrG0s.png')
-        embed.set_footer(text="도리봇", icon_url="https://i.imgur.com/Ny6e2BS.jpeg")
+        embed.set_footer(text=f"도리봇 | {current_time}", icon_url="https://i.imgur.com/Ny6e2BS.jpeg")
         await message.channel.send(embed=embed)
-        return 
+        return
 
     if ":01:" in message.content:
+        current_time = datetime.datetime.now(seoul_tz).strftime('%Y-%m-%d %H:%M:%S')
         embed = discord.Embed(
             title='해당 기능은 Beta 버전입니다.',
             description=f'{message.author.mention} 님의 이모지 크기를 \n\n강제로 확대하였습니다.',
             color=0x86E49C  
         )
         embed.set_image(url='https://i.imgur.com/WX2l0uU.png')
-        embed.set_footer(text="도리봇", icon_url="https://i.imgur.com/Ny6e2BS.jpeg")
+        embed.set_footer(text=f"도리봇 | {current_time}", icon_url="https://i.imgur.com/Ny6e2BS.jpeg")
         await message.channel.send(embed=embed)
         return    
 
     if ":02:" in message.content:
+        current_time = datetime.datetime.now(seoul_tz).strftime('%Y-%m-%d %H:%M:%S')
         embed = discord.Embed(
             title='해당 기능은 Beta 버전입니다.',
             description=f'{message.author.mention} 님의 이모지 크기를 \n\n강제로 확대하였습니다.',
             color=0x86E49C  
         )
         embed.set_image(url='https://i.imgur.com/1r3hhVb.png')
-        embed.set_footer(text="도리봇", icon_url="https://i.imgur.com/Ny6e2BS.jpeg")
+        embed.set_footer(text=f"도리봇 | {current_time}", icon_url="https://i.imgur.com/Ny6e2BS.jpeg")
         await message.channel.send(embed=embed)
         return
 
     if ":03:" in message.content:
+        current_time = datetime.datetime.now(seoul_tz).strftime('%Y-%m-%d %H:%M:%S')
         embed = discord.Embed(
             title='해당 기능은 Beta 버전입니다.',
             description=f'{message.author.mention} 님의 이모지 크기를 \n\n강제로 확대하였습니다.',
             color=0x86E49C  
         )
         embed.set_image(url='https://i.imgur.com/NPIbOLd.png')
-        embed.set_footer(text="도리봇", icon_url="https://i.imgur.com/Ny6e2BS.jpeg")
+        embed.set_footer(text=f"도리봇 | {current_time}", icon_url="https://i.imgur.com/Ny6e2BS.jpeg")
         await message.channel.send(embed=embed)
         return
 
     if ":04:" in message.content:
+        current_time = datetime.datetime.now(seoul_tz).strftime('%Y-%m-%d %H:%M:%S')
         embed = discord.Embed(
             title='해당 기능은 Beta 버전입니다.',
             description=f'{message.author.mention} 님의 이모지 크기를 \n\n강제로 확대하였습니다.',
             color=0x86E49C  
         )
         embed.set_image(url='https://i.imgur.com/PzwThBo.png')
-        embed.set_footer(text="도리봇", icon_url="https://i.imgur.com/Ny6e2BS.jpeg")
+        embed.set_footer(text=f"도리봇 | {current_time}", icon_url="https://i.imgur.com/Ny6e2BS.jpeg")
         await message.channel.send(embed=embed)
         return
 
     if ":05:" in message.content:
+        current_time = datetime.datetime.now(seoul_tz).strftime('%Y-%m-%d %H:%M:%S')
         embed = discord.Embed(
             title='해당 기능은 Beta 버전입니다.',
             description=f'{message.author.mention} 님의 이모지 크기를 \n\n강제로 확대하였습니다.',
             color=0x86E49C  
         )
         embed.set_image(url='https://i.imgur.com/bDvCKcC.png')
-        embed.set_footer(text="도리봇", icon_url="https://i.imgur.com/Ny6e2BS.jpeg")
+        embed.set_footer(text=f"도리봇 | {current_time}", icon_url="https://i.imgur.com/Ny6e2BS.jpeg")
         await message.channel.send(embed=embed)
         return
 
     if ":06:" in message.content:
+        current_time = datetime.datetime.now(seoul_tz).strftime('%Y-%m-%d %H:%M:%S')
         embed = discord.Embed(
             title='해당 기능은 Beta 버전입니다.',
             description=f'{message.author.mention} 님의 이모지 크기를 \n\n강제로 확대하였습니다.',
             color=0x86E49C  
         )
         embed.set_image(url='https://i.imgur.com/VPusR3u.png')
-        embed.set_footer(text="도리봇", icon_url="https://i.imgur.com/Ny6e2BS.jpeg")
+        embed.set_footer(text=f"도리봇 | {current_time}", icon_url="https://i.imgur.com/Ny6e2BS.jpeg")
         await message.channel.send(embed=embed)
         return   
 
     if ":07:" in message.content:
+        current_time = datetime.datetime.now(seoul_tz).strftime('%Y-%m-%d %H:%M:%S')
         embed = discord.Embed(
             title='해당 기능은 Beta 버전입니다.',
             description=f'{message.author.mention} 님의 이모지 크기를 \n\n강제로 확대하였습니다.',
             color=0x86E49C  
         )
         embed.set_image(url='https://i.imgur.com/e1zqgdO.png')
-        embed.set_footer(text="도리봇", icon_url="https://i.imgur.com/Ny6e2BS.jpeg")
+        embed.set_footer(text=f"도리봇 | {current_time}", icon_url="https://i.imgur.com/Ny6e2BS.jpeg")
         await message.channel.send(embed=embed)
         return
 
     if ":08:" in message.content:
+        current_time = datetime.datetime.now(seoul_tz).strftime('%Y-%m-%d %H:%M:%S')
         embed = discord.Embed(
             title='해당 기능은 Beta 버전입니다.',
             description=f'{message.author.mention} 님의 이모지 크기를 \n\n강제로 확대하였습니다.',
             color=0x86E49C  
         )
         embed.set_image(url='https://i.imgur.com/7UlfZbz.png')
-        embed.set_footer(text="도리봇", icon_url="https://i.imgur.com/Ny6e2BS.jpeg")
+        embed.set_footer(text=f"도리봇 | {current_time}", icon_url="https://i.imgur.com/Ny6e2BS.jpeg")
         await message.channel.send(embed=embed)
         return
 
     if ":09:" in message.content:
+        current_time = datetime.datetime.now(seoul_tz).strftime('%Y-%m-%d %H:%M:%S')
         embed = discord.Embed(
             title='해당 기능은 Beta 버전입니다.',
             description=f'{message.author.mention} 님의 이모지 크기를 \n\n강제로 확대하였습니다.',
             color=0x86E49C  
         )
         embed.set_image(url='https://i.imgur.com/EwgIbSk.png')
-        embed.set_footer(text="도리봇", icon_url="https://i.imgur.com/Ny6e2BS.jpeg")
+        embed.set_footer(text=f"도리봇 | {current_time}", icon_url="https://i.imgur.com/Ny6e2BS.jpeg")
         await message.channel.send(embed=embed)
         return
 
     if ":10:" in message.content:
+        current_time = datetime.datetime.now(seoul_tz).strftime('%Y-%m-%d %H:%M:%S')
         embed = discord.Embed(
             title='해당 기능은 Beta 버전입니다.',
             description=f'{message.author.mention} 님의 이모지 크기를 \n\n강제로 확대하였습니다.',
             color=0x86E49C  
         )
         embed.set_image(url='https://i.imgur.com/biIJH99.png')
-        embed.set_footer(text="도리봇", icon_url="https://i.imgur.com/Ny6e2BS.jpeg")
+        embed.set_footer(text=f"도리봇 | {current_time}", icon_url="https://i.imgur.com/Ny6e2BS.jpeg")
         await message.channel.send(embed=embed)
         return
 
     if ":11:" in message.content:
+        current_time = datetime.datetime.now(seoul_tz).strftime('%Y-%m-%d %H:%M:%S')
         embed = discord.Embed(
             title='해당 기능은 Beta 버전입니다.',
             description=f'{message.author.mention} 님의 이모지 크기를 \n\n강제로 확대하였습니다.',
             color=0x86E49C  
         )
         embed.set_image(url='https://i.imgur.com/gyePhJr.png')
-        embed.set_footer(text="도리봇", icon_url="https://i.imgur.com/Ny6e2BS.jpeg")
+        embed.set_footer(text=f"도리봇 | {current_time}", icon_url="https://i.imgur.com/Ny6e2BS.jpeg")
         await message.channel.send(embed=embed)
         return     
 
     if ":12:" in message.content:
+        current_time = datetime.datetime.now(seoul_tz).strftime('%Y-%m-%d %H:%M:%S')
         embed = discord.Embed(
             title='해당 기능은 Beta 버전입니다.',
             description=f'{message.author.mention} 님의 이모지 크기를 \n\n강제로 확대하였습니다.',
             color=0x86E49C  
         )
         embed.set_image(url='https://i.imgur.com/ZlzXREI.png')
-        embed.set_footer(text="도리봇", icon_url="https://i.imgur.com/Ny6e2BS.jpeg")
+        embed.set_footer(text=f"도리봇 | {current_time}", icon_url="https://i.imgur.com/Ny6e2BS.jpeg")
         await message.channel.send(embed=embed)
         return
 
     if ":13:" in message.content:
+        current_time = datetime.datetime.now(seoul_tz).strftime('%Y-%m-%d %H:%M:%S')
         embed = discord.Embed(
             title='해당 기능은 Beta 버전입니다.',
             description=f'{message.author.mention} 님의 이모지 크기를 \n\n강제로 확대하였습니다.',
             color=0x86E49C  
         )
         embed.set_image(url='https://i.imgur.com/okCxfKw.png')
-        embed.set_footer(text="도리봇", icon_url="https://i.imgur.com/Ny6e2BS.jpeg")
+        embed.set_footer(text=f"도리봇 | {current_time}", icon_url="https://i.imgur.com/Ny6e2BS.jpeg")
         await message.channel.send(embed=embed)
         return
 
     if ":14:" in message.content:
+        current_time = datetime.datetime.now(seoul_tz).strftime('%Y-%m-%d %H:%M:%S')
         embed = discord.Embed(
             title='해당 기능은 Beta 버전입니다.',
             description=f'{message.author.mention} 님의 이모지 크기를 \n\n강제로 확대하였습니다.',
             color=0x86E49C  
         )
         embed.set_image(url='https://i.imgur.com/iKktYRc.png')
-        embed.set_footer(text="도리봇", icon_url="https://i.imgur.com/Ny6e2BS.jpeg")
+        embed.set_footer(text=f"도리봇 | {current_time}", icon_url="https://i.imgur.com/Ny6e2BS.jpeg")
         await message.channel.send(embed=embed)
         return
 
     if ":15:" in message.content:
+        current_time = datetime.datetime.now(seoul_tz).strftime('%Y-%m-%d %H:%M:%S')
         embed = discord.Embed(
             title='해당 기능은 Beta 버전입니다.',
             description=f'{message.author.mention} 님의 이모지 크기를 \n\n강제로 확대하였습니다.',
             color=0x86E49C  
         )
         embed.set_image(url='https://i.imgur.com/NfpVoVi.png')
-        embed.set_footer(text="도리봇", icon_url="https://i.imgur.com/Ny6e2BS.jpeg")
+        embed.set_footer(text=f"도리봇 | {current_time}", icon_url="https://i.imgur.com/Ny6e2BS.jpeg")
         await message.channel.send(embed=embed)
         return
 
     if ":16:" in message.content:
+        current_time = datetime.datetime.now(seoul_tz).strftime('%Y-%m-%d %H:%M:%S')
         embed = discord.Embed(
             title='해당 기능은 Beta 버전입니다.',
             description=f'{message.author.mention} 님의 이모지 크기를 \n\n강제로 확대하였습니다.',
             color=0x86E49C  
         )
         embed.set_image(url='https://i.imgur.com/thA8iNJ.png')
-        embed.set_footer(text="도리봇", icon_url="https://i.imgur.com/Ny6e2BS.jpeg")
+        embed.set_footer(text=f"도리봇 | {current_time}", icon_url="https://i.imgur.com/Ny6e2BS.jpeg")
         await message.channel.send(embed=embed)
         return  
 
     if ":17:" in message.content:
+        current_time = datetime.datetime.now(seoul_tz).strftime('%Y-%m-%d %H:%M:%S')
         embed = discord.Embed(
             title='해당 기능은 Beta 버전입니다.',
             description=f'{message.author.mention} 님의 이모지 크기를 \n\n강제로 확대하였습니다.',
             color=0x86E49C  
         )
         embed.set_image(url='https://i.imgur.com/2afn6NY.png')
-        embed.set_footer(text="도리봇", icon_url="https://i.imgur.com/Ny6e2BS.jpeg")
+        embed.set_footer(text=f"도리봇 | {current_time}", icon_url="https://i.imgur.com/Ny6e2BS.jpeg")
         await message.channel.send(embed=embed)
         return
 
     if ":18:" in message.content:
+        current_time = datetime.datetime.now(seoul_tz).strftime('%Y-%m-%d %H:%M:%S')
         embed = discord.Embed(
             title='해당 기능은 Beta 버전입니다.',
             description=f'{message.author.mention} 님의 이모지 크기를 \n\n강제로 확대하였습니다.',
             color=0x86E49C  
         )
         embed.set_image(url='https://i.imgur.com/6dZaEcG.png')
-        embed.set_footer(text="도리봇", icon_url="https://i.imgur.com/Ny6e2BS.jpeg")
+        embed.set_footer(text=f"도리봇 | {current_time}", icon_url="https://i.imgur.com/Ny6e2BS.jpeg")
         await message.channel.send(embed=embed)
         return
 
     if ":19:" in message.content:
+        current_time = datetime.datetime.now(seoul_tz).strftime('%Y-%m-%d %H:%M:%S')
         embed = discord.Embed(
             title='해당 기능은 Beta 버전입니다.',
             description=f'{message.author.mention} 님의 이모지 크기를 \n\n강제로 확대하였습니다.',
             color=0x86E49C  
         )
         embed.set_image(url='https://i.imgur.com/tjp1ces.png')
-        embed.set_footer(text="도리봇", icon_url="https://i.imgur.com/Ny6e2BS.jpeg")
+        embed.set_footer(text=f"도리봇 | {current_time}", icon_url="https://i.imgur.com/Ny6e2BS.jpeg")
         await message.channel.send(embed=embed)
         return
 
     if ":20:" in message.content:
+        current_time = datetime.datetime.now(seoul_tz).strftime('%Y-%m-%d %H:%M:%S')       
         embed = discord.Embed(
             title='해당 기능은 Beta 버전입니다.',
             description=f'{message.author.mention} 님의 이모지 크기를 \n\n강제로 확대하였습니다.',
             color=0x86E49C  
         )
         embed.set_image(url='https://i.imgur.com/N7H3IN5.png')
-        embed.set_footer(text="도리봇", icon_url="https://i.imgur.com/Ny6e2BS.jpeg")
+        embed.set_footer(text=f"도리봇 | {current_time}", icon_url="https://i.imgur.com/Ny6e2BS.jpeg")
         await message.channel.send(embed=embed)
         return
 
     if ":21:" in message.content:
+        current_time = datetime.datetime.now(seoul_tz).strftime('%Y-%m-%d %H:%M:%S')
         embed = discord.Embed(
             title='해당 기능은 Beta 버전입니다.',
             description=f'{message.author.mention} 님의 이모지 크기를 \n\n강제로 확대하였습니다.',
             color=0x86E49C  
         )
         embed.set_image(url='https://i.imgur.com/npCQgc9.png')
-        embed.set_footer(text="도리봇", icon_url="https://i.imgur.com/Ny6e2BS.jpeg")
+        embed.set_footer(text=f"도리봇 | {current_time}", icon_url="https://i.imgur.com/Ny6e2BS.jpeg")
         await message.channel.send(embed=embed)
         return
 
     if ":22:" in message.content:
+        current_time = datetime.datetime.now(seoul_tz).strftime('%Y-%m-%d %H:%M:%S')
         embed = discord.Embed(
             title='해당 기능은 Beta 버전입니다.',
             description=f'{message.author.mention} 님의 이모지 크기를 \n\n강제로 확대하였습니다.',
             color=0x86E49C  
         )
         embed.set_image(url='https://i.imgur.com/vnGfnPf.png')
-        embed.set_footer(text="도리봇", icon_url="https://i.imgur.com/Ny6e2BS.jpeg")
+        embed.set_footer(text=f"도리봇 | {current_time}", icon_url="https://i.imgur.com/Ny6e2BS.jpeg")
         await message.channel.send(embed=embed)
         return
 
     if ":23:" in message.content:
+        current_time = datetime.datetime.now(seoul_tz).strftime('%Y-%m-%d %H:%M:%S')
         embed = discord.Embed(
             title='해당 기능은 Beta 버전입니다.',
             description=f'{message.author.mention} 님의 이모지 크기를 \n\n강제로 확대하였습니다.',
             color=0x86E49C  
         )
         embed.set_image(url='https://i.imgur.com/F9D06cX.png')
-        embed.set_footer(text="도리봇", icon_url="https://i.imgur.com/Ny6e2BS.jpeg")
+        embed.set_footer(text=f"도리봇 | {current_time}", icon_url="https://i.imgur.com/Ny6e2BS.jpeg")
         await message.channel.send(embed=embed)
         return
 
     if ":24:" in message.content:
+        current_time = datetime.datetime.now(seoul_tz).strftime('%Y-%m-%d %H:%M:%S')
         embed = discord.Embed(
             title='해당 기능은 Beta 버전입니다.',
             description=f'{message.author.mention} 님의 이모지 크기를 \n\n강제로 확대하였습니다.',
             color=0x86E49C  
         )
         embed.set_image(url='https://i.imgur.com/HaoReRY.png')
-        embed.set_footer(text="도리봇", icon_url="https://i.imgur.com/Ny6e2BS.jpeg")
+        embed.set_footer(text=f"도리봇 | {current_time}", icon_url="https://i.imgur.com/Ny6e2BS.jpeg")
         await message.channel.send(embed=embed)
         return
 
     if ":25:" in message.content:
+        current_time = datetime.datetime.now(seoul_tz).strftime('%Y-%m-%d %H:%M:%S')
         embed = discord.Embed(
             title='해당 기능은 Beta 버전입니다.',
             description=f'{message.author.mention} 님의 이모지 크기를 \n\n강제로 확대하였습니다.',
             color=0x86E49C  
         )
         embed.set_image(url='https://i.imgur.com/vt1Q6RD.png')
-        embed.set_footer(text="도리봇", icon_url="https://i.imgur.com/Ny6e2BS.jpeg")
+        embed.set_footer(text=f"도리봇 | {current_time}", icon_url="https://i.imgur.com/Ny6e2BS.jpeg")
         await message.channel.send(embed=embed)
         return
 
     if ":26:" in message.content:
+        current_time = datetime.datetime.now(seoul_tz).strftime('%Y-%m-%d %H:%M:%S')
         embed = discord.Embed(
             title='해당 기능은 Beta 버전입니다.',
             description=f'{message.author.mention} 님의 이모지 크기를 \n\n강제로 확대하였습니다.',
             color=0x86E49C  
         )
         embed.set_image(url='https://i.imgur.com/Q4sKIfP.png')
-        embed.set_footer(text="도리봇", icon_url="https://i.imgur.com/Ny6e2BS.jpeg")
+        embed.set_footer(text=f"도리봇 | {current_time}", icon_url="https://i.imgur.com/Ny6e2BS.jpeg")
         await message.channel.send(embed=embed)
         return
 
     if ":27:" in message.content:
+        current_time = datetime.datetime.now(seoul_tz).strftime('%Y-%m-%d %H:%M:%S')
         embed = discord.Embed(
             title='해당 기능은 Beta 버전입니다.',
             description=f'{message.author.mention} 님의 이모지 크기를 \n\n강제로 확대하였습니다.',
             color=0x86E49C  
         )
         embed.set_image(url='https://i.imgur.com/V8oqrZB.png')
-        embed.set_footer(text="도리봇", icon_url="https://i.imgur.com/Ny6e2BS.jpeg")
+        embed.set_footer(text=f"도리봇 | {current_time}", icon_url="https://i.imgur.com/Ny6e2BS.jpeg")
         await message.channel.send(embed=embed)
         return
 
     if ":28:" in message.content:
+        current_time = datetime.datetime.now(seoul_tz).strftime('%Y-%m-%d %H:%M:%S')
         embed = discord.Embed(
             title='해당 기능은 Beta 버전입니다.',
             description=f'{message.author.mention} 님의 이모지 크기를 \n\n강제로 확대하였습니다.',
             color=0x86E49C  
         )
         embed.set_image(url='https://i.imgur.com/8jNSKlD.png')
-        embed.set_footer(text="도리봇", icon_url="https://i.imgur.com/Ny6e2BS.jpeg")
+        embed.set_footer(text=f"도리봇 | {current_time}", icon_url="https://i.imgur.com/Ny6e2BS.jpeg")
         await message.channel.send(embed=embed)
         return   
 
     if ":29:" in message.content:
+        current_time = datetime.datetime.now(seoul_tz).strftime('%Y-%m-%d %H:%M:%S')
         embed = discord.Embed(
             title='해당 기능은 Beta 버전입니다.',
             description=f'{message.author.mention} 님의 이모지 크기를 \n\n강제로 확대하였습니다.',
             color=0x86E49C  
         )
         embed.set_image(url='https://i.imgur.com/SWW5313.png')
-        embed.set_footer(text="도리봇", icon_url="https://i.imgur.com/Ny6e2BS.jpeg")
+        embed.set_footer(text=f"도리봇 | {current_time}", icon_url="https://i.imgur.com/Ny6e2BS.jpeg")
         await message.channel.send(embed=embed)
         return
 
     if ":30:" in message.content:
+        current_time = datetime.datetime.now(seoul_tz).strftime('%Y-%m-%d %H:%M:%S')
         embed = discord.Embed(
             title='해당 기능은 Beta 버전입니다.',
             description=f'{message.author.mention} 님의 이모지 크기를 \n\n강제로 확대하였습니다.',
             color=0x86E49C  
         )
         embed.set_image(url='https://i.imgur.com/fdBrLKw.png')
-        embed.set_footer(text="도리봇", icon_url="https://i.imgur.com/Ny6e2BS.jpeg")
+        embed.set_footer(text=f"도리봇 | {current_time}", icon_url="https://i.imgur.com/Ny6e2BS.jpeg")
         await message.channel.send(embed=embed)
         return
 
     if ":31:" in message.content:
+        current_time = datetime.datetime.now(seoul_tz).strftime('%Y-%m-%d %H:%M:%S')
         embed = discord.Embed(
             title='해당 기능은 Beta 버전입니다.',
             description=f'{message.author.mention} 님의 이모지 크기를 \n\n강제로 확대하였습니다.',
             color=0x86E49C  
         )
         embed.set_image(url='https://i.imgur.com/am84lo6.png')
-        embed.set_footer(text="도리봇", icon_url="https://i.imgur.com/Ny6e2BS.jpeg")
+        embed.set_footer(text=f"도리봇 | {current_time}", icon_url="https://i.imgur.com/Ny6e2BS.jpeg")
         await message.channel.send(embed=embed)
         return     
 
     if ":32:" in message.content:
+        current_time = datetime.datetime.now(seoul_tz).strftime('%Y-%m-%d %H:%M:%S')
         embed = discord.Embed(
             title='해당 기능은 Beta 버전입니다.',
             description=f'{message.author.mention} 님의 이모지 크기를 \n\n강제로 확대하였습니다.',
             color=0x86E49C  
         )
         embed.set_image(url='https://i.imgur.com/T1F1AFH.png')
-        embed.set_footer(text="도리봇", icon_url="https://i.imgur.com/Ny6e2BS.jpeg")
+        embed.set_footer(text=f"도리봇 | {current_time}", icon_url="https://i.imgur.com/Ny6e2BS.jpeg")
         await message.channel.send(embed=embed)
         return
 
     if ":33:" in message.content:
+        current_time = datetime.datetime.now(seoul_tz).strftime('%Y-%m-%d %H:%M:%S')
         embed = discord.Embed(
             title='해당 기능은 Beta 버전입니다.',
             description=f'{message.author.mention} 님의 이모지 크기를 \n\n강제로 확대하였습니다.',
             color=0x86E49C  
         )
         embed.set_image(url='https://i.imgur.com/P1eW1Fv.png')
-        embed.set_footer(text="도리봇", icon_url="https://i.imgur.com/Ny6e2BS.jpeg")
+        embed.set_footer(text=f"도리봇 | {current_time}", icon_url="https://i.imgur.com/Ny6e2BS.jpeg")
         await message.channel.send(embed=embed)
         return
 
     if ":34:" in message.content:
+        current_time = datetime.datetime.now(seoul_tz).strftime('%Y-%m-%d %H:%M:%S')
         embed = discord.Embed(
             title='해당 기능은 Beta 버전입니다.',
             description=f'{message.author.mention} 님의 이모지 크기를 \n\n강제로 확대하였습니다.',
             color=0x86E49C  
         )
         embed.set_image(url='https://i.imgur.com/ddlUmB6.png')
-        embed.set_footer(text="도리봇", icon_url="https://i.imgur.com/Ny6e2BS.jpeg")
+        embed.set_footer(text=f"도리봇 | {current_time}", icon_url="https://i.imgur.com/Ny6e2BS.jpeg")
         await message.channel.send(embed=embed)
         return
 
     if ":35:" in message.content:
+        current_time = datetime.datetime.now(seoul_tz).strftime('%Y-%m-%d %H:%M:%S')
         embed = discord.Embed(
             title='해당 기능은 Beta 버전입니다.',
             description=f'{message.author.mention} 님의 이모지 크기를 \n\n강제로 확대하였습니다.',
             color=0x86E49C  
         )
         embed.set_image(url='https://i.imgur.com/JETBDDo.png')
-        embed.set_footer(text="도리봇", icon_url="https://i.imgur.com/Ny6e2BS.jpeg")
+        embed.set_footer(text=f"도리봇 | {current_time}", icon_url="https://i.imgur.com/Ny6e2BS.jpeg")
         await message.channel.send(embed=embed)
         return
 
     if ":36:" in message.content:
+        current_time = datetime.datetime.now(seoul_tz).strftime('%Y-%m-%d %H:%M:%S')
         embed = discord.Embed(
             title='해당 기능은 Beta 버전입니다.',
             description=f'{message.author.mention} 님의 이모지 크기를 \n\n강제로 확대하였습니다.',
             color=0x86E49C  
         )
         embed.set_image(url='https://i.imgur.com/mtgJRPI.png')
-        embed.set_footer(text="도리봇", icon_url="https://i.imgur.com/Ny6e2BS.jpeg")
+        embed.set_footer(text=f"도리봇 | {current_time}", icon_url="https://i.imgur.com/Ny6e2BS.jpeg")
         await message.channel.send(embed=embed)
         return   
 
     if ":37:" in message.content:
+        current_time = datetime.datetime.now(seoul_tz).strftime('%Y-%m-%d %H:%M:%S')
         embed = discord.Embed(
             title='해당 기능은 Beta 버전입니다.',
             description=f'{message.author.mention} 님의 이모지 크기를 \n\n강제로 확대하였습니다.',
             color=0x86E49C  
         )
         embed.set_image(url='https://i.imgur.com/ZCE00xe.png')
-        embed.set_footer(text="도리봇", icon_url="https://i.imgur.com/Ny6e2BS.jpeg")
+        embed.set_footer(text=f"도리봇 | {current_time}", icon_url="https://i.imgur.com/Ny6e2BS.jpeg")
         await message.channel.send(embed=embed)
         return 
 
     if ":38:" in message.content:
+        current_time = datetime.datetime.now(seoul_tz).strftime('%Y-%m-%d %H:%M:%S')
         embed = discord.Embed(
             title='해당 기능은 Beta 버전입니다.',
             description=f'{message.author.mention} 님의 이모지 크기를 \n\n강제로 확대하였습니다.',
             color=0x86E49C  
         )
         embed.set_image(url='https://i.imgur.com/zsd6Zxf.png')
-        embed.set_footer(text="도리봇", icon_url="https://i.imgur.com/Ny6e2BS.jpeg")
+        embed.set_footer(text=f"도리봇 | {current_time}", icon_url="https://i.imgur.com/Ny6e2BS.jpeg")
         await message.channel.send(embed=embed)
         return
 
     if ":39:" in message.content:
+        current_time = datetime.datetime.now(seoul_tz).strftime('%Y-%m-%d %H:%M:%S')
         embed = discord.Embed(
             title='해당 기능은 Beta 버전입니다.',
             description=f'{message.author.mention} 님의 이모지 크기를 \n\n강제로 확대하였습니다.',
             color=0x86E49C  
         )
         embed.set_image(url='https://i.imgur.com/0PnFdno.png')
-        embed.set_footer(text="도리봇", icon_url="https://i.imgur.com/Ny6e2BS.jpeg")
+        embed.set_footer(text=f"도리봇 | {current_time}", icon_url="https://i.imgur.com/Ny6e2BS.jpeg")
         await message.channel.send(embed=embed)
         return
 
     if ":40:" in message.content:
+        current_time = datetime.datetime.now(seoul_tz).strftime('%Y-%m-%d %H:%M:%S')
         embed = discord.Embed(
             title='해당 기능은 Beta 버전입니다.',
             description=f'{message.author.mention} 님의 이모지 크기를 \n\n강제로 확대하였습니다.',
             color=0x86E49C    
         )
         embed.set_image(url='https://i.imgur.com/Wf1J7Ur.png')
-        embed.set_footer(text="도리봇", icon_url="https://i.imgur.com/Ny6e2BS.jpeg")
+        embed.set_footer(text=f"도리봇 | {current_time}", icon_url="https://i.imgur.com/Ny6e2BS.jpeg")
         await message.channel.send(embed=embed)
         return
      
