@@ -237,7 +237,7 @@ async def on_message(message):
             color=0x3498db  # 파란색
         )
         embed.set_image(url='https://i.imgur.com/kJDrG0s.png')
-        embed.set_footer(text=f"도리봇 | {current_time}", icon_url="https://i.imgur.com/Ny6e2BS.jpeg")
+        embed.set_footer(text=f"개조된도리봇 | {current_time}", icon_url="https://i.imgur.com/d1Ef9W8.jpeg")
         await message.channel.send(embed=embed)
         return
 
@@ -249,7 +249,7 @@ async def on_message(message):
             color=0x86E49C  
         )
         embed.set_image(url='https://i.imgur.com/WX2l0uU.png')
-        embed.set_footer(text=f"도리봇 | {current_time}", icon_url="https://i.imgur.com/Ny6e2BS.jpeg")
+        embed.set_footer(text=f"개조된도리봇 | {current_time}", icon_url="https://i.imgur.com/d1Ef9W8.jpeg")
         await message.channel.send(embed=embed)
         return    
 
@@ -261,7 +261,7 @@ async def on_message(message):
             color=0x86E49C  
         )
         embed.set_image(url='https://i.imgur.com/1r3hhVb.png')
-        embed.set_footer(text=f"도리봇 | {current_time}", icon_url="https://i.imgur.com/Ny6e2BS.jpeg")
+        embed.set_footer(text=f"개조된도리봇 | {current_time}", icon_url="https://i.imgur.com/d1Ef9W8.jpeg")
         await message.channel.send(embed=embed)
         return
 
@@ -273,7 +273,7 @@ async def on_message(message):
             color=0x86E49C  
         )
         embed.set_image(url='https://i.imgur.com/NPIbOLd.png')
-        embed.set_footer(text=f"도리봇 | {current_time}", icon_url="https://i.imgur.com/Ny6e2BS.jpeg")
+        embed.set_footer(text=f"개조된도리봇 | {current_time}", icon_url="https://i.imgur.com/d1Ef9W8.jpeg")
         await message.channel.send(embed=embed)
         return
 
@@ -285,7 +285,7 @@ async def on_message(message):
             color=0x86E49C  
         )
         embed.set_image(url='https://i.imgur.com/PzwThBo.png')
-        embed.set_footer(text=f"도리봇 | {current_time}", icon_url="https://i.imgur.com/Ny6e2BS.jpeg")
+        embed.set_footer(text=f"개조된도리봇 | {current_time}", icon_url="https://i.imgur.com/d1Ef9W8.jpeg")
         await message.channel.send(embed=embed)
         return
 
@@ -297,7 +297,7 @@ async def on_message(message):
             color=0x86E49C  
         )
         embed.set_image(url='https://i.imgur.com/bDvCKcC.png')
-        embed.set_footer(text=f"도리봇 | {current_time}", icon_url="https://i.imgur.com/Ny6e2BS.jpeg")
+        embed.set_footer(text=f"개조된도리봇 | {current_time}", icon_url="https://i.imgur.com/d1Ef9W8.jpeg")
         await message.channel.send(embed=embed)
         return
 
@@ -309,7 +309,7 @@ async def on_message(message):
             color=0x86E49C  
         )
         embed.set_image(url='https://i.imgur.com/VPusR3u.png')
-        embed.set_footer(text=f"도리봇 | {current_time}", icon_url="https://i.imgur.com/Ny6e2BS.jpeg")
+        embed.set_footer(text=f"개조된도리봇 | {current_time}", icon_url="https://i.imgur.com/d1Ef9W8.jpeg")
         await message.channel.send(embed=embed)
         return   
 
@@ -321,7 +321,7 @@ async def on_message(message):
             color=0x86E49C  
         )
         embed.set_image(url='https://i.imgur.com/e1zqgdO.png')
-        embed.set_footer(text=f"도리봇 | {current_time}", icon_url="https://i.imgur.com/Ny6e2BS.jpeg")
+        embed.set_footer(text=f"개조된도리봇 | {current_time}", icon_url="https://i.imgur.com/d1Ef9W8.jpeg")
         await message.channel.send(embed=embed)
         return
 
@@ -333,7 +333,7 @@ async def on_message(message):
             color=0x86E49C  
         )
         embed.set_image(url='https://i.imgur.com/7UlfZbz.png')
-        embed.set_footer(text=f"도리봇 | {current_time}", icon_url="https://i.imgur.com/Ny6e2BS.jpeg")
+        embed.set_footer(text=f"개조된도리봇 | {current_time}", icon_url="https://i.imgur.com/d1Ef9W8.jpeg")
         await message.channel.send(embed=embed)
         return
 
@@ -345,7 +345,7 @@ async def on_message(message):
             color=0x86E49C  
         )
         embed.set_image(url='https://i.imgur.com/EwgIbSk.png')
-        embed.set_footer(text=f"도리봇 | {current_time}", icon_url="https://i.imgur.com/Ny6e2BS.jpeg")
+        embed.set_footer(text=f"개조된도리봇 | {current_time}", icon_url="https://i.imgur.com/d1Ef9W8.jpeg")
         await message.channel.send(embed=embed)
         return
 
@@ -357,7 +357,7 @@ async def on_message(message):
             color=0x86E49C  
         )
         embed.set_image(url='https://i.imgur.com/biIJH99.png')
-        embed.set_footer(text=f"도리봇 | {current_time}", icon_url="https://i.imgur.com/Ny6e2BS.jpeg")
+        embed.set_footer(text=f"개조된도리봇 | {current_time}", icon_url="https://i.imgur.com/d1Ef9W8.jpeg")
         await message.channel.send(embed=embed)
         return
 
@@ -369,7 +369,7 @@ async def on_message(message):
             color=0x86E49C  
         )
         embed.set_image(url='https://i.imgur.com/gyePhJr.png')
-        embed.set_footer(text=f"도리봇 | {current_time}", icon_url="https://i.imgur.com/Ny6e2BS.jpeg")
+        embed.set_footer(text=f"개조된도리봇 | {current_time}", icon_url="https://i.imgur.com/d1Ef9W8.jpeg")
         await message.channel.send(embed=embed)
         return     
 
@@ -381,7 +381,7 @@ async def on_message(message):
             color=0x86E49C  
         )
         embed.set_image(url='https://i.imgur.com/ZlzXREI.png')
-        embed.set_footer(text=f"도리봇 | {current_time}", icon_url="https://i.imgur.com/Ny6e2BS.jpeg")
+        embed.set_footer(text=f"개조된도리봇 | {current_time}", icon_url="https://i.imgur.com/d1Ef9W8.jpeg")
         await message.channel.send(embed=embed)
         return
 
@@ -393,7 +393,7 @@ async def on_message(message):
             color=0x86E49C  
         )
         embed.set_image(url='https://i.imgur.com/okCxfKw.png')
-        embed.set_footer(text=f"도리봇 | {current_time}", icon_url="https://i.imgur.com/Ny6e2BS.jpeg")
+        embed.set_footer(text=f"개조된도리봇 | {current_time}", icon_url="https://i.imgur.com/d1Ef9W8.jpeg")
         await message.channel.send(embed=embed)
         return
 
@@ -405,7 +405,7 @@ async def on_message(message):
             color=0x86E49C  
         )
         embed.set_image(url='https://i.imgur.com/iKktYRc.png')
-        embed.set_footer(text=f"도리봇 | {current_time}", icon_url="https://i.imgur.com/Ny6e2BS.jpeg")
+        embed.set_footer(text=f"개조된도리봇 | {current_time}", icon_url="https://i.imgur.com/d1Ef9W8.jpeg")
         await message.channel.send(embed=embed)
         return
 
@@ -417,7 +417,7 @@ async def on_message(message):
             color=0x86E49C  
         )
         embed.set_image(url='https://i.imgur.com/NfpVoVi.png')
-        embed.set_footer(text=f"도리봇 | {current_time}", icon_url="https://i.imgur.com/Ny6e2BS.jpeg")
+        embed.set_footer(text=f"개조된도리봇 | {current_time}", icon_url="https://i.imgur.com/d1Ef9W8.jpeg")
         await message.channel.send(embed=embed)
         return
 
@@ -429,7 +429,7 @@ async def on_message(message):
             color=0x86E49C  
         )
         embed.set_image(url='https://i.imgur.com/thA8iNJ.png')
-        embed.set_footer(text=f"도리봇 | {current_time}", icon_url="https://i.imgur.com/Ny6e2BS.jpeg")
+        embed.set_footer(text=f"개조된도리봇 | {current_time}", icon_url="https://i.imgur.com/d1Ef9W8.jpeg")
         await message.channel.send(embed=embed)
         return  
 
@@ -441,7 +441,7 @@ async def on_message(message):
             color=0x86E49C  
         )
         embed.set_image(url='https://i.imgur.com/2afn6NY.png')
-        embed.set_footer(text=f"도리봇 | {current_time}", icon_url="https://i.imgur.com/Ny6e2BS.jpeg")
+        embed.set_footer(text=f"개조된도리봇 | {current_time}", icon_url="https://i.imgur.com/d1Ef9W8.jpeg")
         await message.channel.send(embed=embed)
         return
 
@@ -453,7 +453,7 @@ async def on_message(message):
             color=0x86E49C  
         )
         embed.set_image(url='https://i.imgur.com/6dZaEcG.png')
-        embed.set_footer(text=f"도리봇 | {current_time}", icon_url="https://i.imgur.com/Ny6e2BS.jpeg")
+        embed.set_footer(text=f"개조된도리봇 | {current_time}", icon_url="https://i.imgur.com/d1Ef9W8.jpeg")
         await message.channel.send(embed=embed)
         return
 
@@ -465,7 +465,7 @@ async def on_message(message):
             color=0x86E49C  
         )
         embed.set_image(url='https://i.imgur.com/tjp1ces.png')
-        embed.set_footer(text=f"도리봇 | {current_time}", icon_url="https://i.imgur.com/Ny6e2BS.jpeg")
+        embed.set_footer(text=f"개조된도리봇 | {current_time}", icon_url="https://i.imgur.com/d1Ef9W8.jpeg")
         await message.channel.send(embed=embed)
         return
 
@@ -477,7 +477,7 @@ async def on_message(message):
             color=0x86E49C  
         )
         embed.set_image(url='https://i.imgur.com/N7H3IN5.png')
-        embed.set_footer(text=f"도리봇 | {current_time}", icon_url="https://i.imgur.com/Ny6e2BS.jpeg")
+        embed.set_footer(text=f"개조된도리봇 | {current_time}", icon_url="https://i.imgur.com/d1Ef9W8.jpeg")
         await message.channel.send(embed=embed)
         return
 
@@ -489,7 +489,7 @@ async def on_message(message):
             color=0x86E49C  
         )
         embed.set_image(url='https://i.imgur.com/npCQgc9.png')
-        embed.set_footer(text=f"도리봇 | {current_time}", icon_url="https://i.imgur.com/Ny6e2BS.jpeg")
+        embed.set_footer(text=f"개조된도리봇 | {current_time}", icon_url="https://i.imgur.com/d1Ef9W8.jpeg")
         await message.channel.send(embed=embed)
         return
 
@@ -501,7 +501,7 @@ async def on_message(message):
             color=0x86E49C  
         )
         embed.set_image(url='https://i.imgur.com/vnGfnPf.png')
-        embed.set_footer(text=f"도리봇 | {current_time}", icon_url="https://i.imgur.com/Ny6e2BS.jpeg")
+        embed.set_footer(text=f"개조된도리봇 | {current_time}", icon_url="https://i.imgur.com/d1Ef9W8.jpeg")
         await message.channel.send(embed=embed)
         return
 
@@ -513,7 +513,7 @@ async def on_message(message):
             color=0x86E49C  
         )
         embed.set_image(url='https://i.imgur.com/F9D06cX.png')
-        embed.set_footer(text=f"도리봇 | {current_time}", icon_url="https://i.imgur.com/Ny6e2BS.jpeg")
+        embed.set_footer(text=f"개조된도리봇 | {current_time}", icon_url="https://i.imgur.com/d1Ef9W8.jpeg")
         await message.channel.send(embed=embed)
         return
 
@@ -525,7 +525,7 @@ async def on_message(message):
             color=0x86E49C  
         )
         embed.set_image(url='https://i.imgur.com/HaoReRY.png')
-        embed.set_footer(text=f"도리봇 | {current_time}", icon_url="https://i.imgur.com/Ny6e2BS.jpeg")
+        embed.set_footer(text=f"개조된도리봇 | {current_time}", icon_url="https://i.imgur.com/d1Ef9W8.jpeg")
         await message.channel.send(embed=embed)
         return
 
@@ -537,7 +537,7 @@ async def on_message(message):
             color=0x86E49C  
         )
         embed.set_image(url='https://i.imgur.com/vt1Q6RD.png')
-        embed.set_footer(text=f"도리봇 | {current_time}", icon_url="https://i.imgur.com/Ny6e2BS.jpeg")
+        embed.set_footer(text=f"개조된도리봇 | {current_time}", icon_url="https://i.imgur.com/d1Ef9W8.jpeg")
         await message.channel.send(embed=embed)
         return
 
@@ -549,7 +549,7 @@ async def on_message(message):
             color=0x86E49C  
         )
         embed.set_image(url='https://i.imgur.com/Q4sKIfP.png')
-        embed.set_footer(text=f"도리봇 | {current_time}", icon_url="https://i.imgur.com/Ny6e2BS.jpeg")
+        embed.set_footer(text=f"개조된도리봇 | {current_time}", icon_url="https://i.imgur.com/d1Ef9W8.jpeg")
         await message.channel.send(embed=embed)
         return
 
@@ -561,7 +561,7 @@ async def on_message(message):
             color=0x86E49C  
         )
         embed.set_image(url='https://i.imgur.com/V8oqrZB.png')
-        embed.set_footer(text=f"도리봇 | {current_time}", icon_url="https://i.imgur.com/Ny6e2BS.jpeg")
+        embed.set_footer(text=f"개조된도리봇 | {current_time}", icon_url="https://i.imgur.com/d1Ef9W8.jpeg")
         await message.channel.send(embed=embed)
         return
 
@@ -573,7 +573,7 @@ async def on_message(message):
             color=0x86E49C  
         )
         embed.set_image(url='https://i.imgur.com/8jNSKlD.png')
-        embed.set_footer(text=f"도리봇 | {current_time}", icon_url="https://i.imgur.com/Ny6e2BS.jpeg")
+        embed.set_footer(text=f"개조된도리봇 | {current_time}", icon_url="https://i.imgur.com/d1Ef9W8.jpeg")
         await message.channel.send(embed=embed)
         return   
 
@@ -585,7 +585,7 @@ async def on_message(message):
             color=0x86E49C  
         )
         embed.set_image(url='https://i.imgur.com/SWW5313.png')
-        embed.set_footer(text=f"도리봇 | {current_time}", icon_url="https://i.imgur.com/Ny6e2BS.jpeg")
+        embed.set_footer(text=f"개조된도리봇 | {current_time}", icon_url="https://i.imgur.com/d1Ef9W8.jpeg")
         await message.channel.send(embed=embed)
         return
 
@@ -597,7 +597,7 @@ async def on_message(message):
             color=0x86E49C  
         )
         embed.set_image(url='https://i.imgur.com/fdBrLKw.png')
-        embed.set_footer(text=f"도리봇 | {current_time}", icon_url="https://i.imgur.com/Ny6e2BS.jpeg")
+        embed.set_footer(text=f"개조된도리봇 | {current_time}", icon_url="https://i.imgur.com/d1Ef9W8.jpeg")
         await message.channel.send(embed=embed)
         return
 
@@ -609,7 +609,7 @@ async def on_message(message):
             color=0x86E49C  
         )
         embed.set_image(url='https://i.imgur.com/am84lo6.png')
-        embed.set_footer(text=f"도리봇 | {current_time}", icon_url="https://i.imgur.com/Ny6e2BS.jpeg")
+        embed.set_footer(text=f"개조된도리봇 | {current_time}", icon_url="https://i.imgur.com/d1Ef9W8.jpeg")
         await message.channel.send(embed=embed)
         return     
 
@@ -621,7 +621,7 @@ async def on_message(message):
             color=0x86E49C  
         )
         embed.set_image(url='https://i.imgur.com/T1F1AFH.png')
-        embed.set_footer(text=f"도리봇 | {current_time}", icon_url="https://i.imgur.com/Ny6e2BS.jpeg")
+        embed.set_footer(text=f"개조된도리봇 | {current_time}", icon_url="https://i.imgur.com/d1Ef9W8.jpeg")
         await message.channel.send(embed=embed)
         return
 
@@ -633,7 +633,7 @@ async def on_message(message):
             color=0x86E49C  
         )
         embed.set_image(url='https://i.imgur.com/P1eW1Fv.png')
-        embed.set_footer(text=f"도리봇 | {current_time}", icon_url="https://i.imgur.com/Ny6e2BS.jpeg")
+        embed.set_footer(text=f"개조된도리봇 | {current_time}", icon_url="https://i.imgur.com/d1Ef9W8.jpeg")
         await message.channel.send(embed=embed)
         return
 
@@ -645,7 +645,7 @@ async def on_message(message):
             color=0x86E49C  
         )
         embed.set_image(url='https://i.imgur.com/ddlUmB6.png')
-        embed.set_footer(text=f"도리봇 | {current_time}", icon_url="https://i.imgur.com/Ny6e2BS.jpeg")
+        embed.set_footer(text=f"개조된도리봇 | {current_time}", icon_url="https://i.imgur.com/d1Ef9W8.jpeg")
         await message.channel.send(embed=embed)
         return
 
@@ -657,7 +657,7 @@ async def on_message(message):
             color=0x86E49C  
         )
         embed.set_image(url='https://i.imgur.com/JETBDDo.png')
-        embed.set_footer(text=f"도리봇 | {current_time}", icon_url="https://i.imgur.com/Ny6e2BS.jpeg")
+        embed.set_footer(text=f"개조된도리봇 | {current_time}", icon_url="https://i.imgur.com/d1Ef9W8.jpeg")
         await message.channel.send(embed=embed)
         return
 
@@ -669,7 +669,7 @@ async def on_message(message):
             color=0x86E49C  
         )
         embed.set_image(url='https://i.imgur.com/mtgJRPI.png')
-        embed.set_footer(text=f"도리봇 | {current_time}", icon_url="https://i.imgur.com/Ny6e2BS.jpeg")
+        embed.set_footer(text=f"개조된도리봇 | {current_time}", icon_url="https://i.imgur.com/d1Ef9W8.jpeg")
         await message.channel.send(embed=embed)
         return   
 
@@ -681,7 +681,7 @@ async def on_message(message):
             color=0x86E49C  
         )
         embed.set_image(url='https://i.imgur.com/ZCE00xe.png')
-        embed.set_footer(text=f"도리봇 | {current_time}", icon_url="https://i.imgur.com/Ny6e2BS.jpeg")
+        embed.set_footer(text=f"개조된도리봇 | {current_time}", icon_url="https://i.imgur.com/d1Ef9W8.jpeg")
         await message.channel.send(embed=embed)
         return 
 
@@ -693,7 +693,7 @@ async def on_message(message):
             color=0x86E49C  
         )
         embed.set_image(url='https://i.imgur.com/zsd6Zxf.png')
-        embed.set_footer(text=f"도리봇 | {current_time}", icon_url="https://i.imgur.com/Ny6e2BS.jpeg")
+        embed.set_footer(text=f"개조된도리봇 | {current_time}", icon_url="https://i.imgur.com/d1Ef9W8.jpeg")
         await message.channel.send(embed=embed)
         return
 
@@ -705,7 +705,7 @@ async def on_message(message):
             color=0x86E49C  
         )
         embed.set_image(url='https://i.imgur.com/0PnFdno.png')
-        embed.set_footer(text=f"도리봇 | {current_time}", icon_url="https://i.imgur.com/Ny6e2BS.jpeg")
+        embed.set_footer(text=f"개조된도리봇 | {current_time}", icon_url="https://i.imgur.com/d1Ef9W8.jpeg")
         await message.channel.send(embed=embed)
         return
 
@@ -717,7 +717,7 @@ async def on_message(message):
             color=0x86E49C    
         )
         embed.set_image(url='https://i.imgur.com/Wf1J7Ur.png')
-        embed.set_footer(text=f"도리봇 | {current_time}", icon_url="https://i.imgur.com/Ny6e2BS.jpeg")
+        embed.set_footer(text=f"개조된도리봇 | {current_time}", icon_url="https://i.imgur.com/d1Ef9W8.jpeg")
         await message.channel.send(embed=embed)
         return
      
