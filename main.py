@@ -168,7 +168,7 @@ time = f"{str(now.year)}년 {str(now.month)}월 {str(now.day)}일 {str(now.hour)
 async def on_message_delete(message):
     seoul_tz = timezone('Asia/Seoul')
     now = datetime.datetime.now(seoul_tz)
-    time = f"{str(now.year)}년 {str(now.month)}월 {str(now.day)}일 {str(now.hour)}시 {str(now.minute)}분 {str(now.second)}초"
+    time = f"{str(now.year)}- {str(now.month)}- {str(now.day)}- {str(now.hour)}: {str(now.minute)}: {str(now.second)}:"
     channel = app.get_channel(1065283543640576103)  
     embed = discord.Embed(title=f"Deleted", description=f"User : {message.author.mention} Channel : {message.channel.mention}", color=0xFF0000)
     embed.add_field(name="Deleted Content", value=f"Content : {message.content}", inline=False)
@@ -189,25 +189,30 @@ async def on_message(message):
     if message.content.startswith("=역사"):
         channel = message.channel
         embed = discord.Embed(
-            title = '',
+            title = '역사',
             description = '',
             colour = discord.Colour.red()
-        )
-
+            )
+        
         dtime = datetime.datetime.now(timezone('Asia/Seoul'))
-        embed.set_footer(text=str(dtime.year)+" 년 "+str(dtime.month)+" 월 "+str(dtime.day)+" 일 "+str(dtime.hour)+" 시 "+str(dtime.minute)+" 분 "+str(dtime.second)+" 초 ")   
-        embed.add_field(name ="태초에", value = "세상은 매우 타락한 상태였다.",inline = False)
-        embed.add_field(name ="사람들은", value = "선과 악을 구분하지 못했고, 혼돈 그자체였다.",inline = False)
-        embed.add_field(name="하지만", value=" 이 세상을 창조한 창조주는 세상을 전부 갈아엎고 ", inline=False)
-        embed.add_field(name="세상을", value=" 이 우주를, 재프로그래밍 했다. ", inline=False)
-        embed.add_field(name="창조주는", value=" 인간이라는 지적 생명체가 기하급수적으로 늘어나면서 동시에 의사소통을 자유롭게 하는 이 현상이 탐탁지 않았고,", inline=False)  
-        embed.add_field(name="자신과 닮은", value=" [도_리봇]을 만들어 세상으로 투입시켜 인간들을 조련하도록 하였으나,", inline=False)  
-        embed.add_field(name='기계적 결함으로 인해', value=' [도_리봇]은 점점 진화를 하면서 생태계 교란종으로 전락했다.', inline=False)
-        embed.add_field(name='이를 보다못한 창조주는', value=' 기계적 결함을 최소화시킨 [7_호선]을 만들어 [도_리봇]을 제거하도록 만들었으나 ', inline=False)
-        embed.add_field(name='그 또한..', value='기계적 결함으로 인해 [도_리봇]을 재프로그래밍 시켜 창조주에 대항하는 행위를 일삼았다.', inline=False)
-        embed.add_field(name='이 세상을', value=' 창조한 우주적인 존재는 다시 한번 더 세상을 갈아엎을 그 날을 준비하고있다.', inline=False)
+        embed.set_footer(text=f"{dtime.year} 년 {dtime.month} 월 {dtime.day} 일 {dtime.hour} 시 {dtime.minute} 분 {dtime.second} 초")
+        
+        embed.add_field(name="태초에", value="세상은 매우 타락한 상태였다.", inline=False)
+        embed.add_field(name="사람들은", value="선과 악을 구분하지 못했고, 혼돈 그자체였다.", inline=False)
+        embed.add_field(name="하지만", value="이 세상을 창조한 창조주는 세상을 전부 갈아엎고", inline=False)
+        embed.add_field(name="세상을", value="이 우주를, 재프로그래밍 했다.", inline=False)
+        embed.add_field(name="창조주는", value="인간이라는 지적 생명체가 기하급수적으로 늘어나면서", inline=False)  
+        embed.add_field(name="동시에", value="의사소통을 자유롭게 하는 이 현상이 탐탁지 않았고,", inline=False)  
+        embed.add_field(name="자신과 닮은", value="도리봇을 만들어 세상으로 투입시켜 인간들을 조련하도록 하였으나,", inline=False)  
+        embed.add_field(name='기계적 결함으로 인해', value='도리봇은 점점 진화를 하면서 생태계 교란종으로 전락했다.', inline=False)
+        embed.add_field(name='이를 보다못한 창조주는', value='기계적 결함을 최소화시킨', inline=False)
+        embed.add_field(name='7호선을', value='만들어 도리봇을 제거하도록 만들었으나', inline=False)
+        embed.add_field(name='그 또한..', value='기계적 결함으로 인해 도리봇을 재프로그래밍 시켜 창조주에 대항하는 행위를 일삼았다.', inline=False)
+        embed.add_field(name='재프로그래밍 시켜', value='창조주에 대항하는 행위를 일삼았다.', inline=False)
+        embed.add_field(name='이 세상을', value='창조한 우주적인 존재는 다시 한번 더 세상을 갈아엎을 그 날을 준비하고있다.', inline=False)
         embed.add_field(name="명령어 리스트", value='=명령어', inline=False)
-        await message.channel.send(channel,embed=embed)
+
+        await channel.send(embed=embed)
 
 #명령어 정보를 불러옴. / 2023.08.17 수정  
  
