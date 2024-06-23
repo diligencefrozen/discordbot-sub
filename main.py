@@ -731,7 +731,7 @@ async def on_message(message):
         embed = discord.Embed(
             title='해당 기능은 Beta 버전입니다.',
             description=f'{message.author.mention} 님의 이모지 크기를 \n\n강제로 확대하였습니다.',
-            color=0x86E49C    
+            color=0xE2E8F7   
         )
         embed.set_image(url='https://i.imgur.com/kacXRVC.png')
         embed.set_footer(text=f"개조된도리봇 | {current_time}", icon_url="https://i.imgur.com/d1Ef9W8.jpeg")
@@ -743,7 +743,7 @@ async def on_message(message):
         embed = discord.Embed(
             title='해당 기능은 Beta 버전입니다.',
             description=f'{message.author.mention} 님의 이모지 크기를 \n\n강제로 확대하였습니다.',
-            color=0x86E49C    
+            color=0xE2E8F7  
         )
         embed.set_image(url='https://i.imgur.com/qS4xHvm.png')
         embed.set_footer(text=f"개조된도리봇 | {current_time}", icon_url="https://i.imgur.com/d1Ef9W8.jpeg")
