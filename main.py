@@ -168,7 +168,7 @@ time = f"{str(now.year)}년 {str(now.month)}월 {str(now.day)}일 {str(now.hour)
 async def on_message_delete(message):
     seoul_tz = timezone('Asia/Seoul')
     now = datetime.datetime.now(seoul_tz)
-    time = f"{str(now.year)}- {str(now.month)}- {str(now.day)}- {str(now.hour)}: {str(now.minute)}: {str(now.second)}:"
+    time = f"{str(now.year)}- {str(now.month)}- {str(now.day)}- {str(now.hour)}: {str(now.minute)}: {str(now.second)}"
     channel = app.get_channel(1065283543640576103)  
     embed = discord.Embed(title=f"Deleted", description=f"User : {message.author.mention} Channel : {message.channel.mention}", color=0xFF0000)
     embed.add_field(name="Deleted Content", value=f"Content : {message.content}", inline=False)
