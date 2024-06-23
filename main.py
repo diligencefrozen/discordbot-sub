@@ -207,9 +207,10 @@ async def on_message(message):
         embed.add_field(name='기계적 결함으로 인해', value='도리봇은 점점 진화를 하면서 생태계 교란종으로 전락했다.', inline=False)
         embed.add_field(name='이를 보다못한 창조주는', value='기계적 결함을 최소화시킨', inline=False)
         embed.add_field(name='7호선을', value='만들어 도리봇을 제거하도록 만들었으나', inline=False)
-        embed.add_field(name='그 또한..', value='기계적 결함으로 인해 도리봇을 재프로그래밍 시켜 창조주에 대항하는 행위를 일삼았다.', inline=False)
+        embed.add_field(name='그 또한..', value='기계적 결함으로 인해 도리봇을 ', inline=False)
         embed.add_field(name='재프로그래밍 시켜', value='창조주에 대항하는 행위를 일삼았다.', inline=False)
-        embed.add_field(name='이 세상을', value='창조한 우주적인 존재는 다시 한번 더 세상을 갈아엎을 그 날을 준비하고있다.', inline=False)
+        embed.add_field(name='이 세상을', value='창조한 우주적인 존재는 ', inline=False)
+        embed.add_field(name='다시 한번 더', value='세상을 갈아엎을 그 날을 준비하고있다.', inline=False)
         embed.add_field(name="명령어 리스트", value='=명령어', inline=False)
 
         await channel.send(embed=embed)
