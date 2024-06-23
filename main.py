@@ -6,15 +6,20 @@ import logging
 import random
 import traceback
 import time
+import datetime
 import os
 import urllib
 import bs4
 import re
 from urllib.parse import quote
 import warnings
-from discord.ext import commands, tasks
-from urllib.request import URLError, HTTPError, urlopen, Request
+from discord.ext import commands
+from urllib.request import URLError
+from urllib.request import HTTPError
+from urllib.request import urlopen
 from bs4 import BeautifulSoup
+from urllib.request import urlopen, Request
+from discord.ext import tasks
 from pytz import timezone
  
 app = discord.Client()
@@ -156,15 +161,17 @@ async def on_ready():
     await app.change_presence(status=discord.Status.online, activity=game)
         
 seoul_tz = timezone('Asia/Seoul')
+now = datetime.datetime.now(seoul_tz)
+time = f"{str(now.year)}년 {str(now.month)}월 {str(now.day)}일 {str(now.hour)}시 {str(now.minute)}분 {str(now.second)}초"
 
 @app.event
 async def on_message_delete(message):
     seoul_tz = timezone('Asia/Seoul')
     now = datetime.datetime.now(seoul_tz)
-    time = f"{now.year}-{now.month}-{now.day} {now.hour}:{now.minute}:{now.second}"
-    channel = app.get_channel(1064823080100306995)
-    embed = discord.Embed(title="Deleted", description=f"User: {message.author.mention} Channel: {message.channel.mention}", color=0xFF0000)
-    embed.add_field(name="Deleted Content", value=f"Content: {message.content}", inline=False)
+    time = f"{str(now.year)}년 {str(now.month)}월 {str(now.day)}일 {str(now.hour)}시 {str(now.minute)}분 {str(now.second)}초"
+    channel = app.get_channel(1065283543640576103)  
+    embed = discord.Embed(title=f"Deleted", description=f"User : {message.author.mention} Channel : {message.channel.mention}", color=0xFF0000)
+    embed.add_field(name="Deleted Content", value=f"Content : {message.content}", inline=False)
     embed.set_footer(text=f"{message.guild.name} | {time}")
     await channel.send(embed=embed)
     
