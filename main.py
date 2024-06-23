@@ -725,6 +725,30 @@ async def on_message(message):
         embed.set_footer(text=f"개조된도리봇 | {current_time}", icon_url="https://i.imgur.com/d1Ef9W8.jpeg")
         await message.channel.send(embed=embed)
         return
+
+    if ":41:" in message.content:
+        current_time = datetime.datetime.now(seoul_tz).strftime('%Y-%m-%d %H:%M:%S')
+        embed = discord.Embed(
+            title='해당 기능은 Beta 버전입니다.',
+            description=f'{message.author.mention} 님의 이모지 크기를 \n\n강제로 확대하였습니다.',
+            color=0x86E49C    
+        )
+        embed.set_image(url='https://i.imgur.com/kacXRVC.png')
+        embed.set_footer(text=f"개조된도리봇 | {current_time}", icon_url="https://i.imgur.com/d1Ef9W8.jpeg")
+        await message.channel.send(embed=embed)
+        return
+
+    if ":42:" in message.content:
+        current_time = datetime.datetime.now(seoul_tz).strftime('%Y-%m-%d %H:%M:%S')
+        embed = discord.Embed(
+            title='해당 기능은 Beta 버전입니다.',
+            description=f'{message.author.mention} 님의 이모지 크기를 \n\n강제로 확대하였습니다.',
+            color=0x86E49C    
+        )
+        embed.set_image(url='https://i.imgur.com/qS4xHvm.png')
+        embed.set_footer(text=f"개조된도리봇 | {current_time}", icon_url="https://i.imgur.com/d1Ef9W8.jpeg")
+        await message.channel.send(embed=embed)
+        return
      
 #창조주, 창조물에 대한 정보를 불러옴. / 2023.08.17 수정  
  
