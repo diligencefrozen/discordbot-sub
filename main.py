@@ -151,6 +151,48 @@ nickname_patterns06 = [
     re.compile(r"광탈[ㄱㄴㄷㄹㅁㅂㅅㅇㅈㅊㅋㅌㅍㅎabcdefghijklmnopqrstuvwxyz1234567890/@!:;#\\s$%^&*()\-_ㅡ=+.,?'\"{}\[\]|`~<> ]+맨"),   
 ]  
 
+nodong_patterns = [
+    re.compile(r"노[ㄱㄴㄷㄹㅁㅂㅅㅇㅈㅊㅋㅌㅍㅎabcdefghijklmnopqrstuvwxyz1234567890/@!:;#\\s$%^&*()\-_ㅡ=+.,?'\"{}\[\]|`~<> ]+동"),
+    re.compile(r"N[ㄱㄴㄷㄹㅁㅂㅅㅇㅈㅊㅋㅌㅍㅎabcdefghijklmnopqrstuvwxyz1234567890/@!:;#\\s$%^&*()\-_ㅡ=+.,?'\"{}\[\]|`~<> ]+odong"),
+    re.compile(r"No[ㄱㄴㄷㄹㅁㅂㅅㅇㅈㅊㅋㅌㅍㅎabcdefghijklmnopqrstuvwxyz1234567890/@!:;#\\s$%^&*()\-_ㅡ=+.,?'\"{}\[\]|`~<> ]+dong"),
+    re.compile(r"Nod[ㄱㄴㄷㄹㅁㅂㅅㅇㅈㅊㅋㅌㅍㅎabcdefghijklmnopqrstuvwxyz1234567890/@!:;#\\s$%^&*()\-_ㅡ=+.,?'\"{}\[\]|`~<> ]+ong"),
+    re.compile(r"Nodo[ㄱㄴㄷㄹㅁㅂㅅㅇㅈㅊㅋㅌㅍㅎabcdefghijklmnopqrstuvwxyz1234567890/@!:;#\\s$%^&*()\-_ㅡ=+.,?'\"{}\[\]|`~<> ]+ng"),
+    re.compile(r"Nodon[ㄱㄴㄷㄹㅁㅂㅅㅇㅈㅊㅋㅌㅍㅎabcdefghijklmnopqrstuvwxyz1234567890/@!:;#\\s$%^&*()\-_ㅡ=+.,?'\"{}\[\]|`~<> ]+g"),
+    re.compile(r"N[ㄱㄴㄷㄹㅁㅂㅅㅇㅈㅊㅋㅌㅍㅎabcdefghijklmnopqrstuvwxyz1234567890/@!:;#\\s$%^&*()\-_ㅡ=+.,?'\"{}\[\]|`~<> ]+ODONG"),
+    re.compile(r"NO[ㄱㄴㄷㄹㅁㅂㅅㅇㅈㅊㅋㅌㅍㅎabcdefghijklmnopqrstuvwxyz1234567890/@!:;#\\s$%^&*()\-_ㅡ=+.,?'\"{}\[\]|`~<> ]+DONG"),
+    re.compile(r"NOD[ㄱㄴㄷㄹㅁㅂㅅㅇㅈㅊㅋㅌㅍㅎabcdefghijklmnopqrstuvwxyz1234567890/@!:;#\\s$%^&*()\-_ㅡ=+.,?'\"{}\[\]|`~<> ]+ONG"),
+    re.compile(r"NODO[ㄱㄴㄷㄹㅁㅂㅅㅇㅈㅊㅋㅌㅍㅎabcdefghijklmnopqrstuvwxyz1234567890/@!:;#\\s$%^&*()\-_ㅡ=+.,?'\"{}\[\]|`~<> ]+NG"),
+    re.compile(r"NODON[ㄱㄴㄷㄹㅁㅂㅅㅇㅈㅊㅋㅌㅍㅎabcdefghijklmnopqrstuvwxyz1234567890/@!:;#\\s$%^&*()\-_ㅡ=+.,?'\"{}\[\]|`~<> ]+G"),
+    re.compile(r"n[ㄱㄴㄷㄹㅁㅂㅅㅇㅈㅊㅋㅌㅍㅎabcdefghijklmnopqrstuvwxyz1234567890/@!:;#\\s$%^&*()\-_ㅡ=+.,?'\"{}\[\]|`~<> ]+odong"),
+    re.compile(r"no[ㄱㄴㄷㄹㅁㅂㅅㅇㅈㅊㅋㅌㅍㅎabcdefghijklmnopqrstuvwxyz1234567890/@!:;#\\s$%^&*()\-_ㅡ=+.,?'\"{}\[\]|`~<> ]+dong"),
+    re.compile(r"nod[ㄱㄴㄷㄹㅁㅂㅅㅇㅈㅊㅋㅌㅍㅎabcdefghijklmnopqrstuvwxyz1234567890/@!:;#\\s$%^&*()\-_ㅡ=+.,?'\"{}\[\]|`~<> ]+ong"),
+    re.compile(r"nodo[ㄱㄴㄷㄹㅁㅂㅅㅇㅈㅊㅋㅌㅍㅎabcdefghijklmnopqrstuvwxyz1234567890/@!:;#\\s$%^&*()\-_ㅡ=+.,?'\"{}\[\]|`~<> ]+ng"),
+    re.compile(r"nodon[ㄱㄴㄷㄹㅁㅂㅅㅇㅈㅊㅋㅌㅍㅎabcdefghijklmnopqrstuvwxyz1234567890/@!:;#\\s$%^&*()\-_ㅡ=+.,?'\"{}\[\]|`~<> ]+g"),
+    re.compile(r"직[ㄱㄴㄷㄹㅁㅂㅅㅇㅈㅊㅋㅌㅍㅎabcdefghijklmnopqrstuvwxyz1234567890/@!:;#\\s$%^&*()\-_ㅡ=+.,?'\"{}\[\]|`~<> ]+업"),
+    re.compile(r"직[ㄱㄴㄷㄹㅁㅂㅅㅇㅈㅊㅋㅌㅍㅎabcdefghijklmnopqrstuvwxyz1234567890/@!:;#\\s$%^&*()\-_ㅡ=+.,?'\"{}\[\]|`~<> ]+장"),
+    re.compile(r"일[ㄱㄴㄷㄹㅁㅂㅅㅇㅈㅊㅋㅌㅍㅎabcdefghijklmnopqrstuvwxyz1234567890/@!:;#\\s$%^&*()\-_ㅡ=+.,?'\"{}\[\]|`~<> ]+터"),
+    re.compile(r"근[ㄱㄴㄷㄹㅁㅂㅅㅇㅈㅊㅋㅌㅍㅎabcdefghijklmnopqrstuvwxyz1234567890/@!:;#\\s$%^&*()\-_ㅡ=+.,?'\"{}\[\]|`~<> ]+무지"),
+    re.compile(r"근무[ㄱㄴㄷㄹㅁㅂㅅㅇㅈㅊㅋㅌㅍㅎabcdefghijklmnopqrstuvwxyz1234567890/@!:;#\\s$%^&*()\-_ㅡ=+.,?'\"{}\[\]|`~<> ]+지"),
+    re.compile(r"취[ㄱㄴㄷㄹㅁㅂㅅㅇㅈㅊㅋㅌㅍㅎabcdefghijklmnopqrstuvwxyz1234567890/@!:;#\\s$%^&*()\-_ㅡ=+.,?'\"{}\[\]|`~<> ]+업"),
+]
+
+suicide_patterns = [
+    re.compile(r"자[ㄱㄴㄷㄹㅁㅂㅅㅇㅈㅊㅋㅌㅍㅎabcdefghijklmnopqrstuvwxyz1234567890/@!:;#\\s$%^&*()\-_ㅡ=+.,?'\"{}\[\]|`~<> ]+살"),
+    re.compile(r"S[ㄱㄴㄷㄹㅁㅂㅅㅇㅈㅊㅋㅌㅍㅎabcdefghijklmnopqrstuvwxyz1234567890/@!:;#\\s$%^&*()\-_ㅡ=+.,?'\"{}\[\]|`~<> ]+uicide"),
+    re.compile(r"Su[ㄱㄴㄷㄹㅁㅂㅅㅇㅈㅊㅋㅌㅍㅎabcdefghijklmnopqrstuvwxyz1234567890/@!:;#\\s$%^&*()\-_ㅡ=+.,?'\"{}\[\]|`~<> ]+icide"),
+    re.compile(r"Sui[ㄱㄴㄷㄹㅁㅂㅅㅇㅈㅊㅋㅌㅍㅎabcdefghijklmnopqrstuvwxyz1234567890/@!:;#\\s$%^&*()\-_ㅡ=+.,?'\"{}\[\]|`~<> ]+cide"),
+    re.compile(r"Suic[ㄱㄴㄷㄹㅁㅂㅅㅇㅈㅊㅋㅌㅍㅎabcdefghijklmnopqrstuvwxyz1234567890/@!:;#\\s$%^&*()\-_ㅡ=+.,?'\"{}\[\]|`~<> ]+ide"),
+    re.compile(r"Suici[ㄱㄴㄷㄹㅁㅂㅅㅇㅈㅊㅋㅌㅍㅎabcdefghijklmnopqrstuvwxyz1234567890/@!:;#\\s$%^&*()\-_ㅡ=+.,?'\"{}\[\]|`~<> ]+de"),
+    re.compile(r"Suicid[ㄱㄴㄷㄹㅁㅂㅅㅇㅈㅊㅋㅌㅍㅎabcdefghijklmnopqrstuvwxyz1234567890/@!:;#\\s$%^&*()\-_ㅡ=+.,?'\"{}\[\]|`~<> ]+e"),
+    re.compile(r"S[ㄱㄴㄷㄹㅁㅂㅅㅇㅈㅊㅋㅌㅍㅎabcdefghijklmnopqrstuvwxyz1234567890/@!:;#\\s$%^&*()\-_ㅡ=+.,?'\"{}\[\]|`~<> ]+UICIDE"),
+    re.compile(r"SU[ㄱㄴㄷㄹㅁㅂㅅㅇㅈㅊㅋㅌㅍㅎabcdefghijklmnopqrstuvwxyz1234567890/@!:;#\\s$%^&*()\-_ㅡ=+.,?'\"{}\[\]|`~<> ]+ICIDE"),
+    re.compile(r"SUI[ㄱㄴㄷㄹㅁㅂㅅㅇㅈㅊㅋㅌㅍㅎabcdefghijklmnopqrstuvwxyz1234567890/@!:;#\\s$%^&*()\-_ㅡ=+.,?'\"{}\[\]|`~<> ]+CIDE"),
+    re.compile(r"SUIC[ㄱㄴㄷㄹㅁㅂㅅㅇㅈㅊㅋㅌㅍㅎabcdefghijklmnopqrstuvwxyz1234567890/@!:;#\\s$%^&*()\-_ㅡ=+.,?'\"{}\[\]|`~<> ]+IDE"),
+    re.compile(r"SUICI[ㄱㄴㄷㄹㅁㅂㅅㅇㅈㅊㅋㅌㅍㅎabcdefghijklmnopqrstuvwxyz1234567890/@!:;#\\s$%^&*()\-_ㅡ=+.,?'\"{}\[\]|`~<> ]+DE"),
+    re.compile(r"SUICID[ㄱㄴㄷㄹㅁㅂㅅㅇㅈㅊㅋㅌㅍㅎabcdefghijklmnopqrstuvwxyz1234567890/@!:;#\\s$%^&*()\-_ㅡ=+.,?'\"{}\[\]|`~<> ]+E"),
+    re.compile(r"우[ㄱㄴㄷㄹㅁㅂㅅㅇㅈㅊㅋㅌㅍㅎabcdefghijklmnopqrstuvwxyz1234567890/@!:;#\\s$%^&*()\-_ㅡ=+.,?'\"{}\[\]|`~<> ]+울"),
+]
+
 @app.event
 async def on_ready():
     print("I'm logging in.")  
@@ -237,7 +279,44 @@ async def on_message(message):
         embed.add_field(name ='=멤버분석', value = "디스코드 서버 내에서 가장 많은 채팅을 작성한 이용자들의 순위를 불러옵니다",inline = False)
         embed.add_field(name ='=채팅분석', value = "디스코드 서버 내에서 가장 많은 채팅이 작성된 날짜들의 순위가 궁금하신가요?",inline = False) 
         await message.channel.send(channel,embed=embed)
-     
+
+ #사용자의 노동 관련 키워드에 반응함 / 2024.08.10 수정
+
+    for pattern in nodong_patterns:
+        if pattern.search(message.content):
+            embed = discord.Embed(
+                title="⚒️ 만국의 노동자여 단결하라 ⚒️",
+                description="**모두의 권리를 위해, 하나로 뭉치자!**\n\n🏳️‍🌈 만국의 차별받는 모든 노동자와 성소수자들을 위하여!",
+                color=0x8B0000  # Dark Red Color
+            )
+            embed.set_footer(text="노동은 우리의 힘이자, 미래입니다.", icon_url="https://i.imgur.com/5A9j5d5.png")
+            embed.set_thumbnail(url="https://i.imgur.com/5A9j5d5.png")  
+            await message.channel.send(embed=embed)
+            return        
+
+ #사용자의 자살 관련 키워드에 반응함 / 2024.08.10 수정   
+ 
+    for pattern in suicide_patterns:
+        if pattern.search(message.content):
+            embed = discord.Embed(
+                title="💚 당신은 소중합니다 💚",
+                description=(
+                    "당신이 지금 겪고 있는 어려움이 얼마나 큰지 짐작할 수 없지만, "
+                    "당신은 혼자가 아닙니다. 힘든 시기에 도움을 요청하는 것은 "
+                    "용기 있는 행동입니다. 누구에게도 말할 수 없더라도, "
+                    "도움의 손길이 기다리고 있습니다.\n\n"
+                    "**💬 자살 예방 핫라인: 1577-0199**\n"
+                    "**📞 상담 서비스: 24시간 운영**\n\n"
+                    "당신의 삶은 가치 있고, 이 세상은 당신의 존재로 인해 더욱 아름다워집니다. "
+                    "지금 바로 도움을 요청하세요."
+                    ),
+                color=0x00FF00  # Bright Green Color for Hope
+                )
+            embed.set_footer(text="당신의 소중한 생명, 함께 지켜요.", icon_url="https://i.imgur.com/5A9j5d5.png")
+            embed.set_thumbnail(url="https://i.imgur.com/5A9j5d5.png")  
+            await message.channel.send(embed=embed)
+            return  
+         
 #이모지 크기를 늘려줍니다. / 2024.06.23 수정  
 
     if ":dccon:" in message.content:
