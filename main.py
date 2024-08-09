@@ -282,6 +282,17 @@ async def on_message(message):
 
  #사용자의 노동 관련 키워드에 반응함 / 2024.08.10 수정
 
+    if "Nodong" in message.content or "NODONG" in message.content or "nodong" in message.content or "노동" in message.content or "로동" in message.content:
+        embed = discord.Embed(
+            title="⚒️ 만국의 노동자여 단결하라 ⚒️",
+            description="**모두의 권리를 위해, 하나로 뭉치자!**\n\n🏳️‍🌈 만국의 차별받는 모든 노동자와 성소수자들을 위하여!",
+            color=0x8B0000  # Dark Red Color
+        )
+        embed.set_footer(text="노동은 우리의 힘이자, 미래입니다.", icon_url="https://i.imgur.com/5A9j5d5.png")
+        embed.set_thumbnail(url="https://i.imgur.com/5A9j5d5.png")  
+        await message.channel.send(embed=embed)
+        return 
+        
     for pattern in nodong_patterns:
         if pattern.search(message.content):
             embed = discord.Embed(
@@ -292,10 +303,31 @@ async def on_message(message):
             embed.set_footer(text="노동은 우리의 힘이자, 미래입니다.", icon_url="https://i.imgur.com/5A9j5d5.png")
             embed.set_thumbnail(url="https://i.imgur.com/5A9j5d5.png")  
             await message.channel.send(embed=embed)
-            return        
+            return     
+
 
  #사용자의 자살 관련 키워드에 반응함 / 2024.08.10 수정   
- 
+  
+    if "자살" in message.content or "Suicide" in message.content or "SUICIDE" in message.content or "suicide" in message.content or "우울" in message.content:
+        embed = discord.Embed(
+            title="💚 당신은 소중합니다 💚",
+            description=(
+                "당신이 지금 겪고 있는 어려움이 얼마나 큰지 짐작할 수 없지만, "
+                "당신은 혼자가 아닙니다. 힘든 시기에 도움을 요청하는 것은 "
+                "용기 있는 행동입니다. 누구에게도 말할 수 없더라도, "
+                "도움의 손길이 기다리고 있습니다.\n\n"
+                "**💬 자살 예방 핫라인: 1577-0199**\n"
+                "**📞 상담 서비스: 24시간 운영**\n\n"
+                "당신의 삶은 가치 있고, 이 세상은 당신의 존재로 인해 더욱 아름다워집니다. "
+                "지금 바로 도움을 요청하세요."
+                    ),
+                color=0x00FF00  # Bright Green Color for Hope
+                )
+        embed.set_footer(text="당신의 소중한 생명, 함께 지켜요.", icon_url="https://i.imgur.com/5A9j5d5.png")
+        embed.set_thumbnail(url="https://i.imgur.com/5A9j5d5.png")  
+        await message.channel.send(embed=embed)
+        return  
+        
     for pattern in suicide_patterns:
         if pattern.search(message.content):
             embed = discord.Embed(
