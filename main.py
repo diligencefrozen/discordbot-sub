@@ -350,7 +350,36 @@ async def on_message(message):
         embed.set_image(url="https://i.imgur.com/KL3NfyD.jpeg")
         embed.set_footer(text="멘션을 확인했습니다.")
         await message.channel.send(embed=embed)
-     
+    
+# 사용자가 다른 사용자의 메시지에 답장하면, 봇이 대응합니다. / 2024.08.11 수정 
+    if message.reference:
+        # 답장 대상 메시지를 가져오기
+        replied_message = await message.channel.fetch_message(message.reference.message_id)
+        
+        # 답장을 감지하고 반응
+        embed = discord.Embed(
+            title="💬 답장 감지 💬",
+            description=f"{message.author.mention} 님이 {replied_message.author.mention} 님의 메시지에 답장을 달았습니다.",
+            color=0x00ff00
+        )
+        embed.add_field(name="답장 내용", value=message.content, inline=False)
+        embed.add_field(name="원본 메시지", value=replied_message.content, inline=False)
+        embed.set_footer(text="답장을 확인했습니다.")
+        await message.channel.send(embed=embed)
+    
+# 영어 채팅 감지 / 2024.08.11 수정 
+    if re.search(r'[a-zA-Z]', message.content):
+        # 영어 채팅에 대한 반응
+        embed = discord.Embed(
+            title="📢 영어 감지 📢",
+            description=f"{message.author.mention} 님이 영어로 채팅을 시도했습니다.",
+            color=0x00ff00
+        )
+        embed.add_field(name="메시지 내용", value=message.content, inline=False)
+        embed.set_image(url="https://i.imgur.com/XxOa9xF.jpeg")
+        embed.set_footer(text="대한민국의 자랑, 한국어를 애용합시다.")
+        await message.channel.send(embed=embed)
+        
 #명령어 정보를 불러옴. / 2023.08.17 수정  
  
     if message.content.startswith("=명령어"):
