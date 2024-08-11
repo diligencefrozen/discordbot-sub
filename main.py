@@ -151,6 +151,68 @@ nickname_patterns06 = [
     re.compile(r"광탈[ㄱㄴㄷㄹㅁㅂㅅㅇㅈㅊㅋㅌㅍㅎabcdefghijklmnopqrstuvwxyz1234567890/@!:;#\\s$%^&*()\-_ㅡ=+.,?'\"{}\[\]|`~<> ]+맨"),   
 ]  
 
+girl_patterns = [
+    re.compile(r"여[ㄱ-ㅎ가-힣a-zA-Z0-9/@!:;#\\s$%^&*()\-_ㅡ=+.,?'\"{}\[\]|`~<> ]*성"),
+    re.compile(r"여[ㄱ-ㅎ가-힣a-zA-Z0-9/@!:;#\\s$%^&*()\-_ㅡ=+.,?'\"{}\[\]|`~<> ]*자"), 
+    re.compile(r"섹[ㄱ-ㅎ가-힣a-zA-Z0-9/@!:;#\\s$%^&*()\-_ㅡ=+.,?'\"{}\[\]|`~<> ]*스"), 
+    re.compile(r"섹[ㄱ-ㅎ가-힣a-zA-Z0-9/@!:;#\\s$%^&*()\-_ㅡ=+.,?'\"{}\[\]|`~<> ]*시"),
+    re.compile(r"섹[ㄱ-ㅎ가-힣a-zA-Z0-9/@!:;#\\s$%^&*()\-_ㅡ=+.,?'\"{}\[\]|`~<> ]*기"),
+    re.compile(r"색[ㄱ-ㅎ가-힣a-zA-Z0-9/@!:;#\\s$%^&*()\-_ㅡ=+.,?'\"{}\[\]|`~<> ]*기"),
+    re.compile(r"보[ㄱ-ㅎ가-힣a-zA-Z0-9/@!:;#\\s$%^&*()\-_ㅡ=+.,?'\"{}\[\]|`~<> ]*지"),
+    re.compile(r"몸[ㄱ-ㅎ가-힣a-zA-Z0-9/@!:;#\\s$%^&*()\-_ㅡ=+.,?'\"{}\[\]|`~<> ]*매"),
+    re.compile(r"포[ㄱ-ㅎ가-힣a-zA-Z0-9/@!:;#\\s$%^&*()\-_ㅡ=+.,?'\"{}\[\]|`~<> ]*르노"),
+    re.compile(r"포르[ㄱ-ㅎ가-힣a-zA-Z0-9/@!:;#\\s$%^&*()\-_ㅡ=+.,?'\"{}\[\]|`~<> ]*노"),
+    re.compile(r"야[ㄱ-ㅎ가-힣a-zA-Z0-9/@!:;#\\s$%^&*()\-_ㅡ=+.,?'\"{}\[\]|`~<> ]*동"),
+    re.compile(r"난[ㄱ-ㅎ가-힣a-zA-Z0-9/@!:;#\\s$%^&*()\-_ㅡ=+.,?'\"{}\[\]|`~<> ]*교"),
+    re.compile(r"강[ㄱ-ㅎ가-힣a-zA-Z0-9/@!:;#\\s$%^&*()\-_ㅡ=+.,?'\"{}\[\]|`~<> ]*간"),
+    re.compile(r"자[ㄱ-ㅎ가-힣a-zA-Z0-9/@!:;#\\s$%^&*()\-_ㅡ=+.,?'\"{}\[\]|`~<> ]*위"),
+    re.compile(r"계[ㄱ-ㅎ가-힣a-zA-Z0-9/@!:;#\\s$%^&*()\-_ㅡ=+.,?'\"{}\[\]|`~<> ]*집"),
+    re.compile(r"여자"), 
+    re.compile(r"여성"), 
+    re.compile(r"girl", re.IGNORECASE),
+    re.compile(r"계집"), 
+    re.compile(r"포르노"), 
+    re.compile(r"난교"),
+    re.compile(r"강간"), 
+    re.compile(r"섹스"), 
+    re.compile(r"몸매"),
+    re.compile(r"야동"), 
+    re.compile(r"자위"), 
+    re.compile(r"woman", re.IGNORECASE),
+    re.compile(r"섹스", re.IGNORECASE), 
+    re.compile(r"섹시", re.IGNORECASE), 
+    re.compile(r"섹기", re.IGNORECASE),
+    re.compile(r"색기", re.IGNORECASE), 
+    re.compile(r"보지", re.IGNORECASE),
+]
+
+warning_messages = [
+    "주의: 성적인 키워드 사용을 자제해 주십시오.",
+    "경고: 성적인 표현은 삼가해 주시기 바랍니다.",
+    "알림: 성적인 단어 사용을 피해주세요.",
+    "주의: 성적인 언급은 금지되어 있습니다.",
+    "경고: 성적인 키워드 사용은 허용되지 않습니다.",
+    "알림: 성적인 표현은 자제해 주시기 바랍니다.",
+    "주의: 성적인 내용은 허용되지 않습니다.",
+    "경고: 성적인 언급을 삼가해 주십시오.",
+    "알림: 성적인 단어 사용은 금지되어 있습니다.",
+    "주의: 성적인 표현은 허용되지 않습니다.",
+    "경고: 성적인 키워드를 자제해 주세요.",
+    "알림: 성적인 내용은 이곳에서 허용되지 않습니다.",
+    "주의: 성적인 단어 사용을 삼가해 주세요.",
+    "경고: 성적인 표현은 이곳에서 금지되어 있습니다.",
+    "알림: 성적인 키워드는 사용하지 말아 주십시오.",
+    "주의: 성적인 언급은 이곳에서 허용되지 않습니다.",
+    "경고: 과도하게 성적인 것에 집착하는 행위는 중독성을 유발할 수 있으며, 뇌의 보상 시스템에 부정적인 영향을 미칠 수 있습니다.",
+    "경고: 과할 정도로 성적인 것에 집착하는 것은 성에 대한 왜곡된 인식을 형성할 수 있으며, 실제 성적 관계에 문제를 일으킬 수 있습니다.",
+    "알림: 성적인 것에 집착하는 행위는 스트레스 및 불안과 연관될 수 있으며, 심리적 건강에 해로울 수 있습니다.",
+    "경고: 성적인 것에 집착하는 행위는 뇌의 화학적 변화를 유발하여 중독성을 높일 수 있습니다.",
+    "주의: 성적인 것에 집착하는 것은 성적 기능 장애와 관련이 있으며, 심리적 스트레스를 유발할 수 있습니다.",
+    "경고: 성적인 것에 집착하는 행위는 성적 기대를 왜곡시키며, 실제 관계에서의 만족도를 저하시킬 수 있습니다.",
+    "주의: 성적인 것에 집착하면, 성적 폭력 및 비현실적인 기대를 강화할 수 있습니다.",
+    "경고: 여성에 대한 부정적 언어 사용은 금지합니다."
+]
+
 @app.event
 async def on_ready():
     print("I'm logging in.")  
@@ -215,6 +277,36 @@ async def on_message(message):
 
         await channel.send(embed=embed)
 
+ #성 적인 키워드에 대응합니다. / 2024.08.11 수정        
+
+    if any(pattern.search(message.content) for pattern in girl_patterns):
+        # await message.delete()
+
+        # 현재 시간 표시
+        dtime = datetime.datetime.now(timezone('Asia/Seoul'))
+        time_str = dtime.strftime("%Y년 %m월 %d일 %H시 %M분 %S초")
+
+        # 임베드 메시지 디자인
+        embed = discord.Embed(
+            title="🚨 경고: 부적절한 내용 감지 🚨",
+            description=f"{message.author.mention}님, 여성 차별적인 언행을 사용하신 것 같아요ㅠㅜ",
+            color=0xff0000,
+            timestamp=dtime
+        )
+        
+        # 시간 추가
+        embed.add_field(name="시간", value=time_str, inline=False)
+
+        # 랜덤 경고 메시지 추가
+        random_warning = random.choice(warning_messages)
+        embed.add_field(name="경고", value=random_warning, inline=False)
+
+        # 추가적인 사용자 안내 메시지
+        embed.set_footer(text="반복적인 위반 시 추가적인 조치가 있을 수 있습니다.")
+
+        # 채널에 임베드 메시지 전송
+        await message.channel.send(embed=embed)
+     
 #명령어 정보를 불러옴. / 2023.08.17 수정  
  
     if message.content.startswith("=명령어"):
