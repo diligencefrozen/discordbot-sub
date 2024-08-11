@@ -380,22 +380,6 @@ async def on_message(message):
         embed.set_image(url="https://i.imgur.com/XxOa9xF.jpeg")
         embed.set_footer(text="대한민국의 자랑, 한국어를 애용합시다.")
         await message.channel.send(embed=embed)
-
-# 수정된 채팅 감지 / 2024.08.11 수정 
-@app.event
-async def on_message_edit(before, after):
-    if before.content != after.content:
-        # 현재 시간 가져오기
-        seoul_tz = timezone('Asia/Seoul')
-        now = datetime.datetime.now(seoul_tz)
-        time = f"{str(now.year)}-{str(now.month)}-{str(now.day)} {str(now.hour)}:{str(now.minute)}:{str(now.second)}"
-        
-        # 수정된 내용과 이전 내용을 동일 채널에 전송
-        embed = discord.Embed(title="✏️ Message Edited", color=0xFFFF00)
-        embed.add_field(name="Before", value=before.content, inline=False)
-        embed.add_field(name="After", value=after.content, inline=False)
-        embed.set_footer(text=f"Edited at {time}")
-        await after.channel.send(embed=embed)
         
 #명령어 정보를 불러옴. / 2023.08.17 수정  
  
