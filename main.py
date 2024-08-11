@@ -277,6 +277,30 @@ async def on_message(message):
 
         await channel.send(embed=embed)
 
+    # 파일 업로드 감지
+    if message.attachments:
+        for attachment in message.attachments:
+            # 지원하는 확장자 목록 (이미지, 문서, 비디오 등)
+            supported_extensions = ['jpg', 'jpeg', 'png', 'gif', 'bmp', 'webp',
+                                    'pdf', 'doc', 'docx', 'xls', 'xlsx', 'ppt', 'pptx', 'txt',
+                                    'mp4', 'mkv', 'mov', 'avi', 'wmv', 'flv', 'm4v', 'mp3', 'wav', 'ogg']
+
+            if any(attachment.filename.lower().endswith(ext) for ext in supported_extensions):
+                # 임베드 메시지로 파일 업로드에 반응
+                embed = discord.Embed(
+                    title="오늘도 커뮤니티에 기여해주셔서 감사합니다!",
+                    description=f"{message.author.mention} 님이 파일을 업로드했습니다.",
+                    color=0x00ff00
+                )
+                embed.add_field(name="파일 이름", value=attachment.filename, inline=False)
+                embed.set_footer(text="파일 업로드를 확인했습니다.")
+                
+                # 이미지 파일일 경우 미리보기 추가
+                if attachment.filename.lower().endswith(('jpg', 'jpeg', 'png', 'gif', 'bmp', 'webp')):
+                    embed.set_image(url=attachment.url)
+
+                await message.channel.send(embed=embed)
+ 
  #성 적인 키워드에 대응합니다. / 2024.08.11 수정        
 
     if any(pattern.search(message.content) for pattern in girl_patterns):
