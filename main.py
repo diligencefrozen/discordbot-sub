@@ -424,28 +424,29 @@ async def on_message_edit(before, after):
         await after.channel.send(embed=embed)
 
 # 채팅 타이핑 감지 / 2024.08.11 수정 
+
 typing_users = {}
+
+KST = timezone('Asia/Seoul')
 
 @app.event
 async def on_typing(channel, user, when):
-    # 봇이 아닌 사용자만 반응
     if not user.bot:
-        # 타이핑을 시작했음을 알리는 메시지 전송
+        # 한국 시간대로 변환
+        when_kst = when.astimezone(KST)
+        # 타이핑 시작 메시지
         embed = discord.Embed(
             title="⌨️ Typing Detected",
             description=f"{user.mention} 님이 메세지를 입력중 입니다.",
             color=0x00ff00
         )
-        embed.set_footer(text=f"타이핑 시작 시간: {when.strftime('%Y-%m-%d %H:%M:%S')}")
+        embed.set_footer(text=f"타이핑 시작 시간: {when_kst.strftime('%Y-%m-%d %H:%M:%S')}")
         await channel.send(embed=embed)
 
-        # 타이핑 사용자 저장
         typing_users[user.id] = when
 
-        # 일정 시간이 지나면 타이핑 중단을 알리는 메시지 전송
-        await asyncio.sleep(5)  # 5초 후에 타이핑 중단으로 간주
+        await asyncio.sleep(5)
 
-        # 사용자가 아직 타이핑 중이 아니면 타이핑 중단 메시지 전송
         if typing_users.get(user.id) == when:
             embed = discord.Embed(
                 title="⌨️ Typing Stopped",
