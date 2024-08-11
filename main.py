@@ -21,7 +21,13 @@ from bs4 import BeautifulSoup
 from urllib.request import urlopen, Request
 from discord.ext import tasks
 from pytz import timezone
- 
+
+intents = discord.Intents.default()
+intents.messages = True
+intents.message_content = True
+intents.guilds = True
+intents.members = True
+
 app = discord.Client()
 #app = discord.Client(intents=discord.Intents.all())
 #새로운 버전의 파이썬부터는 위의 코드를 실행하면 프로그램이 실행되지 않는다.
