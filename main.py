@@ -277,7 +277,7 @@ async def on_message(message):
 
         await channel.send(embed=embed)
 
-    # 파일 업로드 감지
+    # 파일 업로드 감지 / 2024.08.11 수정   
     if message.attachments:
         for attachment in message.attachments:
             # 지원하는 확장자 목록 (이미지, 문서, 비디오 등)
