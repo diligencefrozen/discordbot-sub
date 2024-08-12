@@ -301,7 +301,7 @@ async def on_message(message):
         # 임베드 메시지 디자인
         embed = discord.Embed(
             title="🚨 경고: 성 적인 내용 감지 🚨",
-            description=f"{message.author.mention} 매우 불결한 내용이 감지되었습니다.",
+            description=f"{message.author.mention} 매우 불결한 내용이 \n\n감지되었습니다.",
             color=0xff0000,
             timestamp=dtime
         )
@@ -326,7 +326,7 @@ async def on_message(message):
         # 멘션에 반응 - 이미지 포함
         embed = discord.Embed(
             title="📢 멘션 감지 📢",
-            description=f"{message.author.mention} 님이 {mentioned_users} 님을 호출했습니다.",
+            description=f"{message.author.mention} 님이 \n\n{mentioned_users} 님을 호출했습니다.",
             color=0x00ff00
         )
         embed.set_image(url="https://i.imgur.com/KL3NfyD.jpeg")
@@ -341,7 +341,7 @@ async def on_message(message):
         # 답장을 감지하고 반응
         embed = discord.Embed(
             title="💬 답장 감지 💬",
-            description=f"{message.author.mention} 님이 {replied_message.author.mention} 님의 메시지에 답장을 달았습니다.",
+            description=f"{message.author.mention} 님이 {replied_message.author.mention} 님의 \n\n메시지에 답장을 달았습니다.",
             color=0x00ff00
         )
         embed.add_field(name="답장 내용", value=message.content, inline=False)
@@ -354,7 +354,7 @@ async def on_message(message):
         # 영어 채팅에 대한 반응
         embed = discord.Embed(
             title="📢 영어 감지 📢",
-            description=f"{message.author.mention} 님이 영어로 채팅을 시도했습니다.",
+            description=f"{message.author.mention} 님이 영어로 \n\n채팅을 시도했습니다.",
             color=0x00ff00
         )
         embed.add_field(name="메시지 내용", value=message.content, inline=False)
