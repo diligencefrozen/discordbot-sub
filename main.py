@@ -161,36 +161,17 @@ nickname_patterns06 = [
 girl_patterns = [
     re.compile(r"여[ㄱ-ㅎ가-힣a-zA-Z0-9/@!:;#\\s$%^&*()\-_ㅡ=+.,?'\"{}\[\]|`~<> ]*성"),
     re.compile(r"여[ㄱ-ㅎ가-힣a-zA-Z0-9/@!:;#\\s$%^&*()\-_ㅡ=+.,?'\"{}\[\]|`~<> ]*자"), 
-    re.compile(r"섹[ㄱ-ㅎ가-힣a-zA-Z0-9/@!:;#\\s$%^&*()\-_ㅡ=+.,?'\"{}\[\]|`~<> ]*스"), 
-    re.compile(r"섹[ㄱ-ㅎ가-힣a-zA-Z0-9/@!:;#\\s$%^&*()\-_ㅡ=+.,?'\"{}\[\]|`~<> ]*시"),
-    re.compile(r"섹[ㄱ-ㅎ가-힣a-zA-Z0-9/@!:;#\\s$%^&*()\-_ㅡ=+.,?'\"{}\[\]|`~<> ]*기"),
-    re.compile(r"색[ㄱ-ㅎ가-힣a-zA-Z0-9/@!:;#\\s$%^&*()\-_ㅡ=+.,?'\"{}\[\]|`~<> ]*기"),
-    re.compile(r"보[ㄱ-ㅎ가-힣a-zA-Z0-9/@!:;#\\s$%^&*()\-_ㅡ=+.,?'\"{}\[\]|`~<> ]*지"),
     re.compile(r"몸[ㄱ-ㅎ가-힣a-zA-Z0-9/@!:;#\\s$%^&*()\-_ㅡ=+.,?'\"{}\[\]|`~<> ]*매"),
     re.compile(r"포[ㄱ-ㅎ가-힣a-zA-Z0-9/@!:;#\\s$%^&*()\-_ㅡ=+.,?'\"{}\[\]|`~<> ]*르노"),
     re.compile(r"포르[ㄱ-ㅎ가-힣a-zA-Z0-9/@!:;#\\s$%^&*()\-_ㅡ=+.,?'\"{}\[\]|`~<> ]*노"),
     re.compile(r"야[ㄱ-ㅎ가-힣a-zA-Z0-9/@!:;#\\s$%^&*()\-_ㅡ=+.,?'\"{}\[\]|`~<> ]*동"),
-    re.compile(r"난[ㄱ-ㅎ가-힣a-zA-Z0-9/@!:;#\\s$%^&*()\-_ㅡ=+.,?'\"{}\[\]|`~<> ]*교"),
-    re.compile(r"강[ㄱ-ㅎ가-힣a-zA-Z0-9/@!:;#\\s$%^&*()\-_ㅡ=+.,?'\"{}\[\]|`~<> ]*간"),
     re.compile(r"자[ㄱ-ㅎ가-힣a-zA-Z0-9/@!:;#\\s$%^&*()\-_ㅡ=+.,?'\"{}\[\]|`~<> ]*위"),
-    re.compile(r"계[ㄱ-ㅎ가-힣a-zA-Z0-9/@!:;#\\s$%^&*()\-_ㅡ=+.,?'\"{}\[\]|`~<> ]*집"),
     re.compile(r"여자"), 
     re.compile(r"여성"), 
-    re.compile(r"girl", re.IGNORECASE),
-    re.compile(r"계집"), 
     re.compile(r"포르노"), 
-    re.compile(r"난교"),
-    re.compile(r"강간"), 
-    re.compile(r"섹스"), 
     re.compile(r"몸매"),
     re.compile(r"야동"), 
     re.compile(r"자위"), 
-    re.compile(r"woman", re.IGNORECASE),
-    re.compile(r"섹스", re.IGNORECASE), 
-    re.compile(r"섹시", re.IGNORECASE), 
-    re.compile(r"섹기", re.IGNORECASE),
-    re.compile(r"색기", re.IGNORECASE), 
-    re.compile(r"보지", re.IGNORECASE),
 ]
 
 warning_messages = [
@@ -307,8 +288,8 @@ async def on_message(message):
                     embed.set_image(url=attachment.url)
 
                 await message.channel.send(embed=embed)
- 
- #성 적인 키워드에 대응합니다. / 2024.08.11 수정        
+
+ #성 적인 키워드에 대응합니다. / 2024.08.12 수정        
 
     if any(pattern.search(message.content) for pattern in girl_patterns):
         # await message.delete()
@@ -319,8 +300,8 @@ async def on_message(message):
 
         # 임베드 메시지 디자인
         embed = discord.Embed(
-            title="🚨 경고: 부적절한 내용 감지 🚨",
-            description=f"{message.author.mention}님, 여성 차별적인 언행을 사용하신 것 같아요ㅠㅜ",
+            title="🚨 경고: 성 적인 내용 감지 🚨",
+            description=f"{message.author.mention} 매우 불결한 내용이 감지되었습니다.",
             color=0xff0000,
             timestamp=dtime
         )
