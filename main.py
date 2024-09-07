@@ -385,7 +385,7 @@ async def on_message(message):
         embed.add_field(name ='=채팅분석', value = "디스코드 서버 내에서 가장 많은 채팅이 작성된 날짜들의 순위가 궁금하신가요?",inline = False) 
         await message.channel.send(channel,embed=embed)
      
-#이모지 크기를 늘려줍니다. / 2024.06.23 수정  
+#이모지 크기를 늘려줍니다. / 2024.09.07 수정  
 
     if ":dccon:" in message.content:
         current_time = datetime.datetime.now(seoul_tz).strftime('%Y-%m-%d %H:%M:%S')
