@@ -902,6 +902,90 @@ async def on_message(message):
         embed.set_footer(text=f"개조된도리봇 | {current_time}", icon_url="https://i.imgur.com/d1Ef9W8.jpeg")
         await message.channel.send(embed=embed)
         return
+
+    if ":43:" in message.content:
+        current_time = datetime.datetime.now(seoul_tz).strftime('%Y-%m-%d %H:%M:%S')
+        embed = discord.Embed(
+            title='해당 기능은 Beta 버전입니다.',
+            description=f'{message.author.mention} 님의 이모지 크기를 \n\n강제로 확대하였습니다.',
+            color=0xE2E8F7  
+        )
+        embed.set_image(url='https://i.imgur.com/wx4DDx8.png')
+        embed.set_footer(text=f"개조된도리봇 | {current_time}", icon_url="https://i.imgur.com/d1Ef9W8.jpeg")
+        await message.channel.send(embed=embed)
+        return
+
+    if ":44:" in message.content:
+        current_time = datetime.datetime.now(seoul_tz).strftime('%Y-%m-%d %H:%M:%S')
+        embed = discord.Embed(
+            title='해당 기능은 Beta 버전입니다.',
+            description=f'{message.author.mention} 님의 이모지 크기를 \n\n강제로 확대하였습니다.',
+            color=0xE2E8F7  
+        )
+        embed.set_image(url='https://i.imgur.com/POgnrvw.png')
+        embed.set_footer(text=f"개조된도리봇 | {current_time}", icon_url="https://i.imgur.com/d1Ef9W8.jpeg")
+        await message.channel.send(embed=embed)
+        return
+
+    if ":45:" in message.content:
+        current_time = datetime.datetime.now(seoul_tz).strftime('%Y-%m-%d %H:%M:%S')
+        embed = discord.Embed(
+            title='해당 기능은 Beta 버전입니다.',
+            description=f'{message.author.mention} 님의 이모지 크기를 \n\n강제로 확대하였습니다.',
+            color=0xE2E8F7  
+        )
+        embed.set_image(url='https://i.imgur.com/N2u1tIl.png')
+        embed.set_footer(text=f"개조된도리봇 | {current_time}", icon_url="https://i.imgur.com/d1Ef9W8.jpeg")
+        await message.channel.send(embed=embed)
+        return
+
+    if ":46:" in message.content:
+        current_time = datetime.datetime.now(seoul_tz).strftime('%Y-%m-%d %H:%M:%S')
+        embed = discord.Embed(
+            title='해당 기능은 Beta 버전입니다.',
+            description=f'{message.author.mention} 님의 이모지 크기를 \n\n강제로 확대하였습니다.',
+            color=0xE2E8F7  
+        )
+        embed.set_image(url='https://i.imgur.com/nux88ht.png')
+        embed.set_footer(text=f"개조된도리봇 | {current_time}", icon_url="https://i.imgur.com/d1Ef9W8.jpeg")
+        await message.channel.send(embed=embed)
+        return
+ 
+    if ":47:" in message.content:
+        current_time = datetime.datetime.now(seoul_tz).strftime('%Y-%m-%d %H:%M:%S')
+        embed = discord.Embed(
+            title='해당 기능은 Beta 버전입니다.',
+            description=f'{message.author.mention} 님의 이모지 크기를 \n\n강제로 확대하였습니다.',
+            color=0xE2E8F7  
+        )
+        embed.set_image(url='https://i.imgur.com/OsYzTtq.png')
+        embed.set_footer(text=f"개조된도리봇 | {current_time}", icon_url="https://i.imgur.com/d1Ef9W8.jpeg")
+        await message.channel.send(embed=embed)
+        return
+ 
+    if ":48:" in message.content:
+        current_time = datetime.datetime.now(seoul_tz).strftime('%Y-%m-%d %H:%M:%S')
+        embed = discord.Embed(
+            title='해당 기능은 Beta 버전입니다.',
+            description=f'{message.author.mention} 님의 이모지 크기를 \n\n강제로 확대하였습니다.',
+            color=0xE2E8F7  
+        )
+        embed.set_image(url='https://i.imgur.com/vzpjTT8.png')
+        embed.set_footer(text=f"개조된도리봇 | {current_time}", icon_url="https://i.imgur.com/d1Ef9W8.jpeg")
+        await message.channel.send(embed=embed)
+        return
+
+    if ":49:" in message.content:
+        current_time = datetime.datetime.now(seoul_tz).strftime('%Y-%m-%d %H:%M:%S')
+        embed = discord.Embed(
+            title='해당 기능은 Beta 버전입니다.',
+            description=f'{message.author.mention} 님의 이모지 크기를 \n\n강제로 확대하였습니다.',
+            color=0xE2E8F7  
+        )
+        embed.set_image(url='https://i.imgur.com/op71BO3.png')
+        embed.set_footer(text=f"개조된도리봇 | {current_time}", icon_url="https://i.imgur.com/d1Ef9W8.jpeg")
+        await message.channel.send(embed=embed)
+        return
      
 #창조주, 창조물에 대한 정보를 불러옴. / 2023.08.17 수정  
  
