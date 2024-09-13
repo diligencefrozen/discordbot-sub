@@ -265,32 +265,46 @@ async def on_message(message):
 
         await channel.send(embed=embed)
 
-    # 파일 업로드 감지 / 2024.08.12 수정   
+# 파일 업로드 감지 / 2024.09.13 수정   
+# 비동기 이벤트 함수에서만 await 사용 가능
+@app.event
+
+async def on_message(message):
+    
+    #봇이 자신의 메시지를 검열하기 때문에 임시적인 해결책을 추가했습니다. 
+    if message.author.bot:
+        return
+    
     if message.attachments:
         for attachment in message.attachments:
-            # 지원하는 확장자 목록 (이미지, 문서, 비디오 등)
             supported_extensions = ['jpg', 'jpeg', 'png', 'gif', 'bmp', 'webp',
                                     'pdf', 'doc', 'docx', 'xls', 'xlsx', 'ppt', 'pptx', 'txt', 'hwp', 'hwpx',
                                     'mp4', 'mkv', 'mov', 'avi', 'wmv', 'flv', 'm4v', 'mp3', 'wav', 'ogg']
 
             if any(attachment.filename.lower().endswith(ext) for ext in supported_extensions):
-                # 임베드 메시지로 파일 업로드에 반응
                 embed = discord.Embed(
-                    title="오늘도 커뮤니티에 기여해주셔서 감사합니다!",
+                    title="📁 파일 업로드 알림",
                     description=f"{message.author.mention} 님이 파일을 업로드했습니다.",
                     color=0x00ff00
                 )
                 embed.add_field(name="파일 이름", value=attachment.filename, inline=False)
                 embed.set_footer(text="파일 업로드를 확인했습니다.")
-                
-                # 이미지 파일일 경우 미리보기 추가
+                embed.set_footer(text="파일 다운로드는 제한 시간이 존재합니다.")
+
                 if attachment.filename.lower().endswith(('jpg', 'jpeg', 'png', 'gif', 'bmp', 'webp')):
                     embed.set_image(url=attachment.url)
+                else:
+                    embed.add_field(name="파일 다운로드", value=f"[여기 클릭]({attachment.url})", inline=False)
 
+                # 비동기 함수 내에서 await 사용 가능
                 await message.channel.send(embed=embed)
 
- #성 적인 키워드에 대응합니다. / 2024.08.12 수정        
+#성 적인 키워드에 대응합니다. / 2024.09.13 수정        
 
+#봇이 자신의 메시지를 검열하기 때문에 임시적인 해결책을 추가했습니다. 
+    if message.author.bot:
+        return
+    
     if any(pattern.search(message.content) for pattern in girl_patterns):
         # await message.delete()
 
@@ -319,7 +333,12 @@ async def on_message(message):
         # 채널에 임베드 메시지 전송
         await message.channel.send(embed=embed)
 
-# 서버 사용자가 다른 서버 사용자를 멘션하면, 봇이 대응 합니다. / 2024.08.11 수정   
+# 서버 사용자가 다른 서버 사용자를 멘션하면, 봇이 대응 합니다. / 2024.09.13 수정
+
+#봇이 자신의 메시지를 검열하기 때문에 임시적인 해결책을 추가했습니다. 
+    if message.author.bot:
+        return
+    
     if message.mentions:
         mentioned_users = ", ".join([user.mention for user in message.mentions])
 
@@ -332,8 +351,13 @@ async def on_message(message):
         embed.set_image(url="https://i.imgur.com/KL3NfyD.jpeg")
         embed.set_footer(text="멘션을 확인했습니다.")
         await message.channel.send(embed=embed)
+     
+# 사용자가 다른 사용자의 메시지에 답장하면, 봇이 대응합니다. / 2024.09.13 수정 
+
+#봇이 자신의 메시지를 검열하기 때문에 임시적인 해결책을 추가했습니다. 
+    if message.author.bot:
+        return
     
-# 사용자가 다른 사용자의 메시지에 답장하면, 봇이 대응합니다. / 2024.08.11 수정 
     if message.reference:
         # 답장 대상 메시지를 가져오기
         replied_message = await message.channel.fetch_message(message.reference.message_id)
@@ -341,7 +365,7 @@ async def on_message(message):
         # 답장을 감지하고 반응
         embed = discord.Embed(
             title="💬 답장 감지 💬",
-            description=f"{message.author.mention} 님이 {replied_message.author.mention} 님의 \n\n메시지에 답장을 달았습니다.",
+            description=f"{message.author.mention} 님이 {replied_message.author.mention} 님의 메시지에 \n\n답장을 달았습니다.",
             color=0x00ff00
         )
         embed.add_field(name="답장 내용", value=message.content, inline=False)
@@ -349,7 +373,12 @@ async def on_message(message):
         embed.set_footer(text="답장을 확인했습니다.")
         await message.channel.send(embed=embed)
     
-# 영어 채팅 감지 / 2024.08.11 수정 
+# 영어 채팅 감지 / 2024.09.13 수정 
+
+#봇이 자신의 메시지를 검열하기 때문에 임시적인 해결책을 추가했습니다. 
+    if message.author.bot:
+        return
+    
     if re.search(r'[a-zA-Z]', message.content):
         # 영어 채팅에 대한 반응
         embed = discord.Embed(
@@ -361,7 +390,7 @@ async def on_message(message):
         embed.set_image(url="https://i.imgur.com/XxOa9xF.jpeg")
         embed.set_footer(text="대한민국의 자랑, 한국어를 애용합시다.")
         await message.channel.send(embed=embed)
-        
+          
 #명령어 정보를 불러옴. / 2023.08.17 수정  
  
     if message.content.startswith("=명령어"):
