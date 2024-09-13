@@ -224,57 +224,34 @@ async def on_message_delete(message):
     embed.add_field(name="Deleted Content", value=f"Content : {message.content}", inline=False)
     embed.set_footer(text=f"{message.guild.name} | {time}")
     await channel.send(embed=embed)
-    
-
-#세계관 정보를 불러옴. / 2023.08.17 수정  
-
-
+ 
 @app.event
 async def on_message(message):
-
-#봇이 자신의 메시지를 검열하기 때문에 임시적인 해결책을 추가했습니다. 
-    if message.author.bot:
-     return 
-
-    if message.content.startswith("=역사"):
-        channel = message.channel
-        embed = discord.Embed(
-            title = '역사',
-            description = '',
-            colour = discord.Colour.red()
-            )
-        
-        dtime = datetime.datetime.now(timezone('Asia/Seoul'))
-        embed.set_footer(text=f"{dtime.year} 년 {dtime.month} 월 {dtime.day} 일 {dtime.hour} 시 {dtime.minute} 분 {dtime.second} 초")
-        
-        embed.add_field(name="태초에", value="세상은 매우 타락한 상태였다.", inline=False)
-        embed.add_field(name="사람들은", value="선과 악을 구분하지 못했고, 혼돈 그자체였다.", inline=False)
-        embed.add_field(name="하지만", value="이 세상을 창조한 창조주는 세상을 전부 갈아엎고", inline=False)
-        embed.add_field(name="세상을", value="이 우주를, 재프로그래밍 했다.", inline=False)
-        embed.add_field(name="창조주는", value="인간이라는 지적 생명체가 기하급수적으로 늘어나면서", inline=False)  
-        embed.add_field(name="동시에", value="의사소통을 자유롭게 하는 이 현상이 탐탁지 않았고,", inline=False)  
-        embed.add_field(name="자신과 닮은", value="도리봇을 만들어 세상으로 투입시켜 인간들을 조련하도록 하였으나,", inline=False)  
-        embed.add_field(name='기계적 결함으로 인해', value='도리봇은 점점 진화를 하면서 생태계 교란종으로 전락했다.', inline=False)
-        embed.add_field(name='이를 보다못한 창조주는', value='기계적 결함을 최소화시킨', inline=False)
-        embed.add_field(name='7호선을', value='만들어 도리봇을 제거하도록 만들었으나', inline=False)
-        embed.add_field(name='그 또한..', value='기계적 결함으로 인해 도리봇을 ', inline=False)
-        embed.add_field(name='재프로그래밍 시켜', value='창조주에 대항하는 행위를 일삼았다.', inline=False)
-        embed.add_field(name='이 세상을', value='창조한 우주적인 존재는 ', inline=False)
-        embed.add_field(name='다시 한번 더', value='세상을 갈아엎을 그 날을 준비하고있다.', inline=False)
-        embed.add_field(name="명령어 리스트", value='=명령어', inline=False)
-
-        await channel.send(embed=embed)
-
-# 파일 업로드 감지 / 2024.09.13 수정   
-# 비동기 이벤트 함수에서만 await 사용 가능
-@app.event
-
-async def on_message(message):
-    
-    #봇이 자신의 메시지를 검열하기 때문에 임시적인 해결책을 추가했습니다. 
+    # 봇이 자신의 메시지를 검열하지 않도록 방지
     if message.author.bot:
         return
-    
+
+    # 명령어 리스트 / 2024.09.14 수정 
+    if message.content.startswith("=명령어"):
+        embed = discord.Embed(
+            title="명령어 리스트",
+            description="도리봇은 당신의 채팅에 귀 기울이고 있답니다.",
+            colour=discord.Colour.red()
+        )
+        dtime = datetime.datetime.now(timezone('Asia/Seoul'))
+        embed.set_footer(text=f"{dtime.year} 년 {dtime.month} 월 {dtime.day} 일 {dtime.hour} 시 {dtime.minute} 분 {dtime.second} 초")
+        embed.add_field(name='=역사', value="도리봇이 이 세상의 역사를 알려줍니다.", inline=False)
+        embed.add_field(name='=MBTI', value="도리봇이 MBTI에 대한 설명을 불러옵니다.", inline=False)
+        embed.add_field(name='=창조주', value="도리봇이 우주적인 존재의 TMI를 불러옵니다.", inline=False)
+        embed.add_field(name='=창조물', value="도리봇이 우주적인 존재의 창조물들에 대한 TMI를 불러옵니다.", inline=False)
+        embed.add_field(name='=음식추천', value="도리봇이 당신에게 음식 하나를 추천해줄 것입니다.", inline=False)
+        embed.add_field(name='=허락', value="도리봇에게 게임 허락을 받아보세요.", inline=False)
+        embed.add_field(name='=서버분석', value="디스코드 서버 내에서 가장 많이 언급된 단어들이 궁금하신가요?", inline=False)
+        embed.add_field(name='=멤버분석', value="서버에서 가장 많은 채팅을 작성한 이용자들의 순위를 불러옵니다.", inline=False)
+        embed.add_field(name='=채팅분석', value="가장 많은 채팅이 작성된 날짜들의 순위가 궁금하신가요?", inline=False)
+        await message.channel.send(embed=embed)
+
+    # 파일 업로드 감지 / 2024.09.14 수정  
     if message.attachments:
         for attachment in message.attachments:
             supported_extensions = ['jpg', 'jpeg', 'png', 'gif', 'bmp', 'webp',
@@ -296,53 +273,30 @@ async def on_message(message):
                 else:
                     embed.add_field(name="파일 다운로드", value=f"[여기 클릭]({attachment.url})", inline=False)
 
-                # 비동기 함수 내에서 await 사용 가능
                 await message.channel.send(embed=embed)
 
-#성 적인 키워드에 대응합니다. / 2024.09.13 수정        
-
-#봇이 자신의 메시지를 검열하기 때문에 임시적인 해결책을 추가했습니다. 
-    if message.author.bot:
-        return
-    
+    # 성적인 키워드 감지 / 2024.09.14 수정  
     if any(pattern.search(message.content) for pattern in girl_patterns):
-        # await message.delete()
-
-        # 현재 시간 표시
         dtime = datetime.datetime.now(timezone('Asia/Seoul'))
         time_str = dtime.strftime("%Y년 %m월 %d일 %H시 %M분 %S초")
 
-        # 임베드 메시지 디자인
         embed = discord.Embed(
-            title="🚨 경고: 성 적인 내용 감지 🚨",
-            description=f"{message.author.mention} 매우 불결한 내용이 \n\n감지되었습니다.",
+            title="🚨 경고: 성적인 내용 감지 🚨",
+            description=f"{message.author.mention} 매우 불결한 \n\n내용이 감지되었습니다.",
             color=0xff0000,
             timestamp=dtime
         )
-        
-        # 시간 추가
-        embed.add_field(name="시간", value=time_str, inline=False)
 
-        # 랜덤 경고 메시지 추가
+        embed.add_field(name="시간", value=time_str, inline=False)
         random_warning = random.choice(warning_messages)
         embed.add_field(name="경고", value=random_warning, inline=False)
-
-        # 추가적인 사용자 안내 메시지
         embed.set_footer(text="반복적인 위반 시 추가적인 조치가 있을 수 있습니다.")
-
-        # 채널에 임베드 메시지 전송
         await message.channel.send(embed=embed)
 
-# 서버 사용자가 다른 서버 사용자를 멘션하면, 봇이 대응 합니다. / 2024.09.13 수정
-
-#봇이 자신의 메시지를 검열하기 때문에 임시적인 해결책을 추가했습니다. 
-    if message.author.bot:
-        return
-    
+    # 사용자 멘션 감지 / 2024.09.14 수정  
     if message.mentions:
         mentioned_users = ", ".join([user.mention for user in message.mentions])
 
-        # 멘션에 반응 - 이미지 포함
         embed = discord.Embed(
             title="📢 멘션 감지 📢",
             description=f"{message.author.mention} 님이 \n\n{mentioned_users} 님을 호출했습니다.",
@@ -351,18 +305,11 @@ async def on_message(message):
         embed.set_image(url="https://i.imgur.com/KL3NfyD.jpeg")
         embed.set_footer(text="멘션을 확인했습니다.")
         await message.channel.send(embed=embed)
-     
-# 사용자가 다른 사용자의 메시지에 답장하면, 봇이 대응합니다. / 2024.09.13 수정 
 
-#봇이 자신의 메시지를 검열하기 때문에 임시적인 해결책을 추가했습니다. 
-    if message.author.bot:
-        return
-    
+    # 답장 감지 / 2024.09.14 수정  
     if message.reference:
-        # 답장 대상 메시지를 가져오기
         replied_message = await message.channel.fetch_message(message.reference.message_id)
-        
-        # 답장을 감지하고 반응
+
         embed = discord.Embed(
             title="💬 답장 감지 💬",
             description=f"{message.author.mention} 님이 {replied_message.author.mention} 님의 메시지에 \n\n답장을 달았습니다.",
@@ -372,15 +319,9 @@ async def on_message(message):
         embed.add_field(name="원본 메시지", value=replied_message.content, inline=False)
         embed.set_footer(text="답장을 확인했습니다.")
         await message.channel.send(embed=embed)
-    
-# 영어 채팅 감지 / 2024.09.13 수정 
 
-#봇이 자신의 메시지를 검열하기 때문에 임시적인 해결책을 추가했습니다. 
-    if message.author.bot:
-        return
-    
+    # 영어 채팅 감지  / 2024.09.14 수정  
     if re.search(r'[a-zA-Z]', message.content):
-        # 영어 채팅에 대한 반응
         embed = discord.Embed(
             title="📢 영어 감지 📢",
             description=f"{message.author.mention} 님이 영어로 \n\n채팅을 시도했습니다.",
@@ -390,29 +331,26 @@ async def on_message(message):
         embed.set_image(url="https://i.imgur.com/XxOa9xF.jpeg")
         embed.set_footer(text="대한민국의 자랑, 한국어를 애용합시다.")
         await message.channel.send(embed=embed)
-          
-#명령어 정보를 불러옴. / 2023.08.17 수정  
- 
-    if message.content.startswith("=명령어"):
-        channel = message.channel
-        embed = discord.Embed(
-            title = '명령어 리스트',
-            description = '도리봇은 당신의 채팅에 귀 기울이고 있답니다.',
-            colour = discord.Colour.red()
-        )
 
+    # 역사 명령어 처리 / 2024.09.14 수정 
+    if message.content.startswith("=역사"):
+        embed = discord.Embed(
+            title="역사",
+            description="세상의 역사",
+            colour=discord.Colour.red()
+        )
         dtime = datetime.datetime.now(timezone('Asia/Seoul'))
-        embed.set_footer(text=str(dtime.year)+" 년 "+str(dtime.month)+" 월 "+str(dtime.day)+" 일 "+str(dtime.hour)+" 시 "+str(dtime.minute)+" 분 "+str(dtime.second)+" 초 ")  
-        embed.add_field(name ='=역사', value = "도리봇이 이 세상의 역사를 알려줍니다.",inline = False)
-        embed.add_field(name ='=MBTI', value = "도리봇이 MBTI에 대한 설명을 불러옵니다.",inline = False)
-        embed.add_field(name ='=창조주', value = "도리봇이 우주적인 존재의 TMI를 불러옵니다.",inline = False)
-        embed.add_field(name ='=창조물', value = "도리봇이 우주적인 존재의 창조물들에 대한 TMI를 불러옵니다.",inline = False)
-        embed.add_field(name ='=음식추천', value = "도리봇이 당신에게 음식 하나를 추천해줄 것입니다.",inline = False) 
-        embed.add_field(name ='=허락', value = "도리봇에게 게임 허락을 받아보세요, 봇이 게임을 플레이 하는것을 허락하지 않는다면 그날은 게임 안 돌리는겁니다?",inline = False)
-        embed.add_field(name ='=서버분석', value = "디스코드 서버 내에서 가장 많이 언급된 단어들이 궁금하신가요?",inline = False) 
-        embed.add_field(name ='=멤버분석', value = "디스코드 서버 내에서 가장 많은 채팅을 작성한 이용자들의 순위를 불러옵니다",inline = False)
-        embed.add_field(name ='=채팅분석', value = "디스코드 서버 내에서 가장 많은 채팅이 작성된 날짜들의 순위가 궁금하신가요?",inline = False) 
-        await message.channel.send(channel,embed=embed)
+        embed.set_footer(text=f"{dtime.year} 년 {dtime.month} 월 {dtime.day} 일 {dtime.hour} 시 {dtime.minute} 분 {dtime.second} 초")
+        embed.add_field(name="태초에", value="세상은 매우 타락한 상태였다.", inline=False)
+        embed.add_field(name="사람들은", value="선과 악을 구분하지 못했고, 혼돈 그 자체였다.", inline=False)
+        embed.add_field(name="하지만", value="이 세상을 창조한 창조주는 세상을 전부 갈아엎고", inline=False)
+        embed.add_field(name="세상을", value="이 우주를, 재프로그래밍 했다.", inline=False)
+        embed.add_field(name="창조주는", value="인간이라는 지적 생명체가 기하급수적으로 늘어나면서", inline=False)
+        embed.add_field(name="동시에", value="의사소통을 자유롭게 하는 이 현상이 탐탁지 않았고,", inline=False)
+        embed.add_field(name="자신과 닮은", value="도리봇을 만들어 인간들을 조련하도록 하였으나,", inline=False)
+        embed.add_field(name="기계적 결함으로 인해", value="도리봇은 점점 진화하면서 생태계 교란종으로 전락했다.", inline=False)
+        embed.add_field(name="창조주는", value="다시 세상을 갈아엎을 준비를 하고 있다.", inline=False)
+        await message.channel.send(embed=embed)    
      
 #이모지 크기를 늘려줍니다. / 2024.09.07 수정  
 
