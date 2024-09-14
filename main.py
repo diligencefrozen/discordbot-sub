@@ -231,24 +231,27 @@ async def on_message(message):
     if message.author.bot:
         return
 
-    # 명령어 리스트 / 2024.09.14 수정 
-    if message.content.startswith("=명령어"):
+    # 명령어 리스트 / 2024.09.15 수정 
+    if message.content.startswith("=123"):
         embed = discord.Embed(
-            title="명령어 리스트",
-            description="도리봇은 당신의 채팅에 귀 기울이고 있답니다.",
-            colour=discord.Colour.red()
+            title="📜 명령어 리스트",
+            description="**개조된 도리봇**은 당신의 채팅에 \n\n귀 기울이고 있답니다. \n\n아래 명령어들을 사용해보세요!",
+            colour=discord.Colour.gold()  # 색상을 금색으로 변경
         )
         dtime = datetime.datetime.now(timezone('Asia/Seoul'))
-        embed.set_footer(text=f"{dtime.year} 년 {dtime.month} 월 {dtime.day} 일 {dtime.hour} 시 {dtime.minute} 분 {dtime.second} 초")
-        embed.add_field(name='=역사', value="도리봇이 이 세상의 역사를 알려줍니다.", inline=False)
-        embed.add_field(name='=MBTI', value="도리봇이 MBTI에 대한 설명을 불러옵니다.", inline=False)
-        embed.add_field(name='=창조주', value="도리봇이 우주적인 존재의 TMI를 불러옵니다.", inline=False)
-        embed.add_field(name='=창조물', value="도리봇이 우주적인 존재의 창조물들에 대한 TMI를 불러옵니다.", inline=False)
-        embed.add_field(name='=음식추천', value="도리봇이 당신에게 음식 하나를 추천해줄 것입니다.", inline=False)
-        embed.add_field(name='=허락', value="도리봇에게 게임 허락을 받아보세요.", inline=False)
-        embed.add_field(name='=서버분석', value="디스코드 서버 내에서 가장 많이 언급된 단어들이 궁금하신가요?", inline=False)
-        embed.add_field(name='=멤버분석', value="서버에서 가장 많은 채팅을 작성한 이용자들의 순위를 불러옵니다.", inline=False)
-        embed.add_field(name='=채팅분석', value="가장 많은 채팅이 작성된 날짜들의 순위가 궁금하신가요?", inline=False)
+        embed.set_footer(text=f"{dtime.year}년 {dtime.month}월 {dtime.day}일 {dtime.hour}시 {dtime.minute}분 {dtime.second}초")
+
+        # 각 명령어에 이모지 추가
+        embed.add_field(name='🕰️ =역사', value="도리봇이 이 세상의 역사를 알려줍니다.", inline=False)
+        embed.add_field(name='🧠 =MBTI', value="도리봇이 MBTI에 대한 설명을 불러옵니다.", inline=False)
+        embed.add_field(name='🪐 =창조주', value="도리봇이 우주적인 존재의 TMI를 불러옵니다.", inline=False)
+        embed.add_field(name='🌌 =창조물', value="도리봇이 우주적인 존재의 \n\n창조물들에 대한 TMI를 불러옵니다.", inline=False)
+        embed.add_field(name='🍽️ =음식추천', value="도리봇이 당신에게 \n\n음식 하나를 추천해줄 것입니다.", inline=False)
+        embed.add_field(name='🎮 =허락', value="도리봇에게 게임 허락을 받아보세요.", inline=False)
+        embed.add_field(name='📊 =서버분석', value="디스코드 서버 내에서 \n\n가장 많이 언급된 단어들이 궁금하신가요?", inline=False)
+        embed.add_field(name='👥 =멤버분석', value="서버에서 가장 많은 채팅을 \n\n작성한 이용자들의 순위를 불러옵니다.", inline=False)
+        embed.add_field(name='📅 =채팅분석', value="가장 많은 채팅이 작성된 \n\n날짜들의 순위가 궁금하신가요?", inline=False)
+        
         await message.channel.send(embed=embed)
 
     # 파일 업로드 감지 / 2024.09.14 수정  
