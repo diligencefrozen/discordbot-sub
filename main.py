@@ -269,7 +269,6 @@ async def on_message(message):
                 )
                 embed.add_field(name="파일 이름", value=attachment.filename, inline=False)
                 embed.set_footer(text="파일 업로드를 확인했습니다.")
-                embed.set_footer(text="해당 기능은 Beta 버전입니다.")
 
                 if attachment.filename.lower().endswith(('jpg', 'jpeg', 'png', 'gif', 'bmp', 'webp')):
                     embed.set_image(url=attachment.url)
@@ -294,7 +293,7 @@ async def on_message(message):
         random_warning = random.choice(warning_messages)
         embed.add_field(name="경고", value=random_warning, inline=False)
         embed.set_footer(text="반복적인 위반 시 추가적인 조치가 있을 수 있습니다.")
-        embed.set_footer(text="해당 기능은 Beta 버전입니다.")
+
         await message.channel.send(embed=embed)
 
     # 사용자 멘션 감지 / 2024.09.14 수정  
@@ -308,7 +307,7 @@ async def on_message(message):
         )
         embed.set_image(url="https://i.imgur.com/KL3NfyD.jpeg")
         embed.set_footer(text="멘션을 확인했습니다.")
-        embed.set_footer(text="해당 기능은 Beta 버전입니다.")
+
         await message.channel.send(embed=embed)
 
     # 답장 감지 / 2024.09.14 수정  
@@ -323,7 +322,7 @@ async def on_message(message):
         embed.add_field(name="답장 내용", value=message.content, inline=False)
         embed.add_field(name="원본 메시지", value=replied_message.content, inline=False)
         embed.set_footer(text="답장을 확인했습니다.")
-        embed.set_footer(text="해당 기능은 Beta 버전입니다.")
+
         await message.channel.send(embed=embed)
 
     # 영어 채팅 감지  / 2024.09.14 수정  
@@ -336,7 +335,7 @@ async def on_message(message):
         embed.add_field(name="메시지 내용", value=message.content, inline=False)
         embed.set_image(url="https://i.imgur.com/XxOa9xF.jpeg")
         embed.set_footer(text="대한민국의 자랑, 한국어를 애용합시다.")
-        embed.set_footer(text="해당 기능은 Beta 버전입니다.")
+
         await message.channel.send(embed=embed)
 
     # 역사 명령어 처리 / 2024.09.14 수정 
