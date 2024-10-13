@@ -1786,14 +1786,14 @@ async def on_message(message):
 
 #게임 키워드에 대응함. / 2023.08.17 수정 
 
-    if "모배" in message.content:
-        await message.channel.send(f"{message.author.mention} 2018년 5월 16일 국내에서 서비스가 시작되었고, 전 글로벌 매출 1위겜이죠.")  
- 
-    if "모바일배그" in message.content:
-        await message.channel.send(f"{message.author.mention} 2018년 5월 16일 국내에서 서비스가 시작되었고, 전 글로벌 매출 1위겜이죠.")  
 
-    if "배그" in message.content:
-        await message.channel.send(f"{message.author.mention} 2018년 5월 16일 국내에서 서비스가 시작되었고, 전 글로벌 매출 1위겜이죠.") 
+    if "모배" in message.content or "배그" in message.content:
+        embed = discord.Embed(
+            title="배틀그라운드 모바일",
+            description="2018년 5월 16일 국내 서비스가 시작된 후, 글로벌 매출 1위를 기록한 모바일 배틀로얄 게임입니다. 다양한 모드와 꾸준한 업데이트로 많은 사랑을 받고 있습니다.",
+            color=0x556B2F
+            )
+        await message.channel.send(content=f"{message.author.display_name}님, @everyone 을 사용하여 분대원들을 소집하세요!", embed=embed)
                     
     if "게임" in message.content or "게1임" in message.content or "게11임" in message.content or "게111임" in message.content or "게/임" in message.content or "게//임" in message.content or "게///임" in message.content or "겜" in message.content or "game" in message.content or "Game" in message.content or "GAME" in message.content:     
         dtime = datetime.datetime.now()
