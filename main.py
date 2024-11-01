@@ -254,7 +254,7 @@ async def on_message(message):
         
         await message.channel.send(embed=embed)
 
-    # 파일 업로드 감지 / 2024.09.14 수정  
+    # 파일 업로드 감지 / 2024.11.02 수정 
     if message.attachments:
         for attachment in message.attachments:
             supported_extensions = ['jpg', 'jpeg', 'png', 'gif', 'bmp', 'webp',
@@ -277,7 +277,7 @@ async def on_message(message):
 
                 await message.channel.send(embed=embed)
 
-    # 성적인 키워드 감지 / 2024.09.14 수정  
+    # 성적인 키워드 감지 / 2024.11.02 수정 
     if any(pattern.search(message.content) for pattern in girl_patterns):
         dtime = datetime.datetime.now(timezone('Asia/Seoul'))
         time_str = dtime.strftime("%Y년 %m월 %d일 %H시 %M분 %S초")
@@ -296,7 +296,7 @@ async def on_message(message):
 
         await message.channel.send(embed=embed)
 
-    # 사용자 멘션 감지 / 2024.09.14 수정  
+    # 사용자 멘션 감지 / 2024.11.02 수정 
     if message.mentions:
         mentioned_users = ", ".join([user.mention for user in message.mentions])
 
@@ -310,7 +310,7 @@ async def on_message(message):
 
         await message.channel.send(embed=embed)
 
-    # 답장 감지 / 2024.09.14 수정  
+    # 답장 감지 / 2024.11.02 수정 
     if message.reference:
         replied_message = await message.channel.fetch_message(message.reference.message_id)
 
@@ -325,7 +325,7 @@ async def on_message(message):
 
         await message.channel.send(embed=embed)
 
-    # 영어 채팅 감지  / 2024.09.14 수정  
+    # 영어 채팅 감지  / 2024.11.02 수정 
     if re.search(r'[a-zA-Z]', message.content):
         embed = discord.Embed(
             title="📢 해당 기능은 Beta 버전입니다.",
