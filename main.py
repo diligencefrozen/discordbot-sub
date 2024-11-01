@@ -268,7 +268,7 @@ async def on_message(message):
                     color=0x00ff00
                 )
                 embed.add_field(name="파일 이름", value=attachment.filename, inline=False)
-                embed.set_footer(text=f"개조된도리봇 | {current_time}", icon_url="https://i.imgur.com/d1Ef9W8.jpeg")
+                embed.set_footer(text="오늘도 커뮤니티에 기여해주셔서 감사해요!")
 
                 if attachment.filename.lower().endswith(('jpg', 'jpeg', 'png', 'gif', 'bmp', 'webp')):
                     embed.set_image(url=attachment.url)
@@ -292,7 +292,7 @@ async def on_message(message):
         embed.add_field(name="시간", value=time_str, inline=False)
         random_warning = random.choice(warning_messages)
         embed.add_field(name="경고", value=random_warning, inline=False)
-        embed.set_footer(text=f"개조된도리봇 | {current_time}", icon_url="https://i.imgur.com/d1Ef9W8.jpeg")
+        embed.set_footer(text="반복적인 위반 시 추가적인 조치가 있을 수 있습니다.")
 
         await message.channel.send(embed=embed)
 
@@ -306,7 +306,7 @@ async def on_message(message):
             color=0x00ff00
         )
         embed.set_image(url="https://i.imgur.com/KL3NfyD.jpeg")
-        embed.set_footer(text=f"개조된도리봇 | {current_time}", icon_url="https://i.imgur.com/d1Ef9W8.jpeg")
+        embed.set_footer(text="개조된도리봇")
 
         await message.channel.send(embed=embed)
 
@@ -321,7 +321,7 @@ async def on_message(message):
         )
         embed.add_field(name="답장 내용", value=message.content, inline=False)
         embed.add_field(name="원본 메시지", value=replied_message.content, inline=False)
-        embed.set_footer(text=f"개조된도리봇 | {current_time}", icon_url="https://i.imgur.com/d1Ef9W8.jpeg")
+        embed.set_footer(text="개조된도리봇")
 
         await message.channel.send(embed=embed)
 
@@ -334,7 +334,7 @@ async def on_message(message):
         )
         embed.add_field(name="메시지 내용", value=message.content, inline=False)
         embed.set_image(url="https://i.imgur.com/XgrhOwC.jpeg")
-        embed.set_footer(text=f"개조된도리봇 | {current_time}", icon_url="https://i.imgur.com/d1Ef9W8.jpeg")
+        embed.set_footer(text="개조된도리봇")
 
         await message.channel.send(embed=embed)
 
