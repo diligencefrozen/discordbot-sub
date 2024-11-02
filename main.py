@@ -321,7 +321,7 @@ async def on_message(message):
         
         embed = discord.Embed(
             title="💬 해당 기능은 Beta 버전입니다.",
-            description=f"{message.author.mention} 님이 {replied_message.author.mention} 님의 \n\n메시지에 답장을 달았습니다.",
+            description=f"{message.author.mention} 님이 \n\n{replied_message.author.mention} 님의 \n\n메시지에 답장을 달았습니다.",
             color=0x00ff00
         )
         embed.add_field(name="답장 내용", value=message.content, inline=False)
