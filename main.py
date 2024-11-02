@@ -319,13 +319,16 @@ async def on_message(message):
         current_time = datetime.datetime.now(timezone('Asia/Seoul')).strftime('%Y-%m-%d %H:%M:%S')
         replied_message = await message.channel.fetch_message(message.reference.message_id)
         
+        # 원본 메시지가 길 경우 미리보기 형식으로 표시
+        original_content = replied_message.content if len(replied_message.content) <= 100 else replied_message.content[:97] + "..."
+        
         embed = discord.Embed(
             title="💬 해당 기능은 Beta 버전입니다.",
-            description=f"{message.author.mention} 님이 \n\n{replied_message.author.mention} 님의 \n\n메시지에 답장을 달았습니다.",
+            description=f"{message.author.mention} 님이 {replied_message.author.mention} 님의 메시지에 답장을 달았습니다.",
             color=0x00ff00
         )
         embed.add_field(name="답장 내용", value=message.content, inline=False)
-        embed.add_field(name="원본 메시지", value=replied_message.content, inline=False)
+        embed.add_field(name="원본 메시지", value=original_content, inline=False)
         embed.set_footer(text=f"개조된도리봇 | {current_time}", icon_url="https://i.imgur.com/d1Ef9W8.jpeg")
         await message.channel.send(embed=embed)
         return  # 중단
