@@ -21,6 +21,7 @@ from bs4 import BeautifulSoup
 from urllib.request import urlopen, Request
 from discord.ext import tasks
 from pytz import timezone
+from discord import Embed
 
 intents = discord.Intents.default()
 intents.messages = True
