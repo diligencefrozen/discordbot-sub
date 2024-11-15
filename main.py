@@ -1697,7 +1697,7 @@ async def handle_link_deletion(message):
             current_time = datetime.datetime.now().strftime('%Y-%m-%d %H:%M:%S')
             embed = Embed(
                 title="🚫 해당 기능은 Beta 버전입니다.",
-                description=f"{message.author.mention} 님, 이 채널에서는 링크를 공유할 수 없습니다.",
+                description=f"{message.author.mention} 님, 이 채널에서는 \n\n링크를 공유할 수 없습니다.",
                 color=0xFF0000
             )
             embed.set_footer(text=f"개조된도리봇 | {current_time}", icon_url="https://i.imgur.com/d1Ef9W8.jpeg")
