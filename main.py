@@ -333,21 +333,19 @@ async def on_message(message):
         await message.channel.send(embed=embed)
         return  # 중단
 
-    # 영어 채팅 감지  / 2024.11.07 수정 
-     
-    # 영어 단어만 감지하고 URL 형식은 제외
-    if re.search(r'\b[a-zA-Z]+\b', message.content) and not re.search(r'https?://', message.content):
+    # 영어 채팅 감지  / 2024.11.02 수정  
+    if re.search(r'[a-zA-Z]', message.content):
         current_time = datetime.datetime.now(seoul_tz).strftime('%Y-%m-%d %H:%M:%S')
         embed = discord.Embed(
             title="📢 해당 기능은 Beta 버전입니다.",
-            description=f"{message.author.mention} 님이 영어로 채팅을 시도했습니다.",
+            description=f"{message.author.mention} 님이 영어로 \n\n채팅을 시도했습니다.",
             color=0xfefe00
         )
         embed.add_field(name="메시지 내용", value=message.content, inline=False)
         embed.set_image(url="https://i.imgur.com/XgrhOwC.jpeg")
         embed.set_footer(text=f"개조된도리봇 | {current_time}", icon_url="https://i.imgur.com/d1Ef9W8.jpeg")
         await message.channel.send(embed=embed)
-        return  # 기능 중단
+        return  # 중단
 
     # 역사 명령어 처리 / 2024.09.14 수정 
     if message.content.startswith("=역사"):
