@@ -1679,11 +1679,21 @@ async def on_message(message):
     if "자살" in message.content or "죽고싶다" in message.content or "질소가스" in message.content:
         await message.channel.send(f"{message.author.mention} 님, 우울감 등 말하기 어려운 고민이 있거나 주변에 이런 어려움을 겪는 가족ㆍ지인이 있을 경우 자살예방 상담전화 1393, 정신건강 상담전화 1577-0199, 희망의 전화 129, 생명의 전화 1588-9191, 청소년 전화 1388, 청소년 모바일 상담 ‘다 들어줄게’ 앱, 카카오톡 등에서 24시간 전문가의 상담을 받을 수 있습니다.")
 
-#사이트 링크를 삭제함. (광고성 링크를 막기 위해서임.) / 2023.08.17 수정 
+#사이트 링크를 삭제함. (광고성 링크를 막기 위해서임.) / 2024.11.30 수정 
 
+@app.event
+async def on_message(message):
+    # 봇의 메시지를 무시
+    if message.author.bot:
+        return
+
+    # 링크를 검열
     if "https://" in message.content or "http://" in message.content or "youtu.be" in message.content or "youtube" in message.content or "gall.dcinside.com" in message.content or "news.naver.com" in message.content or "news.v.daum.net" in message.content:
-        await message.delete()
-        await message.channel.send(f"{message.author.mention} 님, 링크 공유는 서버 규칙을 어긴겁니다.")
+        try:
+            await message.delete()
+            await message.channel.send(f"{message.author.mention} 님, 링크 공유는 서버 규칙을 어긴겁니다.")
+        except Exception as e:
+            print(f"메시지 삭제 실패: {e}")  # 디버깅을 위해 오류 로그 추가
      
  #주요 서버 주축이 되는 멤버의 닉네임에 대응합니다. (개선된 버전 / 기존 버전은 유지보수하기 힘드므로, 약간의 개선된 코드를 추가함.) / 2024.01.04 수정 
 
