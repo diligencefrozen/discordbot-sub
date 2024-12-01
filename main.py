@@ -337,7 +337,7 @@ async def on_message(message):
     if "https://" in message.content or "http://" in message.content or "youtu.be" in message.content or "youtube" in message.content or "gall.dcinside.com" in message.content or "news.naver.com" in message.content or "news.v.daum.net" in message.content:
         try:
             await message.delete()
-            await message.channel.send(f"{message.author.mention} 님, 링크 공유는 서버 규dsadas칙을 어긴겁니다.")
+            await message.channel.send(f"{message.author.mention} 님, 링크 공유는 서버 규칙을 어긴겁니다.")
         except Exception as e:
             print(f"메시지 삭제 실패: {e}")  # 디버깅을 위해 오류 로그 추가
 
