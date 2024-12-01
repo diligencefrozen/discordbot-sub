@@ -200,23 +200,6 @@ warning_messages = [
     "주의: 성적인 것에 집착하면, 성적 폭력 및 비현실적인 기대를 강화할 수 있습니다.",
     "경고: 여성에 대한 부정적 언어 사용은 금지합니다."
 ]
-
-
-#사이트 링크를 삭제함. (광고성 링크를 막기 위해서임.) / 2024.11.30 수정 
-
-@app.event
-async def on_message(message):
-    # 봇의 메시지를 무시
-    if message.author.bot:
-        return
-
-    # 링크를 검열
-    if "https://" in message.content or "http://" in message.content or "youtu.be" in message.content or "youtube" in message.content or "gall.dcinside.com" in message.content or "news.naver.com" in message.content or "news.v.daum.net" in message.content:
-        try:
-            await message.delete()
-            await message.channel.send(f"{message.author.mention} 님, 링크 공유는 서버 규칙을 어긴겁니다.")
-        except Exception as e:
-            print(f"메시지 삭제 실패: {e}")  # 디버깅을 위해 오류 로그 추가
          
 @app.event
 async def on_ready():
@@ -1804,6 +1787,15 @@ async def on_message(message):
          embed.set_image(url = urlF)
          await message.channel.send( embed=embed)         
 
+#사이트 링크를 삭제함. (광고성 링크를 막기 위해서임.) / 2024.12.01 수정 
+
+    allowed_channels = [1247409483353821335, 721047251862159420, 904343326654885939, 862310554567835658, 915207176518270981, 1065283543640576103]
+
+    if message.channel.id in allowed_channels:
+        if "https://" in message.content or "http://" in message.content or "youtu.be" in message.content or "youtube" in message.content or "gall.dcinside.com" in message.content or "news.naver.com" in message.content or "news.v.daum.net" in message.content:
+            await message.delete()
+            await message.channel.send(f"{message.author.mention} 님, 링크 공유는 서버 규칙을 어긴겁니다.")
+ 
 #게임 키워드에 대응함. / 2023.08.17 수정 
 
 
