@@ -333,7 +333,15 @@ async def on_message(message):
         await message.channel.send(embed=embed)
         return  # 중단
 
-    # 영어 채팅 감지  / 2024.11.02 수정  
+    # 링크를 검열 / 2024.12.01
+    if "https://" in message.content or "http://" in message.content or "youtu.be" in message.content or "youtube" in message.content or "gall.dcinside.com" in message.content or "news.naver.com" in message.content or "news.v.daum.net" in message.content:
+        try:
+            await message.delete()
+            await message.channel.send(f"{message.author.mention} 님, 링크 공유는 서버 규dsadas칙을 어긴겁니다.")
+        except Exception as e:
+            print(f"메시지 삭제 실패: {e}")  # 디버깅을 위해 오류 로그 추가
+
+    # 영어 채팅 감지 / 2024.12.01
     if re.search(r'[a-zA-Z]', message.content):
         current_time = datetime.datetime.now(seoul_tz).strftime('%Y-%m-%d %H:%M:%S')
         embed = discord.Embed(
@@ -345,7 +353,6 @@ async def on_message(message):
         embed.set_image(url="https://i.imgur.com/XgrhOwC.jpeg")
         embed.set_footer(text=f"개조된도리봇 | {current_time}", icon_url="https://i.imgur.com/d1Ef9W8.jpeg")
         await message.channel.send(embed=embed)
-        return  # 중단
 
     # 역사 명령어 처리 / 2024.09.14 수정 
     if message.content.startswith("=역사"):
@@ -1786,15 +1793,6 @@ async def on_message(message):
          urlF = urlBase+str(randomNum)
          embed.set_image(url = urlF)
          await message.channel.send( embed=embed)         
-
-#사이트 링크를 삭제함. (광고성 링크를 막기 위해서임.) / 2024.12.01 수정 
-
-    allowed_channels = [1247409483353821335, 721047251862159420, 904343326654885939, 862310554567835658, 915207176518270981, 1065283543640576103]
-
-    if message.channel.id in allowed_channels:
-        if "https://" in message.content or "http://" in message.content or "youtu.be" in message.content or "youtube" in message.content or "gall.dcinside.com" in message.content or "news.naver.com" in message.content or "news.v.daum.net" in message.content:
-            await message.delete()
-            await message.channel.send(f"{message.author.mention} 님, 링크 공유는 서버 규칙을 어긴겁니다.")
  
 #게임 키워드에 대응함. / 2023.08.17 수정 
 
