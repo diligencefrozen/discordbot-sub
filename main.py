@@ -324,7 +324,7 @@ async def on_message(message):
         
         embed = discord.Embed(
             title="💬 해당 기능은 Beta 버전입니다.",
-            description=f"{message.author.mention} 님이 {replied_message.author.mention} 님의 메시지에 답장을 달았습니다.",
+            description=f"{message.author.mention} 님이 {replied_message.author.mention} 님의 메시지에 \n\n답장을 달았습니다.",
             color=0x00ff00
         )
         embed.add_field(name="답장 내용", value=message.content, inline=False)
@@ -342,17 +342,17 @@ async def on_message(message):
             print(f"메시지 삭제 실패: {e}")  # 디버깅을 위해 오류 로그 추가
 
     # 영어 채팅 감지 / 2024.12.01
-    if re.search(r'[a-zA-Z]', message.content):
-        current_time = datetime.datetime.now(seoul_tz).strftime('%Y-%m-%d %H:%M:%S')
-        embed = discord.Embed(
-            title="📢 해당 기능은 Beta 버전입니다.",
-            description=f"{message.author.mention} 님이 영어로 \n\n채팅을 시도했습니다.",
-            color=0xfefe00
-        )
-        embed.add_field(name="메시지 내용", value=message.content, inline=False)
-        embed.set_image(url="https://i.imgur.com/XgrhOwC.jpeg")
-        embed.set_footer(text=f"개조된도리봇 | {current_time}", icon_url="https://i.imgur.com/d1Ef9W8.jpeg")
-        await message.channel.send(embed=embed)
+    #if re.search(r'[a-zA-Z]', message.content):
+       #current_time = datetime.datetime.now(seoul_tz).strftime('%Y-%m-%d %H:%M:%S')
+       #embed = discord.Embed(
+           #title="📢 해당 기능은 Beta 버전입니다.",
+           #description=f"{message.author.mention} 님이 영어로 \n\n채팅을 시도했습니다.",
+           #color=0xfefe00
+       #)
+       #embed.add_field(name="메시지 내용", value=message.content, inline=False)
+       #embed.set_image(url="https://i.imgur.com/XgrhOwC.jpeg")
+       #embed.set_footer(text=f"개조된도리봇 | {current_time}", icon_url="https://i.imgur.com/d1Ef9W8.jpeg")
+       #await message.channel.send(embed=embed)
 
     # 역사 명령어 처리 / 2024.09.14 수정 
     if message.content.startswith("=역사"):
@@ -1803,7 +1803,7 @@ async def on_message(message):
             description="2018년 5월 16일 국내 서비스가 시작된 후, 글로벌 매출 1위를 기록한 모바일 배틀로얄 게임입니다. 다양한 모드와 꾸준한 업데이트로 많은 사랑을 받고 있습니다.",
             color=0x556B2F
             )
-        await message.channel.send(content=f"{message.author.display_name}님, @everyone 을 사용하여 분대원들을 소집하세요!", embed=embed)
+        await message.channel.send(content=f"{message.author.display_name}님, \n\n@everyone 을 사용하여 분대원들을 소집하세요!", embed=embed)
                     
     if "게임" in message.content or "게1임" in message.content or "게11임" in message.content or "게111임" in message.content or "게/임" in message.content or "게//임" in message.content or "게///임" in message.content or "겜" in message.content or "game" in message.content or "Game" in message.content or "GAME" in message.content:     
         dtime = datetime.datetime.now()
