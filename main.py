@@ -299,7 +299,7 @@ async def on_message(message):
         await message.channel.send(embed=embed)
         return  # 중단
 
-    # 사용자 멘션 감지 / 2024.11.02 수정  
+    # 사용자 멘션 감지 / 2025.01.12 수정  
     if message.mentions:
         current_time = datetime.datetime.now(timezone('Asia/Seoul')).strftime('%Y-%m-%d %H:%M:%S')
         mentioned_users = ", ".join([user.mention for user in message.mentions])
@@ -309,7 +309,7 @@ async def on_message(message):
             description=f"{message.author.mention} 님이 \n\n{mentioned_users} 님을 호출했습니다.",
             color=0x00ff00
         )
-        embed.set_image(url="https://i.imgur.com/KL3NfyD.jpeg")
+        embed.set_image(url="https://i.imgur.com/nctlUco.jpeg")
         embed.set_footer(text=f"개조된도리봇 | {current_time}", icon_url="https://i.imgur.com/d1Ef9W8.jpeg")
         await message.channel.send(embed=embed)
         return  # 중단
