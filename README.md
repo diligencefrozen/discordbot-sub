@@ -27,5 +27,5 @@ This Discord bot has been upgraded to effectively enforce restrictions on prohib
   - `pytz` (latest)
   - `Pillow` (latest)
 
-
+These libraries power the bot’s core functionality—everything from handling Discord interactions to making web requests. If you’re using Python 3.9, make sure these dependencies are installed and up to date for the best experience.
 
