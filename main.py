@@ -254,14 +254,18 @@ async def on_message(message):
         
         await message.channel.send(embed=embed)
 
-    # 파일 업로드 감지 / 2024.11.02 수정  
+    # 파일 업로드 감지 / 2025.01.29 수정  
     if message.attachments:
         current_time = datetime.datetime.now(timezone('Asia/Seoul')).strftime('%Y-%m-%d %H:%M:%S')
         for attachment in message.attachments:
-            supported_extensions = ['jpg', 'jpeg', 'png', 'gif', 'bmp', 'webp',
-                                    'pdf', 'doc', 'docx', 'xls', 'xlsx', 'ppt', 'pptx', 'txt', 'hwp', 'hwpx',
-                                    'mp4', 'mkv', 'mov', 'avi', 'wmv', 'flv', 'm4v', 'mp3', 'wav', 'ogg']
-            
+            supported_extensions = [
+                'jpg', 'jpeg', 'png', 'gif', 'bmp', 'webp',
+                'pdf', 'doc', 'docx', 'xls', 'xlsx',
+                'ppt', 'pptx', 'txt', 'hwp', 'hwpx',
+                'mp4', 'mkv', 'mov', 'avi', 'wmv',
+                'flv', 'm4v', 'mp3', 'wav', 'ogg'
+            ]
+
             if any(attachment.filename.lower().endswith(ext) for ext in supported_extensions):
                 embed = discord.Embed(
                     title="📁 해당 기능은 Beta 버전입니다.",
@@ -269,35 +273,43 @@ async def on_message(message):
                     color=0x00ff00
                 )
                 embed.add_field(name="파일 이름", value=attachment.filename, inline=False)
-                embed.set_footer(text=f"개조된도리봇 | {current_time}", icon_url="https://i.imgur.com/d1Ef9W8.jpeg")
-                
-                if attachment.filename.lower().endswith(('jpg', 'jpeg', 'png', 'gif', 'bmp', 'webp')):
+                embed.set_footer(
+                    text=f"도리봇 | {current_time}",
+                    icon_url="https://i.imgur.com/Ny6e2BS.jpeg"
+                )
+
+                # 이미지 타입
+                if attachment.filename.lower().endswith(("jpg", "jpeg", "png", "gif", "bmp", "webp")):
                     embed.set_image(url=attachment.url)
                 else:
-                    embed.add_field(name="파일 다운로드", value=f"[여기 클릭]({attachment.url})", inline=False)
-                    
-                    await message.channel.send(embed=embed)
-                    return  # 중단
+                    embed.add_field(
+                        name="파일 다운로드",
+                        value=f"[여기 클릭]({attachment.url})",
+                        inline=False
+                    )
+
+                # Embed 전송
+                await message.channel.send(embed=embed)
 
     # 성적인 키워드 감지 / 2024.11.02 수정  
-    if any(pattern.search(message.content) for pattern in girl_patterns):
-        dtime = datetime.datetime.now(timezone('Asia/Seoul'))
-        time_str = dtime.strftime("%Y년 %m월 %d일 %H시 %M분 %S초")
-        current_time = dtime.strftime('%Y-%m-%d %H:%M:%S')
+   #if any(pattern.search(message.content) for pattern in girl_patterns):
+       #dtime = datetime.datetime.now(timezone('Asia/Seoul'))
+       #time_str = dtime.strftime("%Y년 %m월 %d일 %H시 %M분 %S초")
+       #current_time = dtime.strftime('%Y-%m-%d %H:%M:%S')
         
-        embed = discord.Embed(
-            title="🚨 해당 기능은 Beta 버전입니다.",
-            description=f"{message.author.mention} 매우 불결한 \n\n내용이 감지되었습니다.",
-            color=0xff0000,
-            timestamp=dtime
-        )
+       #embed = discord.Embed(
+           #title="🚨 해당 기능은 Beta 버전입니다.",
+           #description=f"{message.author.mention} 매우 불결한 \n\n내용이 감지되었습니다.",
+           #color=0xff0000,
+           #timestamp=dtime
+       #)
         
-        embed.add_field(name="시간", value=time_str, inline=False)
-        random_warning = random.choice(warning_messages)
-        embed.add_field(name="경고", value=random_warning, inline=False)
-        embed.set_footer(text=f"개조된도리봇 | {current_time}", icon_url="https://i.imgur.com/d1Ef9W8.jpeg")
-        await message.channel.send(embed=embed)
-        return  # 중단
+       #embed.add_field(name="시간", value=time_str, inline=False)
+       #random_warning = random.choice(warning_messages)
+       #embed.add_field(name="경고", value=random_warning, inline=False)
+       #embed.set_footer(text=f"개조된도리봇 | {current_time}", icon_url="https://i.imgur.com/d1Ef9W8.jpeg")
+       #await message.channel.send(embed=embed)
+       #return  # 중단
 
     # 사용자 멘션 감지 / 2025.01.28 수정  
     if message.mentions:
