@@ -273,10 +273,7 @@ async def on_message(message):
                     color=0x00ff00
                 )
                 embed.add_field(name="파일 이름", value=attachment.filename, inline=False)
-                embed.set_footer(
-                    text=f"도리봇 | {current_time}",
-                    icon_url="https://i.imgur.com/Ny6e2BS.jpeg"
-                )
+                embed.set_footer(text=f"개조된도리봇 | {current_time}", icon_url="https://i.imgur.com/d1Ef9W8.jpeg")
 
                 # 이미지 타입
                 if attachment.filename.lower().endswith(("jpg", "jpeg", "png", "gif", "bmp", "webp")):
