@@ -488,7 +488,7 @@ async def on_message(message):
             description=f'{message.author.mention} 님의 이모지 크기를 \n\n강제로 확대하였습니다.',
             color=0x86E49C  
         )
-        embed.set_image(url='https://iili.io/2QqWWIS.png')
+        embed.set_image(url='https://iili.io/3VaSqQI.png')
         embed.set_footer(text=f"개조된도리봇 | {current_time}", icon_url="https://i.imgur.com/d1Ef9W8.jpeg")
         await message.channel.send(embed=embed)
         return
@@ -500,7 +500,7 @@ async def on_message(message):
             description=f'{message.author.mention} 님의 이모지 크기를 \n\n강제로 확대하였습니다.',
             color=0x86E49C  
         )
-        embed.set_image(url='https://iili.io/2QqWXh7.png')
+        embed.set_image(url='https://iili.io/3VaSfhN.png')
         embed.set_footer(text=f"개조된도리봇 | {current_time}", icon_url="https://i.imgur.com/d1Ef9W8.jpeg")
         await message.channel.send(embed=embed)
         return
@@ -524,7 +524,7 @@ async def on_message(message):
             description=f'{message.author.mention} 님의 이모지 크기를 \n\n강제로 확대하였습니다.',
             color=0x86E49C  
         )
-        embed.set_image(url='https://iili.io/2QqWwBe.png')
+        embed.set_image(url='https://iili.io/3VaSCBt.png')
         embed.set_footer(text=f"개조된도리봇 | {current_time}", icon_url="https://i.imgur.com/d1Ef9W8.jpeg")
         await message.channel.send(embed=embed)
         return
@@ -644,7 +644,7 @@ async def on_message(message):
             description=f'{message.author.mention} 님의 이모지 크기를 \n\n강제로 확대하였습니다.',
             color=0x86E49C  
         )
-        embed.set_image(url='https://iili.io/2QqWiEg.png')
+        embed.set_image(url='https://iili.io/3VaSKIp.png')
         embed.set_footer(text=f"개조된도리봇 | {current_time}", icon_url="https://i.imgur.com/d1Ef9W8.jpeg")
         await message.channel.send(embed=embed)
         return
@@ -680,7 +680,7 @@ async def on_message(message):
             description=f'{message.author.mention} 님의 이모지 크기를 \n\n강제로 확대하였습니다.',
             color=0x86E49C  
         )
-        embed.set_image(url='https://iili.io/2QqWZYv.png')
+        embed.set_image(url='https://iili.io/3VaSnEX.png')
         embed.set_footer(text=f"개조된도리봇 | {current_time}", icon_url="https://i.imgur.com/d1Ef9W8.jpeg")
         await message.channel.send(embed=embed)
         return
